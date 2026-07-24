@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olesya Levytska — Senior UI/UX & Product Designer</title>
+<style>
+  :root{
+    --ink:#1c2230;
+    --muted:#5b6472;
+    --faint:#8a92a0;
+    --accent:#3f6cff;
+    --accent-soft:#eaf0ff;
+    --line:#e5e8ef;
+    --sidebar:#f6f8fc;
+    --chip:#eef1f7;
+    --page:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:#e9edf3;
+    line-height:1.5;
+    font-size:13px;
+  }
+  .page{
+    max-width:900px;
+    margin:24px auto;
+    background:var(--page);
+    display:grid;
+    grid-template-columns:270px 1fr;
+    box-shadow:0 6px 30px rgba(30,40,70,.12);
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .side{
+    background:var(--sidebar);
+    padding:30px 24px;
+    border-right:1px solid var(--line);
+  }
+  .name{
+    font-size:26px;
+    font-weight:800;
+    letter-spacing:-.5px;
+    line-height:1.1;
+    margin-bottom:6px;
+  }
+  .role{
+    font-size:12.5px;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .side h2{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+    color:var(--faint);
+    font-weight:700;
+    margin:22px 0 10px;
+    padding-bottom:6px;
+    border-bottom:1px solid var(--line);
+  }
+  .contact a,.contact span{
+    display:flex;
+    gap:8px;
+    align-items:flex-start;
+    font-size:12px;
+    color:var(--muted);
+    text-decoration:none;
+    margin-bottom:8px;
+    word-break:break-word;
+  }
+  .contact a:hover{color:var(--accent);}
+  .ic{color:var(--accent);flex:none;width:14px;text-align:center;font-weight:700;}
+
+  .skillgroup{margin-bottom:14px;}
+  .skillgroup h3{
+    font-size:11.5px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:5px;}
+  .chip{
+    background:var(--chip);
+    color:var(--muted);
+    font-size:10.5px;
+    padding:3px 8px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .chip.k{background:var(--accent-soft);color:var(--accent);font-weight:600;}
+
+  /* ---------- MAIN ---------- */
+  .main{padding:30px 32px;}
+  .main h2{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.4px;
+    color:var(--accent);
+    font-weight:800;
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .main h2::after{content:"";flex:1;height:1px;background:var(--line);}
+  section{margin-bottom:26px;}
+  .summary{font-size:12.5px;color:var(--muted);}
+  .summary p{margin-bottom:9px;}
+  .summary strong{color:var(--ink);}
+
+  /* experience */
+  .company{margin-bottom:20px;}
+  .company-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:2px;
+  }
+  .company-name{font-size:15px;font-weight:800;}
+  .company-role{font-size:12px;color:var(--accent);font-weight:600;}
+  .date{
+    font-size:11px;
+    color:var(--faint);
+    font-weight:600;
+    white-space:nowrap;
+    flex:none;
+  }
+  .project{
+    border-left:2px solid var(--line);
+    padding:0 0 2px 14px;
+    margin:12px 0 12px 4px;
+  }
+  .project-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:3px;
+  }
+  .project-name{font-size:13px;font-weight:700;}
+  .pdate{font-size:10.5px;color:var(--faint);font-weight:600;white-space:nowrap;flex:none;}
+  .desc{font-size:11.5px;color:var(--muted);margin-bottom:6px;}
+  .tech{font-size:11px;margin-bottom:7px;}
+  .tech b{color:var(--faint);font-weight:600;text-transform:uppercase;letter-spacing:.5px;font-size:9.5px;}
+  .tech .t{
+    display:inline-block;background:var(--accent-soft);color:var(--accent);
+    font-size:10px;padding:1px 7px;border-radius:4px;margin:2px 3px 0 0;font-weight:600;
+  }
+  .label{
+    font-size:9.5px;text-transform:uppercase;letter-spacing:.6px;
+    color:var(--faint);font-weight:700;margin:8px 0 4px;
+  }
+  ul.pts{list-style:none;}
+  ul.pts li{
+    position:relative;padding-left:15px;margin-bottom:4px;
+    font-size:11.5px;color:var(--muted);
+  }
+  ul.pts li::before{
+    content:"";position:absolute;left:2px;top:7px;
+    width:5px;height:5px;border-radius:50%;background:var(--accent);
+  }
+  ul.pts li b{color:var(--ink);}
+  .takeaway{
+    background:var(--accent-soft);
+    border-radius:6px;
+    padding:8px 11px;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:8px;
+  }
+  .takeaway b{color:var(--accent);}
+
+  /* education */
+  .edu-item{
+    display:flex;justify-content:space-between;gap:12px;
+    padding:7px 0;border-bottom:1px solid var(--line);
+  }
+  .edu-item:last-child{border-bottom:none;}
+  .edu-name{font-weight:700;font-size:12.5px;}
+  .edu-sub{font-size:11px;color:var(--muted);}
+
+  @page{size:A4;margin:0;}
+  @media print{
+    body{background:#fff;font-size:11.5px;}
+    .page{margin:0;max-width:100%;box-shadow:none;grid-template-columns:250px 1fr;}
+    .side{-webkit-print-color-adjust:exact;}
+    .main{padding-bottom:14px;}
+    section{margin-bottom:18px;}
+    section:last-child{margin-bottom:0;}
+    .company-head{break-after:avoid;}
+    .project{break-inside:avoid;}
+  }
+  @media (max-width:720px){
+    .page{grid-template-columns:1fr;}
+    .side{border-right:none;border-bottom:1px solid var(--line);}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="side">
+    <div class="name">Olesya<br>Levytska</div>
+    <div class="role">Senior UI/UX &amp; Product Designer</div>
+
+    <div class="contact">
+      <a href="mailto:olesyalevytskaua@gmail.com"><span class="ic">✉</span>olesyalevytskaua@gmail.com</a>
+      <a href="tel:+380977505802"><span class="ic">☎</span>+380 97 750 5802</a>
+      <a href="https://linkedin.com/in/olesya-levytska"><span class="ic">in</span>linkedin.com/in/olesya-levytska</a>
+      <span><span class="ic">◉</span>Ivano-Frankivsk · Lviv · Remote · Open to relocation</span>
+    </div>
+
+    <h2>Core Expertise</h2>
+
+    <div class="skillgroup">
+      <h3>Product Design</h3>
+      <div class="chips">
+        <span class="chip k">Product Discovery</span>
+        <span class="chip k">Product Strategy</span>
+        <span class="chip">End-to-End Design</span>
+        <span class="chip">UX/UI Design</span>
+        <span class="chip">Mobile App Design</span>
+        <span class="chip">SaaS &amp; Web Apps</span>
+        <span class="chip">Responsive Design</span>
+        <span class="chip">Healthcare &amp; AI Products</span>
+        <span class="chip">Accessibility</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>UX Research &amp; Analytics</h3>
+      <div class="chips">
+        <span class="chip">User Interviews</span>
+        <span class="chip">Usability Testing</span>
+        <span class="chip">Competitive Research</span>
+        <span class="chip">Journey Mapping</span>
+        <span class="chip">User Flows</span>
+        <span class="chip">Information Architecture</span>
+        <span class="chip">Wireframing</span>
+        <span class="chip">Prototyping</span>
+        <span class="chip">A/B Testing</span>
+        <span class="chip">Product Analytics</span>
+        <span class="chip">Data-Informed Design</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>Design Systems &amp; Delivery</h3>
+      <div class="chips">
+        <span class="chip">Design Systems</span>
+        <span class="chip">Component Libraries</span>
+        <span class="chip">UI Kits</span>
+        <span class="chip">Design Tokens</span>
+        <span class="chip">Design Documentation</span>
+        <span class="chip">Developer Handoff</span>
+        <span class="chip">Design QA</span>
+        <span class="chip">Accessibility Standards</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>Collaboration</h3>
+      <div class="chips">
+        <span class="chip">Cross-Functional Teams</span>
+        <span class="chip">Agile Development</span>
+        <span class="chip">Design Reviews</span>
+        <span class="chip">Stakeholder Management</span>
+        <span class="chip">Requirements Analysis</span>
+        <span class="chip">Product Presentations</span>
+      </div>
+    </div>
+
+    <h2>Tools &amp; Technology</h2>
+
+    <div class="skillgroup">
+      <h3>Design &amp; Prototyping</h3>
+      <div class="chips">
+        <span class="chip k">Figma</span>
+        <span class="chip">FigJam</span>
+        <span class="chip">Photoshop</span>
+        <span class="chip">Illustrator</span>
+        <span class="chip">Miro</span>
+        <span class="chip">Lottie</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>AI &amp; AI-Assisted Workflows</h3>
+      <div class="chips">
+        <span class="chip k">Claude</span>
+        <span class="chip k">ChatGPT</span>
+        <span class="chip">Perplexity</span>
+        <span class="chip">Midjourney</span>
+        <span class="chip">Lovable</span>
+        <span class="chip">Cursor</span>
+        <span class="chip">Design-to-Code</span>
+        <span class="chip">Rapid Prototyping</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>Dev Collaboration &amp; Vibe Coding</h3>
+      <div class="chips">
+        <span class="chip">GitHub</span>
+        <span class="chip">Git</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Pull Requests</span>
+        <span class="chip">React / Next.js</span>
+        <span class="chip">HTML / CSS</span>
+        <span class="chip">AI-Assisted Coding</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>Web &amp; No-Code</h3>
+      <div class="chips">
+        <span class="chip">WordPress</span>
+        <span class="chip">Elementor</span>
+        <span class="chip">Webflow</span>
+        <span class="chip">Wix</span>
+        <span class="chip">Tilda</span>
+        <span class="chip">OpenCart</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h3>Product &amp; Project Mgmt</h3>
+      <div class="chips">
+        <span class="chip">Jira</span>
+        <span class="chip">Trello</span>
+        <span class="chip">GitHub Issues</span>
+        <span class="chip">Agile Workflows</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+
+    <section class="summary">
+      <h2>Summary</h2>
+      <p><strong>Senior Product Designer with 5+ years building AI-powered healthcare and SaaS products</strong>, backed by 10+ years in business analysis and process optimization. I design end-to-end product experiences that combine product thinking, UX research, behavioral insights, and modern AI workflows to create intuitive solutions that drive user satisfaction and business growth.</p>
+      <p>I work at the intersection of design, AI, and engineering — using tools like Claude, ChatGPT, Cursor, Lovable, GitHub, and VS Code to accelerate discovery, prototyping, documentation, and frontend implementation. By integrating AI into everyday product development, I help teams iterate faster, reduce handoff friction, and ship high-quality experiences with greater speed.</p>
+      <p>Passionate about continuous learning and emerging technologies, I turn complex ideas into scalable digital products that people trust and love to use.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <!-- COMPUTOOLS -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">Computools</div>
+            <div class="company-role">Senior UI/UX &amp; Product Designer</div>
+          </div>
+          <div class="date">Oct 2025 – Present</div>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">VesselHaven</div>
+            <div class="pdate">Dec 2025 – Present</div>
+          </div>
+          <div class="desc">Premium yacht vessel management platform connecting owners, captains, crew, service providers, and guests — streamlining sales, charter management, maintenance, and communication in one digital ecosystem.</div>
+          <div class="tech"><span class="t">Figma</span><span class="t">FigJam</span><span class="t">Claude</span></div>
+          <div class="label">Key Contributions</div>
+          <ul class="pts">
+            <li>Led Product Discovery and UX Research to align user needs with business requirements.</li>
+            <li>Designed end-to-end journeys for marketplace and vessel management, plus wireframes, prototypes, IA, and responsive interfaces.</li>
+            <li>Built intuitive workflows for <b>multiple roles</b> — owners, brokers, captains, crew, and vendors — simplifying complex operations.</li>
+            <li>Established an <b>AI-assisted design-to-code workflow</b> with Claude, turning prototypes into production-ready frontend and accelerating developer handoff.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">Vaults1</div>
+            <div class="pdate">Sep 2025 – Dec 2025</div>
+          </div>
+          <div class="desc">Premium self-storage platform letting individuals and businesses discover, compare, and reserve storage units through a seamless digital booking experience.</div>
+          <div class="tech"><span class="t">Figma</span><span class="t">FigJam</span></div>
+          <div class="label">Key Contributions</div>
+          <ul class="pts">
+            <li>Conducted Product Discovery and UX Research into customer needs and booking behavior.</li>
+            <li>Designed complete journeys from search and comparison to reservation and payment — flows, wireframes, dashboards, and marketing pages.</li>
+            <li>Delivered a <b>premium, brand-aligned visual experience</b> balancing aesthetics with usability to build trust during booking.</li>
+            <li>Created reusable UI components and simplified IA to reduce friction and support scalable growth.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- THE PAUSE -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">The Pause Technologies Inc.</div>
+            <div class="company-role">Senior UI/UX &amp; Product Designer</div>
+          </div>
+          <div class="date">Dec 2024 – Present</div>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">Harmoni® by ThePause®</div>
+            <div class="pdate">Dec 2024 – Present</div>
+          </div>
+          <div class="desc">The next evolution of ThePause® — a personalized health platform for women in perimenopause and menopause, combining AI-powered guidance, symptom tracking, wellness programs, and health insights. A complete rebrand shaped by continuous research, analytics, and customer feedback.</div>
+          <div class="tech"><span class="t">Figma</span><span class="t">FigJam</span><span class="t">Lottie</span><span class="t">ChatGPT</span><span class="t">Claude</span><span class="t">Midjourney</span><span class="t">GitHub</span><span class="t">VS Code</span><span class="t">HTML</span><span class="t">WordPress</span><span class="t">Elementor</span></div>
+          <div class="label">Key Contributions</div>
+          <ul class="pts">
+            <li>Led the <b>complete rebrand from ThePause® to Harmoni®</b> across mobile app and website, establishing a modern, scalable visual identity.</li>
+            <li>Redesigned onboarding using research, behavioral insights, and product metrics to improve activation and feature discovery.</li>
+            <li>Designed new experiences: symptom tracking, personalized insights, AI-powered guidance, challenges, meditation flows, reports, and educational content.</li>
+            <li>Built and maintained a <b>scalable design system</b> across mobile and web.</li>
+            <li>Collaborated daily with developers via GitHub and AI-assisted design-to-code workflows to accelerate delivery.</li>
+            <li>Partnered with founders and healthcare experts to translate complex medical information into clear, accessible experiences.</li>
+          </ul>
+          <div class="takeaway"><b>Growth:</b> Working on Harmoni® shifted my approach from designing interfaces to designing products — combining UX research, analytics, AI capabilities, and wearable health data to shape personalized digital health experiences that deliver measurable business value.</div>
+        </div>
+      </div>
+
+      <!-- REMEDY -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">Remedy Product Studio</div>
+            <div class="company-role">UI/UX Designer</div>
+          </div>
+          <div class="date">Jan 2022 – Nov 2024</div>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">Between Health</div>
+            <div class="pdate">Sep 2024 – Oct 2024</div>
+          </div>
+          <div class="desc">Platform connecting expecting and postpartum mothers with doulas to create a positive birth experience.</div>
+          <div class="tech"><span class="t">Figma</span></div>
+          <ul class="pts">
+            <li>Designed intuitive experiences for both mothers and doulas, improving communication and profile management.</li>
+            <li>Created a comprehensive component library for consistency and scalability.</li>
+            <li>Delivered production-ready designs in close collaboration with developers.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">ThePause</div>
+            <div class="pdate">May 2024 – Oct 2024</div>
+          </div>
+          <div class="desc">AI-powered menopause companion app helping women identify their menopause stage and build daily health routines through community and self-care.</div>
+          <div class="tech"><span class="t">Figma</span><span class="t">Lottie</span><span class="t">AI Image Gen</span></div>
+          <ul class="pts">
+            <li>Designed a highly responsive UI for an optimal experience across devices.</li>
+            <li>Collaborated with a medical expert to streamline the medical data collection algorithm, improving accuracy.</li>
+            <li>Interactive prototypes boosted user satisfaction and improved task accuracy by <b>30%</b>.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">She Matters</div>
+            <div class="pdate">Jan 2024 – Sep 2024</div>
+          </div>
+          <div class="desc">Mobile app supporting Black pregnant women with preeclampsia — providing emergency assistance and fostering community.</div>
+          <div class="tech"><span class="t">Figma</span><span class="t">Lottie</span><span class="t">AI Image Gen</span></div>
+          <ul class="pts">
+            <li>Ran the full design process from concept to testing, informed by user research.</li>
+            <li>Built a consistent design system for seamless development, including <b>smartwatch components</b>.</li>
+            <li>Presented prototypes to stakeholders and implemented feedback.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">Remedy Design System 2.0</div>
+            <div class="pdate">Dec 2023 – Mar 2024</div>
+          </div>
+          <div class="desc">Corporate design system with a shared, customizable component set for designers and developers, expanding with each new project.</div>
+          <div class="tech"><span class="t">Figma</span></div>
+          <ul class="pts">
+            <li>Established a process for adding and synchronizing components with development.</li>
+            <li>Built a well-organized Figma file with fully documented, responsive components.</li>
+            <li>Reduced front-end development time by <b>35–45%</b> through reusable components.</li>
+            <li>Improved cross-team communication, onboarding, usability, and accessibility.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <div class="project-name">Caraway Health</div>
+            <div class="pdate">Oct 2022 – Dec 2023</div>
+          </div>
+          <div class="desc">Mobile and web app delivering accessible, friendly healthcare to young women.</div>
+          <div class="tech"><span class="t">Figma</span></div>
+          <ul class="pts">
+            <li>Developed simple, effective user flows with a highly responsive UI across devices.</li>
+            <li>Designed <b>emergency-case interactions</b> with intuitive, stress-free flows.</li>
+            <li>Made adding health measures easy, with immediate results and recommendations.</li>
+          </ul>
+          <div class="takeaway"><b>Growth:</b> At Remedy I deepened user-centered healthcare design — accessibility, complex data visualization, HIPAA compliance and privacy, and interaction design for critical, high-stakes use cases — while coordinating across large teams with comprehensive documentation and handoff.</div>
+        </div>
+      </div>
+
+      <!-- SEVEN -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">Seven</div>
+            <div class="company-role">Figma Engineer</div>
+          </div>
+          <div class="date">2021 · 6 mo</div>
+        </div>
+        <div class="desc" style="margin-left:0;">SaaS for organizing the work of doctors and medical consultants inside a medical-system Figma file.</div>
+        <ul class="pts">
+          <li>Cleaned up and structured design files to company standards.</li>
+          <li>Prepared component stages and clickable prototypes for demonstration.</li>
+          <li>Maintained design styles and design-system consistency.</li>
+        </ul>
+      </div>
+
+      <!-- FREELANCE -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">Freelance</div>
+            <div class="company-role">Site Design &amp; Development</div>
+          </div>
+          <div class="date">2021 · 1 yr</div>
+        </div>
+        <div class="desc" style="margin-left:0;">Built varied website types with low-code builders — WordPress, Tilda, Wix, Webflow, and more.</div>
+        <ul class="pts">
+          <li>Gathered requirements, ran research, and created designs end-to-end.</li>
+          <li>Built sites and connected them to Google Analytics.</li>
+          <li>Made quick, creative decisions to find the best solution within deadlines.</li>
+        </ul>
+      </div>
+
+      <!-- 24EASTYARD -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">24Eastyard</div>
+            <div class="company-role">Project Manager &amp; UX Designer</div>
+          </div>
+          <div class="date">2019 – 2020 · 1 yr</div>
+        </div>
+        <div class="project">
+          <div class="project-head"><div class="project-name">Spark (ex-Valetna) — UAE</div></div>
+          <div class="desc">Smart parking for large Dubai business centers: client mobile apps (Android &amp; iOS), supervisor web app, website, and CRM/CMS — simplifying parking for clients and workers.</div>
+        </div>
+        <div class="project">
+          <div class="project-head"><div class="project-name">Mraity — Egypt &amp; Jordan</div></div>
+          <div class="desc">On-demand beauty platform: client and stylist mobile apps plus CRM/SMS, creating an easy business and payment flow.</div>
+        </div>
+        <ul class="pts">
+          <li>Owned UX design — site maps, user flows, prototypes, wireframes, and client presentation briefs.</li>
+          <li>Managed projects and communication with clients and users, including plans and estimations.</li>
+        </ul>
+      </div>
+
+      <!-- BUSINESS ANALYST -->
+      <div class="company">
+        <div class="company-head">
+          <div>
+            <div class="company-name">Various Companies</div>
+            <div class="company-role">Business Analyst</div>
+          </div>
+          <div class="date">2010 – 2020 · 10 yr</div>
+        </div>
+        <div class="desc" style="margin-left:0;">Analyzed business needs and processes; organized workflows and customized accounting and office software. Built strong analytical thinking and fluency working with large volumes of data and resources.</div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Education &amp; Certifications</h2>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">UI/UX Design</div>
+          <div class="edu-sub">Studying &amp; practicing</div>
+        </div>
+        <div class="date">2021 · Beetroot Academy</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">Project Management, Agile, Project Documentation</div>
+          <div class="edu-sub">FreeCodeCamp</div>
+        </div>
+        <div class="date">2017</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">HTML, CSS, Java</div>
+          <div class="edu-sub">FreeCodeCamp — online</div>
+        </div>
+        <div class="date">2017</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">MA in Economics</div>
+          <div class="edu-sub">Vasyl Stefanyk Precarpathian (Fedkovych) National University — Accounting &amp; Business</div>
+        </div>
+        <div class="date">2003</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
