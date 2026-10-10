@@ -189,9 +189,10 @@ nav{align-items:center;gap:24px;flex-wrap:wrap;justify-content:flex-end}
 .article-cover{aspect-ratio:4/3;height:auto;object-fit:cover;background:var(--surface-2)}
 .insight-carousel-card{gap:0}
 .carousel-preview{display:grid;gap:12px;width:100%;margin:0 0 18px;padding:0;border:0;background:transparent;color:var(--ink);text-align:left}
-.carousel-preview span{justify-self:start;color:var(--accent);border-bottom:1px solid currentColor;font-size:14px}
-.carousel-preview:hover span{color:var(--accent-strong)}
-.carousel-preview .carousel-cover{aspect-ratio:4/5;object-fit:contain;border:1px solid var(--line);box-shadow:0 16px 34px var(--shadow);margin:0}
+.carousel-preview span{justify-self:start;color:var(--accent);border-bottom:1px solid currentColor;font-size:14px;transition:color .2s ease,transform .2s ease}
+.carousel-preview:hover span,.carousel-preview:focus-visible span{color:var(--accent-strong);transform:translateX(4px)}
+.carousel-preview .carousel-cover{aspect-ratio:4/5;object-fit:contain;border:1px solid var(--line);box-shadow:0 16px 34px var(--shadow);margin:0;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.carousel-preview:hover .carousel-cover,.carousel-preview:focus-visible .carousel-cover{border-color:var(--accent);box-shadow:0 22px 46px color-mix(in srgb,var(--accent) 22%,transparent);transform:translateY(-4px) scale(1.01)}
 .placeholder-cover{display:grid;place-items:center;border-radius:12px;margin-bottom:24px;background:linear-gradient(135deg,var(--accent),var(--accent-strong));color:var(--on-accent);font-size:42px;font-weight:800}
 .ux-card h3{font-size:24px;color:var(--ink);max-width:none}
 .ux-card p{margin-bottom:24px}
@@ -209,3 +210,4 @@ footer{color:var(--muted)}
 @media(max-width:650px){header{gap:16px}.brand-name{font-size:16px}.brand-mark{width:36px;height:36px}.header-actions{width:100%;align-items:stretch}nav{gap:14px;justify-content:flex-start}.theme-toggle{position:absolute;right:22px;top:26px}.hero-refined{padding-top:46px}.hero-refined h1{font-size:42px;line-height:1.08}.hero-actions .button{width:100%;justify-content:center}.hero-accent{display:none}.marquee{mask-image:none}.featured-grid,.insight-grid,.capability-grid{grid-template-columns:1fr}.about{display:block}.process{margin-top:26px}.section-head{display:block}.filter-row{justify-content:flex-start;margin-top:18px}.ux-card h3{font-size:22px}}
 @media(prefers-reduced-motion:reduce){.marquee{display:block;white-space:normal;mask-image:none}.marquee-track{animation:none!important;display:flex;flex-wrap:wrap;gap:10px;min-width:0;padding:0}.marquee-track[aria-hidden="true"]{display:none}.marquee-separator{padding:0 2px}.marquee-toggle{display:none}}
 @media(prefers-reduced-motion:reduce){.hero-refined .hero-copy,.hero-accent,.marquee-section,.section-head,.featured-card,.ux-card,.capability-grid article,.process,.tool-row,.contact-modal__panel,.insight-modal__panel{animation:none!important;filter:none!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){.carousel-preview span,.carousel-preview .carousel-cover{transition:none!important;transform:none!important}}
