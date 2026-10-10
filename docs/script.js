@@ -64,3 +64,76 @@ if (carousel) {
  update();
 }
 document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+
+const contactLinks = [...document.querySelectorAll('a[href="contact.html"]')];
+if (contactLinks.length) {
+  let previousFocus;
+  const modal = document.createElement('div');
+  modal.className = 'contact-modal';
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="contact-modal__backdrop" data-contact-close></div>
+    <section class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" tabindex="-1">
+      <button class="contact-modal__close" type="button" data-contact-close aria-label="Close contact dialog">×</button>
+      <img class="contact-modal__portrait" src="images/olesya-portrait.png" width="1254" height="1254" alt="Olesya Levytska">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2 id="contact-modal-title">Olesya Levytska</h2>
+      <p class="contact-role">Senior Product Designer · UI/UX</p>
+      <p class="contact-statement">Designing smarter products.<br>From insight to impact.</p>
+      <div class="contact-modal__actions">
+        <a class="button" href="mailto:olesyalevytskaua@gmail.com">Email me ↗</a>
+        <a class="text-link" href="https://www.linkedin.com/in/olesya-levytska-321363193/">LinkedIn ↗</a>
+      </div>
+      <p class="contact-email"><a href="mailto:olesyalevytskaua@gmail.com">olesyalevytskaua@gmail.com</a></p>
+      <p>Kyiv, Ukraine · Remote · Open to relocation</p>
+    </section>`;
+  document.body.append(modal);
+
+  const panel = modal.querySelector('.contact-modal__panel');
+  const closeButtons = modal.querySelectorAll('[data-contact-close]');
+  const focusableSelector = 'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  const focusable = () => [...modal.querySelectorAll(focusableSelector)].filter(el => el.offsetParent !== null);
+
+  const closeContactModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', handleModalKeydown);
+    previousFocus?.focus?.();
+  };
+
+  function handleModalKeydown(event) {
+    if (event.key === 'Escape') {
+      closeContactModal();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const items = focusable();
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (!first || !last) return;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  const openContactModal = () => {
+    previousFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    document.addEventListener('keydown', handleModalKeydown);
+    requestAnimationFrame(() => (focusable()[0] || panel).focus());
+  };
+
+  contactLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openContactModal();
+    });
+  });
+  closeButtons.forEach(button => button.addEventListener('click', closeContactModal));
+}
