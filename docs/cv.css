@@ -157,3 +157,18 @@
 .resume .contact a,.resume .contact span{font-size:12px}
 @media(max-width:720px){.resume .page{display:flex;flex-direction:column}.resume .main{display:contents}.resume .cv-heading{order:0;padding:24px 24px 0;margin-bottom:0}.resume .summary{order:1;padding:20px 24px;margin-bottom:0}.resume .side{order:2;padding:24px}.resume .main>section:not(.summary){order:3;padding:24px;margin-bottom:0}.resume .side .name,.resume .side .role{display:none}.resume .cv-portrait{width:80px;height:80px}.resume .company-head,.resume .project-head{align-items:flex-start}}
 @media print{.resume .page{display:block;border:0;box-shadow:none}.resume .side .name,.resume .side .role{display:block}.resume .main{display:block}.resume .main>section,.resume .summary,.resume .side,.resume .cv-heading{padding:12px 0}.resume .side h2{margin-top:12px}.resume .cv-heading{break-after:avoid}}
+
+:root[data-theme="dark"] .resume{
+    --ink:#f7f2ea;
+    --muted:#c9c0d3;
+    --faint:#afa5bd;
+    --accent:#b7a2ff;
+    --accent-soft:#302a3b;
+    --line:#403849;
+    --sidebar:#25212d;
+    --chip:#302a3b;
+    --page:#211e28;
+    background:transparent;
+  }
+:root[data-theme="dark"] .resume .page{background:var(--page);border-color:var(--line);box-shadow:0 10px 35px #00000040}
+:root[data-theme="dark"] .resume .side{background:var(--sidebar)}
