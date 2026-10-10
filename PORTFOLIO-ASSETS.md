@@ -1,12 +1,45 @@
-# Portfolio source assets
+# Portfolio sources and maintenance
 
-Owner-provided images are stored in docs/images/:
-- olesya-banner.png — Home banner and social preview.
-- olesya-portrait.png — Home, Contact and website CV portrait.
-- ux-button-contrast-09.png — original cover for UX, Explained Simply #9.
+## Pages
+The portfolio has Home, Work, a native HTML CV, Contact, and nine standalone case-study pages in docs/. Each case page has a readable text overview and the original Figma visual story. Case images use a picture element to select the mobile export at 600px or below.
 
-These are original PNG uploads. They have not been resized or recompressed. Secondary images use native lazy loading; declared image dimensions reserve layout space. The #9 card currently links to the owner's profile until the direct post URL is provided.
+Case studies: Harmoni, VesselHaven, Vaults1, Remedy Design System 2.0, She Matters, Caraway Health, Between Health, Breakthrough Therapy, and ThePause.
 
-The supplied PDF exports of the Figma case studies, CV layouts and contact variants have not yet been read or incorporated. Local command and JavaScript runtimes fail during sandbox initialization. Do not treat this change as completion of the full Figma portfolio implementation.
+## Image mapping
+- docs/images/cases/between-desktop.png — 1200 × 6372 px; source: Between.png
+- docs/images/cases/between-mobile.png — 375 × 5984 px; source: Between-1.png
+- docs/images/cases/breakthrough-desktop.png — 1200 × 5036 px; source: Breakthrough therapy.png
+- docs/images/cases/breakthrough-mobile.png — 375 × 6292 px; source: Breakthrough therapy-1.png
+- docs/images/cases/caraway-desktop.png — 1200 × 5191 px; source: Caraway Desctop.png
+- docs/images/cases/caraway-mobile.png — 375 × 5497 px; source: Caraway Mobile.png
+- docs/images/cases/design-system-desktop.png — 1200 × 12806 px; source: Design system.png
+- docs/images/cases/design-system-mobile.png — 375 × 7237 px; source: Design system-1.png
+- docs/images/cases/harmoni-desktop.png — 1200 × 9068 px; source: Harmoni.png
+- docs/images/cases/harmoni-mobile.png — 375 × 18535 px; source: Harmoni mobile.png
+- docs/images/cases/she-matters-desktop.png — 1200 × 8240 px; source: She matters.png
+- docs/images/cases/she-matters-mobile.png — 375 × 8615 px; source: She matters-1.png
+- docs/images/cases/the-pause-desktop.png — 1200 × 8477 px; source: The pause-1.png
+- docs/images/cases/the-pause-mobile.png — 375 × 6734 px; source: The pause.png
+- docs/images/cases/vaults-desktop.png — 1200 × 5067 px; source: Vaults Desctop.png
+- docs/images/cases/vaults-mobile.png — 375 × 7535 px; source: Vaults Mobile.png
+- docs/images/cases/vesselhaven-desktop.png — 1200 × 8035 px; source: VesselHaven.png
+- docs/images/cases/vesselhaven-mobile.png — 375 × 13590 px; source: VesselHaven mobile.png
 
-Source checks cover asset references, metadata JSON, JavaScript syntax and excluded project name. Visual layout and print previews remain unverified.
+Additional originals: docs/images/olesya-banner.png, docs/images/olesya-portrait.png, docs/images/ux-button-contrast-09.png.
+
+The desktop and mobile contact exports and CV exports serve as layout references. Contact and CV are implemented as native HTML with functional links and selectable text. No screenshot-only contact form is used; the email button opens the visitor's mail application.
+
+## Content
+Profile text and the six highlighted tools come from the owner's supplied LinkedIn About section. The CV preserves the broader skills, tools, and career history in the original repository CV. Case summaries are grounded in the owner's Figma exports and original CV. The original root CV and README are retained.
+
+The #9 UX card links to the owner's profile until its direct post URL is supplied. #4 and #8 use their public post links. Automatic LinkedIn syncing is not configured.
+
+## Publishing
+Merge PR #2 into main. Keep GitHub Pages source set to main and /docs. Static relative links work under the repository URL. The sitemap lists all 13 pages.
+
+## Validation and limits
+Checks cover asset references, internal links and anchors, one main landmark per page, HTML tag balance, JSON-LD syntax, script syntax, mobile image selection, and the excluded project name.
+
+Case PNG originals total approximately 42 MB; only the appropriate desktop/mobile source is selected on each case page. Secondary images and galleries use lazy loading. The images have not yet been converted to smaller WebP files or generated as separate thumbnails. This remains a performance improvement for a working image-processing environment.
+
+Local command and browser runtimes continue to fail during sandbox initialization. Visual browser QA, print preview, and image optimization could not be performed. No successful browser test is claimed.

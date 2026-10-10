@@ -50,3 +50,43 @@ img{max-width:100%}
 .ux-card-with-image h3{font-size:26px}
 @media(max-width:900px){.contact-intro{grid-template-columns:140px minmax(0,1fr);gap:24px}.contact-portrait{width:140px;height:140px}}
 @media(max-width:600px){.portfolio-banner{margin-top:24px;border-radius:12px}.contact-intro{display:block}.contact-portrait{width:120px;height:120px;margin-bottom:28px}.about-portrait{width:150px;height:150px}.contact-intro h1{font-size:40px}.ux-card-with-image h3{font-size:25px}}
+
+/* Original Figma case studies */
+.case-cover{aspect-ratio:16/10;overflow:hidden;background:#f1edfa;border-radius:16px;border:1px solid var(--line)}
+.case-cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.real-work-card:first-child .case-cover{aspect-ratio:21/9}
+.all-work .work-card:first-child{grid-column:auto}
+.all-work .work-card:first-child .case-cover{aspect-ratio:16/10}
+.case-link{display:inline-block;margin-top:12px;font-size:13px;color:var(--accent);border-bottom:1px solid currentColor}
+.real-work-card:hover .case-link{color:#3d2296}
+.case-intro{padding:50px 0 45px;max-width:960px}
+.case-intro>.eyebrow{margin-top:34px}
+.case-intro h1{font-size:clamp(38px,6vw,72px);overflow-wrap:anywhere}
+.case-intro>p{max-width:760px}
+.case-lead{font-size:24px;color:var(--ink);font-weight:550}
+.case-facts{display:flex;flex-wrap:wrap;gap:28px;margin:28px 0}
+.case-facts div{max-width:350px}
+.case-facts dt{text-transform:uppercase;font-size:11px;letter-spacing:1px;color:var(--accent);margin-bottom:6px}
+.case-facts dd{margin:0;font-size:14px;color:var(--muted)}
+.button-outline{margin-top:20px;background:transparent;color:var(--accent);border:1px solid var(--accent);box-shadow:none}
+.button-outline:hover{color:white}
+.process-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.process-grid article{padding:26px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.step-number{font-size:32px;font-weight:700;color:#8471b2}
+.process-grid h3{font-size:22px;margin-top:14px}
+.process-grid p{margin-bottom:0;font-size:15px}
+.full-case figure{margin:0}
+.full-case picture,.full-case img{display:block;width:100%;height:auto}
+.full-case img{border:1px solid var(--line);border-radius:6px;background:#fff}
+.full-case figcaption{padding:20px 0;font-size:12px;color:var(--muted)}
+.full-case figcaption a{display:inline-block;font-size:12px;margin:8px 12px 0 0}
+.contact-profile{display:grid;grid-template-columns:minmax(180px,320px) minmax(0,1fr);gap:54px;padding:50px;margin-bottom:90px;background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 55px #5631c710;align-items:center}
+.contact-profile>img{display:block;width:100%;height:auto;object-fit:contain;border-radius:50%}
+.contact-profile h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:8px}
+.contact-role{font-size:16px}
+.contact-statement{font-size:clamp(26px,3.4vw,42px);font-weight:700;line-height:1.25;color:var(--ink);letter-spacing:-1px;margin:30px 0}
+.contact-actions{display:flex;align-items:center;flex-wrap:wrap;gap:28px}
+.contact-email{margin-top:24px;overflow-wrap:anywhere;font-size:14px}
+@media(max-width:900px){.contact-profile{padding:32px;gap:30px;grid-template-columns:180px minmax(0,1fr)}}
+@media(max-width:600px){.real-work-card:first-child .case-cover{aspect-ratio:16/10}.case-intro{padding-top:35px}.case-lead{font-size:20px}.process-grid{grid-template-columns:1fr}.process-grid article{padding:22px}.contact-profile{grid-template-columns:1fr;padding:26px;gap:24px}.contact-profile>img{max-width:160px}.contact-statement{font-size:30px}.contact-profile h2{font-size:28px}.full-case img{border-radius:0}}
+@media print{.case-intro,.case-summary{break-inside:auto}.full-case,.case-next,.portfolio-banner{display:none}}
