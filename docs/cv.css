@@ -1,11 +1,11 @@
 .resume{
     --ink:#1c2230;
     --muted:#5b6472;
-    --faint:#8a92a0;
-    --accent:#3f6cff;
-    --accent-soft:#eaf0ff;
+    --faint:#625d73;
+    --accent:#5631c7;
+    --accent-soft:#eee8ff;
     --line:#e5e8ef;
-    --sidebar:#f6f8fc;
+    --sidebar:#f4f0ff;
     --chip:#eef1f7;
     --page:#ffffff;
   }.resume *{box-sizing:border-box;margin:0;padding:0;}.resume{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.resume{
@@ -131,3 +131,29 @@
   }
   @media (max-width:720px){.resume .page{grid-template-columns:1fr;}.resume .side{border-right:none;border-bottom:1px solid var(--line);}
   }
+
+.resume{background:transparent}
+.resume .page{max-width:1100px;border:1px solid #ded8ef;border-radius:16px;overflow:hidden}
+.resume .project{display:block;border-bottom:0;scroll-margin-top:0}
+.resume .main{min-width:0}
+.resume .chip{white-space:normal}
+.resume .company-head,.resume .project-head,.resume .edu-item{flex-wrap:wrap}
+.resume .contact a{overflow-wrap:anywhere}
+@media print{.resume .page{display:block;border:0;border-radius:0;overflow:visible}.resume .side{border-right:0;padding:12px 0}.resume .main{padding:16px 0}.resume .project{break-inside:auto}.resume .project-head,.resume h2,.resume .company-head{break-after:avoid}.resume p,.resume li{orphans:3;widows:3}}
+
+.resume .cv-portrait{display:block;width:112px;height:112px;margin:0 0 20px;border-radius:50%;object-fit:contain}
+@media print{.resume .cv-portrait{width:72px;height:72px;margin-bottom:12px}}
+
+/* Native CV layout based on the supplied desktop and mobile references */
+.resume .page{grid-template-columns:310px minmax(0,1fr);background:#fff;border-radius:12px;box-shadow:0 10px 35px #25134212}
+.resume .side{background:#f6f7fc}
+.resume .cv-heading{margin-bottom:26px}
+.resume .cv-heading h2{font-size:22px;text-transform:none;letter-spacing:-.5px;color:var(--ink);margin-bottom:4px}
+.resume .cv-heading h2:after{display:none}
+.resume .cv-heading p{font-size:12px;color:var(--accent);font-weight:600}
+.resume .main h2{letter-spacing:1.4px}
+.resume .main>section{min-width:0}
+.resume .main .project{display:block}
+.resume .contact a,.resume .contact span{font-size:12px}
+@media(max-width:720px){.resume .page{display:flex;flex-direction:column}.resume .main{display:contents}.resume .cv-heading{order:0;padding:24px 24px 0;margin-bottom:0}.resume .summary{order:1;padding:20px 24px;margin-bottom:0}.resume .side{order:2;padding:24px}.resume .main>section:not(.summary){order:3;padding:24px;margin-bottom:0}.resume .side .name,.resume .side .role{display:none}.resume .cv-portrait{width:80px;height:80px}.resume .company-head,.resume .project-head{align-items:flex-start}}
+@media print{.resume .page{display:block;border:0;box-shadow:none}.resume .side .name,.resume .side .role{display:block}.resume .main{display:block}.resume .main>section,.resume .summary,.resume .side,.resume .cv-heading{padding:12px 0}.resume .side h2{margin-top:12px}.resume .cv-heading{break-after:avoid}}
