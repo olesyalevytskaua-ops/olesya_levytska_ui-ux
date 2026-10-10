@@ -65,6 +65,116 @@ if (carousel) {
 }
 document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 
+const insightCarouselTriggers = [...document.querySelectorAll('[data-insight-carousel]')];
+if (insightCarouselTriggers.length) {
+  let previousCarouselFocus;
+  let activeCarouselIndex = 0;
+  const modal = document.createElement('div');
+  modal.className = 'insight-modal';
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="insight-modal__backdrop" data-insight-close></div>
+    <section class="insight-modal__panel" role="dialog" aria-modal="true" aria-labelledby="insight-modal-title" tabindex="-1">
+      <div class="insight-modal__top">
+        <div>
+          <p class="eyebrow">UX, EXPLAINED SIMPLY</p>
+          <h2 id="insight-modal-title">Carousel</h2>
+        </div>
+        <button class="insight-modal__close" type="button" data-insight-close aria-label="Close carousel">×</button>
+      </div>
+      <div class="insight-modal__stage">
+        <button class="insight-modal__nav" type="button" data-insight-prev aria-label="Previous slide">‹</button>
+        <div class="insight-modal__track" tabindex="0" aria-label="Carousel slides"></div>
+        <button class="insight-modal__nav" type="button" data-insight-next aria-label="Next slide">›</button>
+      </div>
+      <div class="insight-modal__footer">
+        <span class="insight-modal__status" aria-live="polite">1 / 1</span>
+        <a class="text-link" data-insight-link href="https://www.linkedin.com/in/olesya-levytska-321363193/">View LinkedIn profile ↗</a>
+      </div>
+    </section>`;
+  document.body.append(modal);
+
+  const panel = modal.querySelector('.insight-modal__panel');
+  const title = modal.querySelector('#insight-modal-title');
+  const track = modal.querySelector('.insight-modal__track');
+  const status = modal.querySelector('.insight-modal__status');
+  const linkedIn = modal.querySelector('[data-insight-link]');
+  const closeButtons = modal.querySelectorAll('[data-insight-close]');
+  const previous = modal.querySelector('[data-insight-prev]');
+  const next = modal.querySelector('[data-insight-next]');
+  const focusableSelector = 'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  const focusable = () => [...modal.querySelectorAll(focusableSelector)].filter(el => el.offsetParent !== null);
+
+  const updateCarousel = () => {
+    const slides = [...track.children];
+    const current = slides.reduce((best, slide, index) => Math.abs(slide.offsetLeft - track.scrollLeft) < Math.abs(slides[best].offsetLeft - track.scrollLeft) ? index : best, 0);
+    activeCarouselIndex = current;
+    status.textContent = `${current + 1} / ${slides.length}`;
+    previous.disabled = current === 0;
+    next.disabled = current === slides.length - 1;
+  };
+
+  const moveCarousel = direction => {
+    const slides = [...track.children];
+    const nextIndex = Math.min(Math.max(activeCarouselIndex + direction, 0), slides.length - 1);
+    slides[nextIndex]?.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest', inline: 'center'});
+  };
+
+  const closeInsightCarousel = () => {
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', handleCarouselKeydown);
+    previousCarouselFocus?.focus?.();
+  };
+
+  function handleCarouselKeydown(event) {
+    if (event.key === 'Escape') {
+      closeInsightCarousel();
+      return;
+    }
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveCarousel(event.key === 'ArrowRight' ? 1 : -1);
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const items = focusable();
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (!first || !last) return;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  const openInsightCarousel = trigger => {
+    const slides = trigger.dataset.carouselSlides.split(',').map(src => src.trim()).filter(Boolean);
+    previousCarouselFocus = document.activeElement;
+    title.textContent = trigger.dataset.carouselTitle || 'Carousel';
+    linkedIn.href = trigger.dataset.carouselLink || linkedIn.href;
+    track.innerHTML = slides.map((src, index) => `<figure class="insight-modal__slide"><img src="${src}" width="1080" height="1350" alt="${title.textContent} slide ${index + 1}"></figure>`).join('');
+    activeCarouselIndex = 0;
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    document.addEventListener('keydown', handleCarouselKeydown);
+    requestAnimationFrame(() => {
+      track.scrollLeft = 0;
+      updateCarousel();
+      panel.focus();
+    });
+  };
+
+  insightCarouselTriggers.forEach(trigger => trigger.addEventListener('click', () => openInsightCarousel(trigger)));
+  closeButtons.forEach(button => button.addEventListener('click', closeInsightCarousel));
+  previous.addEventListener('click', () => moveCarousel(-1));
+  next.addEventListener('click', () => moveCarousel(1));
+  track.addEventListener('scroll', updateCarousel, {passive: true});
+}
+
 const contactLinks = [...document.querySelectorAll('a[href="contact.html"]')];
 if (contactLinks.length) {
   let previousFocus;
