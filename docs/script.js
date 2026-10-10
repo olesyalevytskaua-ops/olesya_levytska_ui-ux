@@ -24,13 +24,15 @@ themeToggle?.addEventListener('click', () => {
 
 const marquee = document.querySelector('[data-marquee]');
 const marqueeToggle = document.querySelector('[data-marquee-toggle]');
-if (marquee && marqueeToggle) {
+if (marquee) {
   const setPaused = paused => {
     marquee.dataset.paused = String(paused);
-    marqueeToggle.setAttribute('aria-pressed', String(paused));
-    marqueeToggle.textContent = paused ? 'Resume skills line' : 'Pause skills line';
+    if (marqueeToggle) {
+      marqueeToggle.setAttribute('aria-pressed', String(paused));
+      marqueeToggle.textContent = paused ? 'Resume skills line' : 'Pause skills line';
+    }
   };
-  marqueeToggle.addEventListener('click', () => setPaused(marquee.dataset.paused !== 'true'));
+  marqueeToggle?.addEventListener('click', () => setPaused(marquee.dataset.paused !== 'true'));
   marquee.addEventListener('mouseenter', () => marquee.dataset.hover = 'true');
   marquee.addEventListener('mouseleave', () => marquee.dataset.hover = 'false');
   marquee.addEventListener('focusin', () => marquee.dataset.focus = 'true');
