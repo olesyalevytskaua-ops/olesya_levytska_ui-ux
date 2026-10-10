@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/sitemap.xml
