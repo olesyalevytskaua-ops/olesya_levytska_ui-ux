@@ -22,6 +22,45 @@ themeToggle?.addEventListener('click', () => {
   setTheme(next);
 });
 
+const headerActions = document.querySelector('.header-actions');
+const mainNav = document.querySelector('header nav');
+if (headerActions && mainNav) {
+  const mobileContact = document.createElement('a');
+  mobileContact.className = 'mobile-contact button';
+  mobileContact.href = 'contact.html';
+  mobileContact.textContent = 'Contact';
+
+  const menuToggle = document.createElement('button');
+  menuToggle.className = 'menu-toggle';
+  menuToggle.type = 'button';
+  menuToggle.setAttribute('aria-label', 'Open navigation menu');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.innerHTML = '<span></span><span></span><span></span>';
+
+  headerActions.prepend(mobileContact);
+  headerActions.append(menuToggle);
+
+  const setMenuOpen = open => {
+    document.body.classList.toggle('menu-open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  };
+
+  menuToggle.addEventListener('click', () => setMenuOpen(!document.body.classList.contains('menu-open')));
+  mobileContact.addEventListener('click', () => setMenuOpen(false));
+  mainNav.addEventListener('click', event => {
+    if (event.target.closest('a')) setMenuOpen(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') setMenuOpen(false);
+  });
+  document.addEventListener('click', event => {
+    if (!document.body.classList.contains('menu-open')) return;
+    if (event.target.closest('header')) return;
+    setMenuOpen(false);
+  });
+}
+
 const marquee = document.querySelector('[data-marquee]');
 const marqueeToggle = document.querySelector('[data-marquee-toggle]');
 if (marquee) {
