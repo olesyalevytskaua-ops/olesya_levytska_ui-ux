@@ -34,3 +34,19 @@ em{font-family:inherit;font-style:normal;font-weight:inherit}
 .contact-card[href]:hover{background:#eee8ff}
 @media(max-width:900px){.about{grid-template-columns:1fr 2fr}.process{grid-column:2}.hero .orbit{display:block}}
 @media(max-width:600px){.hero h1{font-size:42px;letter-spacing:-1.8px}.hero{padding-top:48px}.ux-card{flex-basis:88%}.process{margin-top:30px}.skill-list{gap:8px}.skill-list li{font-size:12px;padding:8px 12px}}
+
+/* Owner-supplied portfolio images */
+img{max-width:100%}
+.portfolio-banner{margin:32px 0 0;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#eee9ff}
+.portfolio-banner img{display:block;width:100%;height:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.about-portrait{display:block;width:180px;height:180px;object-fit:contain;margin:0 0 28px;border-radius:50%}
+.contact-intro{display:grid;grid-template-columns:180px minmax(0,1fr);gap:40px;align-items:center;max-width:none}
+.contact-intro>div>p:not(.eyebrow){max-width:650px;font-size:18px}
+.contact-portrait{width:180px;height:180px;object-fit:contain;border-radius:50%}
+.contact-intro h1{font-size:clamp(38px,5vw,66px);letter-spacing:-2px}
+.article-cover{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:24px}
+.ux-card-with-image .card-meta{margin-bottom:20px}
+.ux-card-with-image h3{font-size:26px}
+@media(max-width:900px){.contact-intro{grid-template-columns:140px minmax(0,1fr);gap:24px}.contact-portrait{width:140px;height:140px}}
+@media(max-width:600px){.portfolio-banner{margin-top:24px;border-radius:12px}.contact-intro{display:block}.contact-portrait{width:120px;height:120px;margin-bottom:28px}.about-portrait{width:150px;height:150px}.contact-intro h1{font-size:40px}.ux-card-with-image h3{font-size:25px}}

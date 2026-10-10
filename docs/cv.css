@@ -140,3 +140,6 @@
 .resume .company-head,.resume .project-head,.resume .edu-item{flex-wrap:wrap}
 .resume .contact a{overflow-wrap:anywhere}
 @media print{.resume .page{display:block;border:0;border-radius:0;overflow:visible}.resume .side{border-right:0;padding:12px 0}.resume .main{padding:16px 0}.resume .project{break-inside:auto}.resume .project-head,.resume h2,.resume .company-head{break-after:avoid}.resume p,.resume li{orphans:3;widows:3}}
+
+.resume .cv-portrait{display:block;width:112px;height:112px;margin:0 0 20px;border-radius:50%;object-fit:contain}
+@media print{.resume .cv-portrait{width:72px;height:72px;margin-bottom:12px}}
