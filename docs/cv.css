@@ -1,11 +1,11 @@
 .resume{
     --ink:#1c2230;
     --muted:#5b6472;
-    --faint:#8a92a0;
-    --accent:#3f6cff;
-    --accent-soft:#eaf0ff;
+    --faint:#625d73;
+    --accent:#5631c7;
+    --accent-soft:#eee8ff;
     --line:#e5e8ef;
-    --sidebar:#f6f8fc;
+    --sidebar:#f4f0ff;
     --chip:#eef1f7;
     --page:#ffffff;
   }.resume *{box-sizing:border-box;margin:0;padding:0;}.resume{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.resume{
@@ -131,3 +131,12 @@
   }
   @media (max-width:720px){.resume .page{grid-template-columns:1fr;}.resume .side{border-right:none;border-bottom:1px solid var(--line);}
   }
+
+.resume{background:transparent}
+.resume .page{max-width:1100px;border:1px solid #ded8ef;border-radius:16px;overflow:hidden}
+.resume .project{display:block;border-bottom:0;scroll-margin-top:0}
+.resume .main{min-width:0}
+.resume .chip{white-space:normal}
+.resume .company-head,.resume .project-head,.resume .edu-item{flex-wrap:wrap}
+.resume .contact a{overflow-wrap:anywhere}
+@media print{.resume .page{display:block;border:0;border-radius:0;overflow:visible}.resume .side{border-right:0;padding:12px 0}.resume .main{padding:16px 0}.resume .project{break-inside:auto}.resume .project-head,.resume h2,.resume .company-head{break-after:avoid}.resume p,.resume li{orphans:3;widows:3}}
