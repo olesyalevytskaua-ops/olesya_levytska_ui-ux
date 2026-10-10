@@ -89,7 +89,6 @@ if (insightCarouselTriggers.length) {
       </div>
       <div class="insight-modal__footer">
         <span class="insight-modal__status" aria-live="polite">1 / 1</span>
-        <a class="text-link" data-insight-link href="https://www.linkedin.com/in/olesya-levytska-321363193/">View LinkedIn profile ↗</a>
       </div>
     </section>`;
   document.body.append(modal);
@@ -98,7 +97,6 @@ if (insightCarouselTriggers.length) {
   const title = modal.querySelector('#insight-modal-title');
   const track = modal.querySelector('.insight-modal__track');
   const status = modal.querySelector('.insight-modal__status');
-  const linkedIn = modal.querySelector('[data-insight-link]');
   const closeButtons = modal.querySelectorAll('[data-insight-close]');
   const previous = modal.querySelector('[data-insight-prev]');
   const next = modal.querySelector('[data-insight-next]');
@@ -155,7 +153,6 @@ if (insightCarouselTriggers.length) {
     const slides = trigger.dataset.carouselSlides.split(',').map(src => src.trim()).filter(Boolean);
     previousCarouselFocus = document.activeElement;
     title.textContent = trigger.dataset.carouselTitle || 'Carousel';
-    linkedIn.href = trigger.dataset.carouselLink || linkedIn.href;
     track.innerHTML = slides.map((src, index) => `<figure class="insight-modal__slide"><img src="${src}" width="1080" height="1350" alt="${title.textContent} slide ${index + 1}"></figure>`).join('');
     activeCarouselIndex = 0;
     modal.hidden = false;
