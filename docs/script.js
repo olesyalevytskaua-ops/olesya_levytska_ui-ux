@@ -102,6 +102,9 @@ if (insightCarouselTriggers.length) {
   const next = modal.querySelector('[data-insight-next]');
   const focusableSelector = 'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])';
   const focusable = () => [...modal.querySelectorAll(focusableSelector)].filter(el => el.offsetParent !== null);
+  let dragStartX = 0;
+  let dragStartScroll = 0;
+  let isDraggingCarousel = false;
 
   const updateCarousel = () => {
     const slides = [...track.children];
@@ -153,7 +156,7 @@ if (insightCarouselTriggers.length) {
     const slides = trigger.dataset.carouselSlides.split(',').map(src => src.trim()).filter(Boolean);
     previousCarouselFocus = document.activeElement;
     title.textContent = trigger.dataset.carouselTitle || 'Carousel';
-    track.innerHTML = slides.map((src, index) => `<figure class="insight-modal__slide"><img src="${src}" width="1080" height="1350" alt="${title.textContent} slide ${index + 1}"></figure>`).join('');
+    track.innerHTML = slides.map((src, index) => `<figure class="insight-modal__slide"><img src="${src}" width="1080" height="1350" alt="${title.textContent} slide ${index + 1}" draggable="false"></figure>`).join('');
     activeCarouselIndex = 0;
     modal.hidden = false;
     document.body.classList.add('modal-open');
@@ -170,6 +173,32 @@ if (insightCarouselTriggers.length) {
   previous.addEventListener('click', () => moveCarousel(-1));
   next.addEventListener('click', () => moveCarousel(1));
   track.addEventListener('scroll', updateCarousel, {passive: true});
+  track.addEventListener('pointerdown', event => {
+    if (event.button !== 0) return;
+    isDraggingCarousel = true;
+    dragStartX = event.clientX;
+    dragStartScroll = track.scrollLeft;
+    track.classList.add('is-dragging');
+    track.setPointerCapture(event.pointerId);
+  });
+  track.addEventListener('pointermove', event => {
+    if (!isDraggingCarousel) return;
+    event.preventDefault();
+    track.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
+  });
+  const stopCarouselDrag = event => {
+    if (!isDraggingCarousel) return;
+    isDraggingCarousel = false;
+    track.classList.remove('is-dragging');
+    if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+    updateCarousel();
+  };
+  track.addEventListener('pointerup', stopCarouselDrag);
+  track.addEventListener('pointercancel', stopCarouselDrag);
+  track.addEventListener('mouseleave', () => {
+    isDraggingCarousel = false;
+    track.classList.remove('is-dragging');
+  });
 }
 
 const contactLinks = [...document.querySelectorAll('a[href="contact.html"]')];
