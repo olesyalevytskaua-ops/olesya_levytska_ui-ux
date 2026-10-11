@@ -172,3 +172,14 @@
   }
 :root[data-theme="dark"] .resume .page{background:var(--page);border-color:var(--line);box-shadow:0 10px 35px #00000040}
 :root[data-theme="dark"] .resume .side{background:var(--sidebar)}
+
+/* Paper/PDF always uses the light palette without changing the screen theme. */
+@media print{
+ :root,:root[data-theme="dark"]{color-scheme:light!important;--bg:#fff!important;--surface:#fff!important;--surface-2:#f2edf8!important;--ink:#17151c!important;--muted:#5f5a69!important;--accent:#6f55c8!important;--accent-strong:#4f34aa!important;--on-accent:#fff!important;--line:#ded7e6!important;--chip:#f1edf6!important;--shadow:transparent!important}
+ :root .resume,:root[data-theme="dark"] .resume{--ink:#1c2230!important;--muted:#5b6472!important;--faint:#625d73!important;--accent:#5631c7!important;--accent-soft:#eee8ff!important;--line:#e5e8ef!important;--sidebar:#f6f7fc!important;--chip:#eef1f7!important;--page:#fff!important;background:#fff!important;color:var(--ink)!important}
+ html,body,main{background:#fff!important;color:#1c2230!important}
+ :root .resume .page,:root[data-theme="dark"] .resume .page{background:#fff!important;color:var(--ink)!important;box-shadow:none!important}
+ :root .resume .side,:root[data-theme="dark"] .resume .side{background:#f6f7fc!important;color:var(--ink)!important}
+ :root .resume .main,:root[data-theme="dark"] .resume .main{background:#fff!important;color:var(--ink)!important}
+ :root .resume .chip,:root .resume .t,:root[data-theme="dark"] .resume .chip,:root[data-theme="dark"] .resume .t{background:var(--chip)!important;color:var(--muted)!important}
+}

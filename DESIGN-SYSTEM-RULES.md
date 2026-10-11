@@ -7,3 +7,7 @@ Non-interactive elements must not have hover styling that implies they can be cl
 Reserve interactive hover and focus styling for working links, buttons and other genuine controls. Use semantic elements and keep visible keyboard focus on interactive controls. Decorative icons remain hidden from screen readers when the adjacent text already provides the name.
 
 A paused animation on hover is allowed when it helps people read moving content; it must not visually imply that the content is clickable.
+
+## Print and PDF
+
+CV printing and PDF export always use the light palette with dark text on white paper, regardless of the website theme. Print rules must not change the screen theme or the saved user preference.
