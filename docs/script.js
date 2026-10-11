@@ -14,11 +14,13 @@ const setTheme = theme => {
   }
 };
 
-const savedTheme = localStorage.getItem('theme');
+// Storage can be blocked by privacy settings; navigation must still initialize.
+let savedTheme;
+try { savedTheme = localStorage.getItem('theme'); } catch (_) {}
 setTheme(savedTheme || root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 themeToggle?.addEventListener('click', () => {
   const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('theme', next);
+  try { localStorage.setItem('theme', next); } catch (_) {}
   setTheme(next);
 });
 
@@ -35,12 +37,16 @@ if (headerActions && mainNav) {
   menuToggle.type = 'button';
   menuToggle.setAttribute('aria-label', 'Open navigation menu');
   menuToggle.setAttribute('aria-expanded', 'false');
+  mainNav.id ||= 'main-navigation';
+  menuToggle.setAttribute('aria-controls', mainNav.id);
   menuToggle.innerHTML = '<span></span><span></span><span></span>';
 
   headerActions.prepend(mobileContact);
   headerActions.append(menuToggle);
 
+  const mobileViewport = matchMedia('(max-width: 650px)');
   const setMenuOpen = open => {
+    open = Boolean(open && mobileViewport.matches);
     document.body.classList.toggle('menu-open', open);
     menuToggle.setAttribute('aria-expanded', String(open));
     menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
@@ -52,13 +58,20 @@ if (headerActions && mainNav) {
     if (event.target.closest('a')) setMenuOpen(false);
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') setMenuOpen(false);
+    if (event.key === 'Escape' && document.body.classList.contains('menu-open')) {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
   });
   document.addEventListener('click', event => {
     if (!document.body.classList.contains('menu-open')) return;
     if (event.target.closest('header')) return;
     setMenuOpen(false);
   });
+  document.addEventListener('focusin', event => {
+    if (document.body.classList.contains('menu-open') && !event.target.closest('header')) setMenuOpen(false);
+  });
+  mobileViewport.addEventListener('change', () => setMenuOpen(false));
 }
 
 const marquee = document.querySelector('[data-marquee]');
