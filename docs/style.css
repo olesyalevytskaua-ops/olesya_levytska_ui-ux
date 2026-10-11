@@ -83,8 +83,8 @@ img{max-width:100%;height:auto}
 .vessel-case-hero .vessel-hero-copy h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .vessel-case-hero .vessel-hero-copy .eyebrow{color:#f0a529;margin-bottom:26px}
 .vessel-case-hero .vessel-hero-logo{margin-bottom:28px}
-.vessel-case-hero .case-lead{max-width:430px;margin:0 auto;color:#17284f;font-size:clamp(18px,2vw,22px);font-weight:500;line-height:1.55}
-.vessel-case-hero .vessel-hero-copy p{color:#17284f}
+.vessel-case-hero .case-lead{max-width:430px;margin:0 auto;color:var(--ink);font-size:clamp(18px,2vw,22px);font-weight:500;line-height:1.55}
+.vessel-case-hero .vessel-hero-copy p{color:var(--ink)}
 .role-note{border-left:4px solid #fbcf24;padding:12px 0 12px 18px;margin:22px 0}
 .vessel-case-hero .vessel-hero-devices{align-self:center}
 .vessel-case-hero .vessel-hero-devices img{filter:drop-shadow(0 24px 28px #17324a28);margin:auto}
@@ -124,6 +124,7 @@ img{max-width:100%;height:auto}
 .case-wide-media{margin:34px 0 0}
 :root[data-theme="dark"] .case-chip-list li,:root[data-theme="dark"] .activity-panel{background:var(--surface);color:var(--ink)}
 :root[data-theme="dark"] .case-callout{background:#163244}
+:root[data-theme="dark"] .vessel-case-hero .case-lead,:root[data-theme="dark"] .vessel-case-hero .vessel-hero-copy p{color:#f7f2ea}
 .case-facts{display:flex;flex-wrap:wrap;gap:28px;margin:28px 0}
 .case-facts div{max-width:350px}
 .case-facts dt{text-transform:uppercase;font-size:11px;letter-spacing:1px;color:var(--accent);margin-bottom:6px}
