@@ -16,8 +16,8 @@
 <meta name="theme-color" content="#fbf8f4">
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#fbf8f4')}catch(e){}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261011-dissolve">
-<script src="script.js?v=20261011-dissolve" defer></script>
+<link rel="stylesheet" href="style.css?v=20261011-hero">
+<script src="script.js?v=20261011-hero" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
 </head>
 <body>
@@ -38,13 +38,20 @@
 <main id="main">
 <section class="hero hero-refined" aria-labelledby="hero-title">
 <div class="hero-copy">
-<p class="eyebrow">OLESYA LEVYTSKA / SENIOR PRODUCT &amp; UX/UI DESIGNER</p>
-<h1 id="hero-title">Thoughtful experiences.<br>From first insight to shipped product.</h1>
-<p>I combine research, product analytics, and thoughtful UI design to make complex journeys easier to use. I work closely with teams through design, implementation, and iteration.</p>
-<div class="hero-actions">
-<a class="button" href="#selected-work">View selected work <span aria-hidden="true">↘</span></a>
+<p class="eyebrow hero-entrance" style="--hero-delay:0ms">Senior Product Designer · Healthcare, AI &amp; SaaS</p>
+<h1 id="hero-title" class="hero-entrance" style="--hero-delay:130ms">Complex products.<br>From discovery to delivery.</h1>
+<p class="hero-entrance" style="--hero-delay:260ms">I turn research and product insights into clear, accessible experiences—working with teams to ship, learn, and improve.</p>
+<div class="hero-actions hero-entrance" style="--hero-delay:390ms">
+<a class="button" href="#selected-work">View selected work <span aria-hidden="true">↗</span></a>
 <a class="button button-outline" href="cv.html">View CV</a>
 </div>
+<ul class="hero-expertise" aria-label="Areas of expertise">
+<li class="hero-entrance" style="--hero-delay:520ms"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span>Product &amp; UX</span></li>
+<li class="hero-entrance" style="--hero-delay:580ms"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Research &amp; analytics</span></li>
+<li class="hero-entrance" style="--hero-delay:640ms"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Design systems</span></li>
+<li class="hero-entrance" style="--hero-delay:700ms"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-15-2 16"/></svg><span>Design to delivery</span></li>
+</ul>
+<a class="hero-scroll-cue hero-entrance" style="--hero-delay:650ms" href="#selected-work">Explore selected work <span class="hero-scroll-arrow" aria-hidden="true">↓</span></a>
 </div>
 </section>
 <section class="section selected-work" id="selected-work">
@@ -88,6 +95,6 @@
 </div>
 </section>
 </main>
-<footer><a class="brand" href="./"><span class="brand-name">Olesya Levytska</span></a><p>Thoughtful experiences from insight to shipped product.</p><a href="mailto:olesyalevytskaua@gmail.com">Let’s talk ↗</a><small>© 2026 Olesya Levytska</small></footer>
+<footer><a class="brand" href="./"><span class="brand-name">Olesya Levytska</span></a><p>Thoughtful experiences from insight to shipped product.</p><a class="text-link footer-contact" href="mailto:olesyalevytskaua@gmail.com">Let’s talk <span class="link-arrow" aria-hidden="true">↗</span></a><small>© 2026 Olesya Levytska</small></footer>
 </body>
 </html>

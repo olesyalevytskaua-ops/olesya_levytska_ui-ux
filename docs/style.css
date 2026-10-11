@@ -301,3 +301,41 @@ header{z-index:50}
 }
 @media(prefers-reduced-motion:reduce){.motion-pending,.motion-enter{opacity:1!important;filter:none!important;animation:none!important}}
 @media print{.motion-pending,.motion-enter{opacity:1!important;filter:none!important;animation:none!important}}
+
+/* Homepage hero: open expertise, natural height, and a single entrance sequence. */
+.hero-refined{padding:clamp(24px,2.5vw,36px) 0 clamp(10px,1vw,14px);overflow:visible}
+.hero-refined .hero-copy{min-width:0;animation:none}
+.hero-refined .eyebrow{color:var(--muted);font-size:12px;letter-spacing:1px;margin-bottom:16px}
+.hero-refined h1{font-size:clamp(34px,4.9vw,64px);line-height:1.08;letter-spacing:-1.5px;max-width:940px;margin-bottom:18px;color:var(--ink);overflow-wrap:break-word}
+.hero-refined .hero-copy>p:not(.eyebrow){font-size:clamp(17px,1.5vw,19px);line-height:1.6;max-width:720px;margin-bottom:0}
+.hero-refined .hero-actions{margin-top:20px;gap:12px}
+.hero-refined .hero-actions .button{min-height:48px;max-width:100%;white-space:normal}
+.hero-refined .button-outline{color:var(--accent-strong)}
+.hero-refined .button-outline:hover{color:var(--on-accent)}
+.hero-expertise{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;max-width:850px;list-style:none;padding:0;margin:clamp(28px,2.5vw,32px) 0 0}
+.hero-expertise li{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0;color:var(--ink);font-size:14px;line-height:1.5}
+.hero-expertise svg{display:block;flex:none;width:32px;height:32px;color:var(--accent)}
+.hero-scroll-cue{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:12px;max-width:100%;color:var(--muted);font-size:13px;line-height:1.5;transition:color .2s ease}
+.hero-scroll-cue:hover,.hero-scroll-cue:focus-visible{color:var(--accent-strong)}
+.hero-scroll-arrow{display:inline-block;flex:none}
+@keyframes hero-dissolve{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-arrow-pulse{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@media(prefers-reduced-motion:no-preference){
+ .hero-animate .hero-entrance{animation:hero-dissolve 950ms cubic-bezier(.22,.61,.36,1) var(--hero-delay,0ms) both}
+ .hero-animate .hero-scroll-arrow{animation:hero-arrow-pulse 1s ease-in-out 1.7s 2}
+ .hero-animate .hero-entrance:focus-within{animation:none;opacity:1;transform:none}
+}
+@media(max-width:650px){
+ .hero-expertise{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}
+ .hero-refined h1{letter-spacing:-1px}
+ .hero-scroll-cue{margin-top:18px}
+}
+/* Footer contact reuses text-link colors and focus, with movement confined to its arrow. */
+footer .footer-contact{display:inline-flex;align-items:center;gap:6px;min-height:44px}
+footer .footer-contact:hover,footer .footer-contact:focus-visible{transform:none}
+.footer-contact .link-arrow{display:inline-block;transition:transform .2s ease}
+.footer-contact:hover .link-arrow,.footer-contact:focus-visible .link-arrow{transform:translateX(4px)}
+@media(prefers-reduced-motion:reduce){
+ .hero-refined .hero-entrance,.hero-scroll-arrow,.footer-contact .link-arrow{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}
+}
+@media print{.hero-refined .hero-entrance,.hero-scroll-arrow{animation:none!important;opacity:1!important;transform:none!important}}

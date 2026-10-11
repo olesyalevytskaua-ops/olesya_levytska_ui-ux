@@ -333,12 +333,24 @@ if (contactLinks.length) {
 }
 
 
+// Enhance only the homepage hero; without JavaScript all of its content is visible.
+(() => {
+  const hero = document.querySelector('.hero-refined');
+  if (!hero || typeof matchMedia !== 'function') return;
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  if (preference.matches) return;
+  hero.classList.add('hero-animate');
+  preference.addEventListener('change', event => {
+    if (event.matches) hero.classList.remove('hero-animate');
+  });
+})();
+
 // Reveal each content block once; reduced motion and printing keep everything visible.
 (() => {
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
   if (preference.matches || typeof IntersectionObserver === 'undefined') return;
   const selector = 'header, .hero-copy, .page-intro, .section-head, .featured-card, .ux-card, .capability-card, .tool-row, main > .project, .case-intro, .case-summary, .contact-profile, .contact-card, .process, .resume .side, .resume .main > section, .resume .cv-heading, .full-case figure, .case-next, footer';
-  const candidates = [...document.querySelectorAll(selector)];
+  const candidates = [...document.querySelectorAll(selector)].filter(element => !element.closest('.hero-refined'));
   const targets = candidates.filter(element => !candidates.some(parent => parent !== element && parent.contains(element)));
   const reveal = (element, animate = true) => {
     element.classList.remove('motion-pending');
