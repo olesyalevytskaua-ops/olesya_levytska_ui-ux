@@ -462,3 +462,10 @@ footer .footer-contact:hover,footer .footer-contact:focus-visible{transform:none
  .hero-refined .hero-entrance,.footer-contact .link-arrow{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}
 }
 @media print{.hero-refined .hero-entrance{animation:none!important;opacity:1!important;transform:none!important}}
+
+/* Actual VesselHaven development screenshots. */
+.vessel-case-page .vessel-workflow-detail{margin-top:48px}
+.vessel-case-page .vessel-screen-trio{grid-template-columns:repeat(3,minmax(0,340px));gap:clamp(18px,3vw,32px)}
+.vessel-case-page .vessel-image-dialog img{max-width:100%}
+@media(max-width:900px){.vessel-case-page .vessel-screen-trio{grid-template-columns:repeat(2,minmax(0,340px))}}
+@media(max-width:600px){.vessel-case-page .vessel-screen-trio{grid-template-columns:minmax(0,390px)}}

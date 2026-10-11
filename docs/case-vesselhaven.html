@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#fbf8f4">
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#fbf8f4')}catch(e){}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261011-vessel-study">
+<link rel="stylesheet" href="style.css?v=20261011-vessel-real-screens">
 <script src="script.js?v=20261011-dissolve" defer>
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
@@ -103,14 +103,25 @@
 <div class="vessel-workflow-section">
 <div class="case-story-copy">
 <p class="case-step-kicker">2. UX &amp; workflows</p>
-<h2>Planning an event in context</h2>
-<p>A person coordinating a yacht trip needs to see the schedule and add an event without losing the date context. The broader product also needs role-based navigation because owners, captains, and crew do not all work from the same information.</p>
-<p>I mapped the calendar and event entry as part of the connected trip workflow. In these exploratory mobile screens, the selected date stays visible above the form; name, time, reminder, and category are presented together before creation. Keeping the date in view is designed to help the person scheduling confirm the intended day.</p>
-<p>The screens show the scheduling interaction, not a complete permissions model. Role profiles and journey maps informed which modules and actions belong in each role's wider path.</p>
+<h2>From onboarding to trip coordination</h2>
+<p>Hotjar helped us investigate onboarding friction across owners, crew, service providers, and guests. We adapted the entry paths to each role's immediate needs.</p>
+<p>Guests were better served by a magic-link invitation that skips most onboarding, with preferences collected optionally later. For owners, we kept the essential information mandatory and moved optional details to the end.</p>
+<h3>Getting started as an owner</h3>
+<p>These screenshots from the development build show role selection and the owner completion screen. The completion screen confirms that the account, vessel, and dashboard are ready, then offers a next action such as inviting crew.</p>
 </div>
-<div class="vessel-screen-pair" aria-label="Exploratory event-planning screens">
-<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open event calendar image larger"><img src="images/cases/vesselhaven-event-calendar.png" width="390" height="844" alt="Mobile calendar with dated events and a list of trip activities" loading="lazy" decoding="async"></button><figcaption>Calendar view: dates and upcoming events remain visible.</figcaption></figure>
-<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open event editor image larger"><img src="images/cases/vesselhaven-event-editor.png" width="390" height="844" alt="Add New Event form beneath a selected July calendar date" loading="lazy" decoding="async"></button><figcaption>Event entry: the selected date remains above the form.</figcaption></figure>
+<div class="vessel-screen-pair" aria-label="Actual VesselHaven owner onboarding screens">
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open owner role-selection screenshot larger"><img src="images/cases/vesselhaven-onboarding-role.jpg" width="709" height="1536" alt="VesselHaven onboarding Step 2 with progress indicator and the I own or run a vessel role option" loading="lazy" decoding="async"></button><figcaption>Owner onboarding: choosing the vessel-management role. Development build.</figcaption></figure>
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open owner onboarding completion screenshot larger"><img src="images/cases/vesselhaven-onboarding-complete.jpg" width="709" height="1536" alt="Welcome aboard screen confirming owner account, vessel and dashboard setup, with an Invite your crew action" loading="lazy" decoding="async"></button><figcaption>Onboarding completion: setup confirmation and a relevant next action. Development build.</figcaption></figure>
+</div>
+<div class="case-story-copy vessel-workflow-detail">
+<h3>Planning trips and reviewing event details</h3>
+<p>The Plan screen brings trip cards and a weekly calendar into the same workspace. The views below show scheduled activities across different dates and an event detail screen with trip information, an invitation-link action, guest responses, and crew.</p>
+<p>These are screenshots of the actual development build. They show the calendar and event detail experience, rather than an event-creation form.</p>
+</div>
+<div class="vessel-screen-pair vessel-screen-trio" aria-label="Actual VesselHaven calendar and event detail screens">
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open weekly calendar screenshot larger"><img src="images/cases/vesselhaven-plan-calendar.jpg" width="709" height="1536" alt="VesselHaven Plan screen with trip cards, week navigation and a Berth move calendar entry" loading="lazy" decoding="async"></button><figcaption>Plan: trip cards and scheduled activities in the weekly calendar.</figcaption></figure>
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open later-week calendar screenshot larger"><img src="images/cases/vesselhaven-plan-calendar-weekend.jpg" width="709" height="1536" alt="VesselHaven weekly calendar showing Friday through Sunday with Berth move and Provisioning activities" loading="lazy" decoding="async"></button><figcaption>Calendar: reviewing activities later in the same week.</figcaption></figure>
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open event details screenshot larger"><img src="images/cases/vesselhaven-event-details.jpg" width="709" height="1536" alt="Sunset charter event details with planned status, invite-link action, guest response counts and crew list" loading="lazy" decoding="async"></button><figcaption>Event details: trip context, invitation link, guest responses, and crew.</figcaption></figure>
 </div>
 </div>
 </section>

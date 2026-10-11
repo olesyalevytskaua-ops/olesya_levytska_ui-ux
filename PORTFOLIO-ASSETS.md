@@ -43,3 +43,14 @@ Checks cover asset references, internal links and anchors, one main landmark per
 Case PNG originals total approximately 42 MB; only the appropriate desktop/mobile source is selected on each case page. Secondary images and galleries use lazy loading. The images have not yet been converted to smaller WebP files or generated as separate thumbnails. This remains a performance improvement for a working image-processing environment.
 
 Local command and browser runtimes continue to fail during sandbox initialization. Visual browser QA, print preview, and image optimization could not be performed. No successful browser test is claimed.
+
+## VesselHaven actual development screenshots — 11 October 2026
+Owner-supplied mobile screenshots replace the white calendar and event-editor illustrations, which were not part of the app. Original screenshots are retained unchanged, including mobile browser chrome. All five images are 709 × 1536 px.
+
+- docs/images/cases/vesselhaven-onboarding-role.jpg — source: IMG_0889.jpeg
+- docs/images/cases/vesselhaven-onboarding-complete.jpg — source: IMG_0890.jpeg
+- docs/images/cases/vesselhaven-plan-calendar.jpg — source: IMG_0894.jpeg
+- docs/images/cases/vesselhaven-plan-calendar-weekend.jpg — source: IMG_0895.jpeg
+- docs/images/cases/vesselhaven-event-details.jpg — source: IMG_0896.jpeg
+
+The case now shows two owner onboarding screens, two weekly calendar views, and one event-detail screen. It does not present these screenshots as an event-creation wizard or as proof of measured conversion improvement.
