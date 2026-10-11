@@ -11,3 +11,7 @@ A paused animation on hover is allowed when it helps people read moving content;
 ## Print and PDF
 
 CV printing and PDF export always use the light palette with dark text on white paper, regardless of the website theme. Print rules must not change the screen theme or the saved user preference.
+
+## Moving content
+
+Automatically scrolling content that runs longer than five seconds must have an always-discoverable pause/resume mechanism. Use a keyboard- and touch-accessible button with a clear action label and visible focus. A pause must persist after focus or the pointer leaves the content. Show a pause icon while moving and a play icon while paused. Respect prefers-reduced-motion with a static, wrapping alternative; hide the unnecessary playback control in that mode.

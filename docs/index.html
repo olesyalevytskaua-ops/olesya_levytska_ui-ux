@@ -16,8 +16,8 @@
 <meta name="theme-color" content="#fbf8f4">
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#fbf8f4')}catch(e){}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261011-static-cards">
-<script src="script.js?v=20261011-menu2" defer></script>
+<link rel="stylesheet" href="style.css?v=20261011-marquee-control">
+<script src="script.js?v=20261011-marquee-control" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
 </head>
 <body>
@@ -49,10 +49,17 @@
 </section>
 <section class="marquee-section" aria-labelledby="skills-line-title">
 <h2 id="skills-line-title" class="sr-only">Skills and tools</h2>
-<div class="marquee" data-marquee tabindex="0" aria-label="Product Strategy, UX Research, Product Analytics, Accessibility, Design Systems, Interaction Design, Prototyping, Figma, Mixpanel, Hotjar, Claude, ChatGPT, Cursor, GitHub">
+<div class="marquee-shell">
+<div class="marquee" id="skills-marquee" data-marquee aria-label="Product Strategy, UX Research, Product Analytics, Accessibility, Design Systems, Interaction Design, Prototyping, Figma, Mixpanel, Hotjar, Claude, ChatGPT, Cursor, GitHub">
 <span class="marquee-track">PRODUCT STRATEGY <span class="marquee-separator" aria-hidden="true">✳</span> UX RESEARCH <span class="marquee-separator" aria-hidden="true">✳</span> PRODUCT ANALYTICS <span class="marquee-separator" aria-hidden="true">✳</span> ACCESSIBILITY <span class="marquee-separator" aria-hidden="true">✳</span> DESIGN SYSTEMS <span class="marquee-separator" aria-hidden="true">✳</span> INTERACTION DESIGN <span class="marquee-separator" aria-hidden="true">✳</span> PROTOTYPING <span class="marquee-separator" aria-hidden="true">✳</span> FIGMA <span class="marquee-separator" aria-hidden="true">✳</span> MIXPANEL <span class="marquee-separator" aria-hidden="true">✳</span> HOTJAR <span class="marquee-separator" aria-hidden="true">✳</span> CLAUDE <span class="marquee-separator" aria-hidden="true">✳</span> CHATGPT <span class="marquee-separator" aria-hidden="true">✳</span> CURSOR <span class="marquee-separator" aria-hidden="true">✳</span> GITHUB <span class="marquee-separator" aria-hidden="true">✳</span></span>
 <span class="marquee-track" aria-hidden="true">PRODUCT STRATEGY <span class="marquee-separator">✳</span> UX RESEARCH <span class="marquee-separator">✳</span> PRODUCT ANALYTICS <span class="marquee-separator">✳</span> ACCESSIBILITY <span class="marquee-separator">✳</span> DESIGN SYSTEMS <span class="marquee-separator">✳</span> INTERACTION DESIGN <span class="marquee-separator">✳</span> PROTOTYPING <span class="marquee-separator">✳</span> FIGMA <span class="marquee-separator">✳</span> MIXPANEL <span class="marquee-separator">✳</span> HOTJAR <span class="marquee-separator">✳</span> CLAUDE <span class="marquee-separator">✳</span> CHATGPT <span class="marquee-separator">✳</span> CURSOR <span class="marquee-separator">✳</span> GITHUB <span class="marquee-separator">✳</span></span>
 </div>
+<button class="marquee-toggle marquee-icon-toggle" type="button" data-marquee-toggle aria-controls="skills-marquee" aria-label="Pause skills line">
+<svg class="marquee-pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+<svg class="marquee-play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m8 4 12 8-12 8V4Z"/></svg>
+</button>
+</div>
+<span class="sr-only" data-marquee-status aria-live="polite"></span>
 </section>
 <section class="section selected-work" id="selected-work">
 <div class="section-head"><div><p class="eyebrow">01 / SELECTED WORK</p><h2>Products for real people.</h2><p>A focused selection across health, SaaS operations, and self-service booking.</p></div><a class="text-link" href="work.html">View all projects ↗</a></div>

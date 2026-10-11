@@ -76,20 +76,23 @@ if (headerActions && mainNav) {
 
 const marquee = document.querySelector('[data-marquee]');
 const marqueeToggle = document.querySelector('[data-marquee-toggle]');
-if (marquee) {
-  const setPaused = paused => {
+const marqueeStatus = document.querySelector('[data-marquee-status]');
+if (marquee && marqueeToggle) {
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let userPaused = false;
+  const updateMarquee = (announce = false) => {
+    const paused = userPaused || reducedMotion.matches;
     marquee.dataset.paused = String(paused);
-    if (marqueeToggle) {
-      marqueeToggle.setAttribute('aria-pressed', String(paused));
-      marqueeToggle.textContent = paused ? 'Resume skills line' : 'Pause skills line';
-    }
+    marqueeToggle.dataset.paused = String(paused);
+    marqueeToggle.setAttribute('aria-label', paused ? 'Resume skills line' : 'Pause skills line');
+    if (announce && marqueeStatus) marqueeStatus.textContent = paused ? 'Skills line paused.' : 'Skills line moving.';
   };
-  marqueeToggle?.addEventListener('click', () => setPaused(marquee.dataset.paused !== 'true'));
-  marquee.addEventListener('mouseenter', () => marquee.dataset.hover = 'true');
-  marquee.addEventListener('mouseleave', () => marquee.dataset.hover = 'false');
-  marquee.addEventListener('focusin', () => marquee.dataset.focus = 'true');
-  marquee.addEventListener('focusout', () => marquee.dataset.focus = 'false');
-  setPaused(false);
+  marqueeToggle.addEventListener('click', () => {
+    userPaused = !userPaused;
+    updateMarquee(true);
+  });
+  reducedMotion.addEventListener('change', () => updateMarquee());
+  updateMarquee();
 }
 
 const carousel = document.querySelector('.carousel');

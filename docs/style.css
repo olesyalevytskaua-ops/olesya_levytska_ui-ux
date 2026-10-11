@@ -163,7 +163,7 @@ nav{align-items:center;gap:24px;flex-wrap:wrap;justify-content:flex-end}
 .marquee{display:flex;width:100%;max-width:100%;overflow:hidden;white-space:nowrap;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee-track{display:inline-flex;align-items:center;flex:0 0 auto;min-width:max-content;padding-right:28px;animation:skills-marquee 35s linear infinite;color:var(--marquee-text);font-size:12px;text-transform:uppercase;letter-spacing:1.4px;font-weight:700}
 .marquee-separator{color:var(--marquee-accent);padding:0 24px;font-size:13px;line-height:1}
-.marquee:is(:hover,:focus-within) .marquee-track,.marquee[data-paused="true"] .marquee-track,.marquee[data-hover="true"] .marquee-track,.marquee[data-focus="true"] .marquee-track{animation-play-state:paused}
+.marquee[data-paused="true"] .marquee-track{animation-play-state:paused}
 @keyframes skills-marquee{to{transform:translateX(-100%)}}
 .selected-work{border-top:0}
 .featured-grid,.insight-grid,.capability-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
@@ -280,3 +280,13 @@ header{z-index:50}
  }
 }
 @media(max-width:650px){.expertise .capability-chips li{font-size:13px}.capability-grid .capability-card{display:block}}
+
+/* Persistent, explicit motion control works with mouse, keyboard and touch. */
+.marquee-shell{display:flex;align-items:center;gap:12px;min-width:0}
+.marquee-shell .marquee{flex:1 1 auto;width:auto;min-width:0}
+.marquee-icon-toggle{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);touch-action:manipulation}
+.marquee-icon-toggle:hover{background:var(--surface-2);border-color:var(--accent)}
+.marquee-icon-toggle .marquee-play-icon{display:none}
+.marquee-icon-toggle[data-paused="true"] .marquee-play-icon{display:block}
+.marquee-icon-toggle[data-paused="true"] .marquee-pause-icon{display:none}
+@media(prefers-reduced-motion:reduce){.marquee-icon-toggle{display:none}.marquee-shell{display:block}}
