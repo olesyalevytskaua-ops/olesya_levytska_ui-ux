@@ -216,3 +216,27 @@ footer{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){.marquee{display:block;white-space:normal;mask-image:none}.marquee-track{animation:none!important;display:flex;flex-wrap:wrap;gap:10px;min-width:0;padding:0}.marquee-track[aria-hidden="true"]{display:none}.marquee-separator{padding:0 2px}.marquee-toggle{display:none}}
 @media(prefers-reduced-motion:reduce){.hero-refined .hero-copy,.marquee-section,.section-head,.featured-card,.ux-card,.capability-grid article,.process,.tool-row,.contact-modal__panel,.insight-modal__panel{animation:none!important;filter:none!important;transform:none!important}}
 @media(prefers-reduced-motion:reduce){.carousel-preview span,.carousel-preview img,.text-link,.real-work-card,.real-work-card .case-cover img,.real-work-card .case-link{transition:none!important;transform:none!important;translate:none!important}}
+/* Expertise: evidence-led capability cards and a logo toolkit. */
+.expertise .section-head h2{max-width:none}
+.capability-grid .capability-card{padding:24px 20px;border-radius:16px;box-shadow:0 8px 24px var(--shadow);transition:border-color .2s ease,transform .2s ease}
+.capability-grid .capability-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.capability-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.capability-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;color:var(--accent);background:var(--surface-2);border-radius:12px}
+.capability-icon svg{width:30px;height:30px}
+.capability-grid .capability-heading h3{font-size:17px;font-weight:650;line-height:1.35;letter-spacing:-.3px;margin:0 0 8px}
+.capability-grid .capability-heading p{font-size:14px;line-height:1.55;margin:0}
+.capability-chips,.tool-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.capability-chips li{background:var(--chip);color:var(--muted);border-radius:999px;padding:6px 11px;font-size:12px;line-height:1.5}
+.tool-row-with-logos{display:flex;align-items:flex-start;gap:32px;padding:26px;border-radius:16px}
+.tool-row-heading{flex:0 0 210px}
+.tool-row-heading h3{font-size:18px;margin-bottom:6px}
+.tool-row-heading p{font-size:14px;line-height:1.55;margin:0}
+.tool-chips{gap:10px}
+.tool-chips li{display:inline-flex;align-items:center;gap:9px;background:var(--chip);color:var(--ink);padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;line-height:1.5}
+.tool-logo{display:block;width:18px;height:18px;flex:0 0 18px;background:currentColor;mask:var(--tool-logo) center/contain no-repeat;-webkit-mask:var(--tool-logo) center/contain no-repeat}
+@media(min-width:981px){.expertise .capability-grid{gap:14px}.capability-heading{flex-direction:column;gap:14px}.capability-grid .capability-card{padding:22px 18px}}
+@media(max-width:650px){.tool-row-with-logos{flex-direction:column;gap:18px;padding:22px}.tool-row-heading{flex-basis:auto}.capability-grid .capability-heading h3{font-size:18px}.capability-chips li{font-size:13px}.capability-grid .capability-card{padding:22px}}
+@media(prefers-reduced-motion:reduce){.capability-grid .capability-card{transition:none}.capability-grid .capability-card:hover{transform:none}}
+
+/* Explicit heading colors keep expertise readable in both themes. */
+.expertise h2,.expertise h3{color:var(--ink)}
