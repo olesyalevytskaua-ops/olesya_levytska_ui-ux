@@ -240,3 +240,6 @@ footer{color:var(--muted)}
 
 /* Explicit heading colors keep expertise readable in both themes. */
 .expertise h2,.expertise h3{color:var(--ink)}
+
+/* Keep the text wordmark visible after removing portrait branding. */
+@media(max-width:430px){header{flex-wrap:wrap}.brand-name{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}.header-actions{max-width:100%}}
