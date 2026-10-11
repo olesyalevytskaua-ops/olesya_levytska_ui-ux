@@ -331,3 +331,39 @@ if (contactLinks.length) {
   });
   closeButtons.forEach(button => button.addEventListener('click', closeContactModal));
 }
+
+
+// Reveal each content block once; reduced motion and printing keep everything visible.
+(() => {
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  if (preference.matches || typeof IntersectionObserver === 'undefined') return;
+  const selector = 'header, .hero-copy, .page-intro, .section-head, .featured-card, .ux-card, .capability-card, .tool-row, main > .project, .case-intro, .case-summary, .contact-profile, .contact-card, .process, .resume .side, .resume .main > section, .resume .cv-heading, .full-case figure, .case-next, footer';
+  const candidates = [...document.querySelectorAll(selector)];
+  const targets = candidates.filter(element => !candidates.some(parent => parent !== element && parent.contains(element)));
+  const reveal = (element, animate = true) => {
+    element.classList.remove('motion-pending');
+    element.classList.toggle('motion-enter', animate);
+    observer.unobserve(element);
+  };
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) reveal(entry.target, !preference.matches);
+  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+  for (const element of targets) {
+    const parent = element.parentElement;
+    const grid = parent?.matches('.featured-grid, .insight-grid, .capability-grid');
+    const index = grid ? [...parent.children].indexOf(element) : 0;
+    const columns = parent?.matches('.capability-grid') ? 4 : 3;
+    element.style.setProperty('--motion-delay', `${(index % columns) * 70}ms`);
+    observer.observe(element);
+    element.classList.add('motion-pending');
+  }
+  document.addEventListener('focusin', event => {
+    const target = event.target.closest('.motion-pending, .motion-enter');
+    if (target) reveal(target, false);
+  });
+  preference.addEventListener('change', event => {
+    if (!event.matches) return;
+    for (const element of targets) reveal(element, false);
+    observer.disconnect();
+  });
+})();

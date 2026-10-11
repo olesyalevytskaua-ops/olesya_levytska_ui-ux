@@ -290,3 +290,14 @@ header{z-index:50}
 .marquee-icon-toggle[data-paused="true"] .marquee-play-icon{display:block}
 .marquee-icon-toggle[data-paused="true"] .marquee-pause-icon{display:none}
 @media(prefers-reduced-motion:reduce){.marquee-icon-toggle{display:none}.marquee-shell{display:block}}
+
+/* One-time scroll dissolves: content stays visible when enhancement is unavailable. */
+.hero-refined .hero-copy,.section-head,.featured-card,.ux-card,.capability-grid article,.process,.tool-row{animation:none}
+@keyframes content-dissolve{from{opacity:0;filter:blur(3px)}to{opacity:1;filter:blur(0)}}
+@media(prefers-reduced-motion:no-preference){
+ .motion-pending{opacity:0;filter:blur(3px)}
+ .motion-enter.motion-enter{animation:content-dissolve .6s ease-out both;animation-delay:var(--motion-delay,0ms)!important}
+ .motion-pending:focus-within,.motion-enter:focus-within{opacity:1;filter:none;animation:none!important}
+}
+@media(prefers-reduced-motion:reduce){.motion-pending,.motion-enter{opacity:1!important;filter:none!important;animation:none!important}}
+@media print{.motion-pending,.motion-enter{opacity:1!important;filter:none!important;animation:none!important}}

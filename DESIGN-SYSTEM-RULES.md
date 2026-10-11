@@ -15,3 +15,7 @@ CV printing and PDF export always use the light palette with dark text on white 
 ## Moving content
 
 Automatically scrolling content that runs longer than five seconds must have an always-discoverable pause/resume mechanism. Use a keyboard- and touch-accessible button with a clear action label and visible focus. A pause must persist after focus or the pointer leaves the content. Show a pause icon while moving and a play icon while paused. Respect prefers-reduced-motion with a static, wrapping alternative; hide the unnecessary playback control in that mode.
+
+## Entrance motion
+
+Use short, one-time dissolves as content enters view, with restrained staggering for peer cards. Entrance animation does not imply clickability; static cards retain no hover treatment. Respect reduced motion, keep keyboard-focused content visible immediately, and show every block in print/PDF. Without JavaScript or IntersectionObserver, content must remain visible.
