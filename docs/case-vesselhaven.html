@@ -15,12 +15,12 @@
 <meta name="theme-color" content="#fbf8f4">
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#fbf8f4')}catch(e){}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261011-dissolve">
+<link rel="stylesheet" href="style.css?v=20261011-vessel-study">
 <script src="script.js?v=20261011-dissolve" defer>
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
 </head>
-<body>
+<body class="vessel-case-page">
 <a class="skip" href="#main">Skip to content</a>
 <header>
 <a class="brand" href="./" aria-label="Olesya Levytska home"><span class="brand-name">Olesya Levytska</span></a>
@@ -55,27 +55,33 @@
 </section>
 <section class="section case-product-overview" aria-labelledby="vessel-product-title">
 <div class="case-product-copy">
-<h2 class="eyebrow" id="vessel-product-title">PRODUCT DESCRIPTION</h2>
-<p>VesselHaven connects yacht <strong>owners, captains, crew, service providers, and guests</strong> in a single ecosystem — cutting coordination overhead so everyone spends less time managing and more time on the water.</p>
+<h2 class="eyebrow" id="vessel-product-title">PROJECT OVERVIEW</h2>
+<dl class="vessel-project-facts">
+<div><dt>Role</dt><dd>Senior Product Designer</dd></div>
+<div><dt>Product</dt><dd>Multi-role yacht management, community, and services marketplace</dd></div>
+<div><dt>Platforms</dt><dd>Responsive web, tablet, and mobile</dd></div>
+</dl>
+<p>VesselHaven brings yacht <strong>owners, captains, crew, service providers, and guests</strong> into one connected product experience. Its design brings operational information and collaboration into a shared structure while giving each role a relevant path through it.</p>
 </div>
 <aside class="role-note">
 <p class="eyebrow">MY ROLE</p>
-<p><strong>Senior Product Designer:</strong> turning complex, multi-role workflows into intuitive experiences that keep the premium feel of the luxury yacht world.</p>
+<p>I synthesized research themes and role profiles into the information architecture, mapped connected workflows, and designed light and dark UI patterns and interactive prototypes.</p>
+<p>I worked with product stakeholders and engineers on priorities, design review, and handoff. Requirements, the test build, and feedback collection were wider team efforts.</p>
 </aside>
 </section>
 <section class="case-summary vessel-process-map" id="case-process" aria-labelledby="case-process-title">
 <div class="process-copy">
 <p class="eyebrow">PROCESS &amp; CONTRIBUTION</p>
 <h2 id="case-process-title">From insight to impact.</h2>
-<p>Each step connects to the detailed section below, turning the old single image case study into a scannable product story.</p>
+<p>Explore how research, role-based workflows, reusable systems, and user feedback shaped the product.</p>
 </div>
 <nav class="vessel-journey" aria-label="VesselHaven case study process">
 <a class="journey-step" href="#discovery"><span>01</span><strong>Discovery</strong><small>Research mapped the ecosystem of roles, tasks, and communication needs.</small></a>
-<a class="journey-step" href="#ux-design"><span>02</span><strong>UX Design process</strong><small>Information architecture connected dashboards, workflows, and permissions.</small></a>
-<a class="journey-step" href="#design-system"><span>03</span><strong>Design System</strong><small>Reusable tokens, components, states, and responsive patterns.</small></a>
-<a class="journey-step" href="#prototyping"><span>04</span><strong>Design solutions &amp; Prototyping</strong><small>Testable flows and AI-assisted design-to-code iteration.</small></a>
-<a class="journey-step" href="#testing"><span>05</span><strong>User Testing &amp; Iteration</strong><small>Feedback from captains and owners shaped product improvements.</small></a>
-<a class="journey-step" href="#final-product"><span>06</span><strong>Final Product Experience</strong><small>One connected product across desktop, tablet, and mobile.</small></a>
+<a class="journey-step" href="#ux-design"><span>02</span><strong>UX &amp; workflows</strong><small>Information architecture connected dashboards, workflows, and permissions.</small></a>
+<a class="journey-step" href="#design-system"><span>03</span><strong>Design system</strong><small>Reusable tokens, components, states, and responsive patterns.</small></a>
+<a class="journey-step" href="#prototyping"><span>04</span><strong>Prototyping</strong><small>Testable flows and AI-assisted design exploration.</small></a>
+<a class="journey-step" href="#testing"><span>05</span><strong>Testing &amp; iteration</strong><small>Sessions with captains and owners informed design review.</small></a>
+<a class="journey-step" href="#final-product"><span>06</span><strong>Product experience</strong><small>Connected design across desktop, tablet, and mobile.</small></a>
 </nav>
 </section>
 <section class="section case-story-section" id="discovery">
@@ -83,155 +89,120 @@
 <div class="case-story-copy">
 <p class="case-step-kicker">1. Discovery</p>
 <h2>Understanding a multi-role yacht ecosystem</h2>
-<p>The platform had to balance the expectations of several distinct user groups — <strong>yacht owners, captains, brokers, service providers, and guests</strong> — each with different responsibilities, permissions, expectations, and workflows.</p>
-<p class="eyebrow">IDENTIFYING USER NEEDS AND PAIN POINTS</p>
-<p>Through interviews and discussions with members of the yachting community, we collected needs, pain points, goals, and ideas. AI-assisted analysis helped organize research notes, cluster recurring themes, identify patterns, and highlight conflicting or missing requirements.</p>
-<p class="eyebrow">KEY INSIGHT</p>
-<p>The platform could not be designed as a collection of isolated features. It required one connected operational ecosystem with tailored experiences and access levels for every user role.</p>
+<p>The project involved <strong>owners, captains, crew, brokers, service providers, and guests</strong>. Their responsibilities and information needs differ, even when they are coordinating the same trip.</p>
+<dl class="vessel-evidence-list">
+<div><dt>Stakeholder direction</dt><dd>The kickoff brief described yacht work spread across spreadsheets, phone calls, and fragmented systems. It called for one place to coordinate operations.</dd></div>
+<div><dt>Research synthesis</dt><dd>Interviews and yachting-community discussions surfaced needs across roles. The documented synthesis linked a single trip to finance, crew coordination, maintenance, services, and guest experience.</dd></div>
+<div><dt>My design interpretation</dt><dd>Shared trip information needed a connected structure, while navigation and access had to reflect different roles. I used role profiles and journey maps to shape that information architecture.</dd></div>
+</dl>
 </div>
-<figure class="case-story-media"><img src="images/cases/vesselhaven-discovery-map.png" width="442" height="256" alt="Yacht ecosystem map showing role cards, service modules, and connected workflows" loading="lazy" decoding="async"></figure>
+<figure class="case-story-media"><img src="images/cases/vesselhaven-discovery-map.png" width="442" height="256" alt="Illustrated yacht surrounded by role and service symbols" loading="lazy" decoding="async"><figcaption>Overview of the yacht ecosystem; the illustration is not a research map.</figcaption></figure>
 </div>
-<ul class="case-chip-list"><li>User interviews</li><li>Needs and pain-point analysis</li><li>AI-assisted research synthesis</li><li>Journey mapping</li><li>Feature prioritization</li><li>Stakeholder collaboration</li></ul>
 </section>
 <section class="section case-story-section" id="ux-design">
-<div class="case-story-grid reverse">
+<div class="vessel-workflow-section">
 <div class="case-story-copy">
-<p class="case-step-kicker">2. UX Design Process</p>
-<h2>Scalable UX from the first screen</h2>
-<p>VesselHaven combines multiple interconnected modules, so the UX needed to be scalable and consistent from the beginning.</p>
-<p>I translated discovery findings, role profiles, and journey maps into a clear information architecture, role-based navigation, and end-to-end user flows. Each module was designed to work independently while remaining part of one connected product ecosystem.</p>
-<p>Consistent interaction patterns reduced the learning curve across the platform, while contextual actions made advanced functionality accessible to both experienced professionals and first-time users.</p>
+<p class="case-step-kicker">2. UX &amp; workflows</p>
+<h2>Planning an event in context</h2>
+<p>A person coordinating a yacht trip needs to see the schedule and add an event without losing the date context. The broader product also needs role-based navigation because owners, captains, and crew do not all work from the same information.</p>
+<p>I mapped the calendar and event entry as part of the connected trip workflow. In these exploratory mobile screens, the selected date stays visible above the form; name, time, reminder, and category are presented together before creation. Keeping the date in view is designed to help the person scheduling confirm the intended day.</p>
+<p>The screens show the scheduling interaction, not a complete permissions model. Role profiles and journey maps informed which modules and actions belong in each role's wider path.</p>
 </div>
-<figure class="case-story-media"><img src="images/cases/vesselhaven-ux-process.png" width="426" height="240" alt="UX process boards showing journey maps, user flows, and mobile screens" loading="lazy" decoding="async"></figure>
+<div class="vessel-screen-pair" aria-label="Exploratory event-planning screens">
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open event calendar image larger"><img src="images/cases/vesselhaven-event-calendar.png" width="390" height="844" alt="Mobile calendar with dated events and a list of trip activities" loading="lazy" decoding="async"></button><figcaption>Calendar view: dates and upcoming events remain visible.</figcaption></figure>
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open event editor image larger"><img src="images/cases/vesselhaven-event-editor.png" width="390" height="844" alt="Add New Event form beneath a selected July calendar date" loading="lazy" decoding="async"></button><figcaption>Event entry: the selected date remains above the form.</figcaption></figure>
 </div>
-<ul class="case-chip-list"><li>Authentication and onboarding</li><li>Role-based dashboards</li><li>Information architecture</li><li>Vessel management workflows</li><li>Guest invitation and trip workflows</li><li>Responsive web and mobile layouts</li></ul>
+</div>
 </section>
 <section class="section case-story-section" id="design-system">
 <div class="case-story-grid">
 <div class="case-story-copy">
 <p class="case-step-kicker">3. Design System</p>
 <h2>A flexible system for changing environments</h2>
-<p>A flexible design system keeps the growing platform consistent and fast to build — ocean-drawn color, Nunito Sans type, and a signature glass-over-gradient surface.</p>
-<p>I created coordinated light and dark themes built from the same semantic tokens, components, interaction patterns, and visual hierarchy. Special attention was given to text contrast, status indicators, icons, data-heavy layouts, and interactive states.</p>
-<p>The interface balances modern aesthetics with clarity, letting users manage complex information — finances, schedules, crew, and maintenance — without feeling overwhelmed.</p>
+<p>I created coordinated light and dark themes using semantic color tokens, Nunito Sans typography, and reusable navigation, form, status, and dashboard patterns.</p>
+<p>Shared tokens and component states were designed to keep information hierarchy consistent across modules and responsive layouts. The service-history examples show the same content structure in both themes, including status indicators and data rows.</p>
+<p>The glass card is one surface treatment in the system. Its elevation and translucency were designed to preserve hierarchy over the brand gradient; readability in real lighting conditions still needs direct validation.</p>
 </div>
 <div class="case-story-stack">
-<figure class="case-story-media"><img src="images/cases/vesselhaven-ui-system.png" width="572" height="305" alt="Light and dark VesselHaven service history interfaces" loading="lazy" decoding="async"></figure>
-<figure class="case-story-media compact"><img src="images/cases/vesselhaven-glass-card.png" width="371" height="282" alt="Glass card component on the VesselHaven brand gradient" loading="lazy" decoding="async"></figure>
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open light and dark service-history examples larger"><img src="images/cases/vesselhaven-ui-system.png" width="572" height="305" alt="Service History designs in dark and light themes, showing summary metrics, status markers, and rows" loading="lazy" decoding="async"></button><figcaption>Service History: matching information structure, light and dark states.</figcaption></figure>
+<figure class="case-story-media compact"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open glass card example larger"><img src="images/cases/vesselhaven-glass-card.png" width="371" height="282" alt="Translucent dashboard card with vessel status and earnings on a teal gradient" loading="lazy" decoding="async"></button><figcaption>Glass card: vessel status and earnings within one reusable surface.</figcaption></figure>
 </div>
 </div>
-<ul class="case-chip-list"><li>Light and dark themes</li><li>Semantic color tokens</li><li>Accessible contrast</li><li>Responsive components</li><li>Status pills and badges</li><li>Reusable UI patterns</li></ul>
 </section>
 <section class="section case-story-section" id="prototyping">
 <div class="case-story-grid reverse">
 <div class="case-story-copy">
-<p class="case-step-kicker">4. Design solutions &amp; Prototyping</p>
+<p class="case-step-kicker">4. Prototyping</p>
 <h2>Turning complex flows into testable experiences</h2>
-<p>Throughout product development, we created an extensive library of interactive Figma prototypes — from individual screens and module interactions to complete end-to-end user journeys.</p>
-<p>Claude was integrated into the workflow to rapidly generate, refine, and compare alternative solutions. This helped explore interaction patterns, identify edge cases, and evaluate directions before committing development resources.</p>
-<p>The AI-assisted workflow also helped transform approved prototypes into frontend code that developers could integrate into the product.</p>
+<p>The team created interactive Figma prototypes at three levels: individual screens, module interactions, and connected user journeys.</p>
+<p>I used Claude to generate and compare possible interaction directions, then reviewed and refined those outputs against the role profiles, information architecture, and visual system. Alternatives and edge cases could be explored before a direction moved forward.</p>
+<p>Approved prototypes also informed frontend code for engineering handoff. I worked with developers to review how the proposed patterns translated into the product.</p>
 </div>
 <div class="activity-panel">
 <p class="eyebrow">PROTOTYPING ACTIVITIES</p>
 <ul>
 <li>Interactive Figma prototypes</li>
-<li>Complete end-to-end flows</li>
-<li>Alternative design exploration</li>
-<li>AI-assisted iteration with Claude</li>
-<li>Edge-case validation</li>
-<li>Design-to-code collaboration</li>
+<li>Module and connected journey flows</li>
+<li>Claude-assisted alternative exploration</li>
+<li>Design review and refinement</li>
+<li>Frontend handoff with engineering</li>
 </ul>
 </div>
 </div>
-<div class="case-callout"><h3>Testing &amp; validation with real users</h3><p>Key flows were tested with real users, including yacht captains and owners. Direct feedback from usability sessions, community events, and industry exhibitions helped refine the product experience.</p></div>
 </section>
 <section class="section case-story-section" id="testing">
 <div class="case-story-grid">
 <div class="case-story-copy">
-<p class="case-step-kicker">5. User Testing &amp; Iteration</p>
-<h2>Turning real feedback into product improvements</h2>
-<p>A dedicated test version of the app was created so yacht captains and owners could interact with realistic workflows and complete key tasks in a practical product environment.</p>
-<p>User observations and comments were organized into recurring themes, usability issues, and improvement opportunities. Each finding was evaluated according to user impact, business value, frequency, and relevance across different roles.</p>
-<p>Feedback was translated into specific product improvements across navigation, terminology, information hierarchy, interaction patterns, and operational flows.</p>
+<p class="case-step-kicker">5. Testing &amp; iteration</p>
+<h2>Reviewing the experience with users</h2>
+<p>A dedicated test version let captains and owners work through realistic tasks. Usability sessions provided task-based observations; conversations at community events and industry exhibitions offered additional, more informal feedback.</p>
+<p>The team grouped observations into recurring themes and reviewed them against user impact, business value, frequency, and relevance across roles. Navigation, terminology, information hierarchy, and operational flows were revisited in subsequent design rounds.</p>
 </div>
 <div class="activity-panel">
 <p class="eyebrow">TESTING AND ITERATION ACTIVITIES</p>
 <ul>
-<li>Usability testing with captains and owners</li>
-<li>Feedback from community events and exhibitions</li>
-<li>Observation of real user behavior</li>
-<li>Feedback synthesis and prioritization</li>
-<li>Flow and interaction refinement</li>
-<li>Iterative prototyping</li>
+<li>Task-based sessions with captains and owners</li>
+<li>Informal event and exhibition feedback</li>
+<li>Theme synthesis and prioritization</li>
+<li>Revised flows and prototypes for review</li>
 </ul>
 </div>
 </div>
 </section>
 <section class="section case-story-section" id="final-product">
-<div class="case-story-grid final-product-grid">
-<div class="case-story-copy">
-<p class="case-step-kicker">6. Final Product Experience</p>
-<h2>One connected ecosystem for every role</h2>
-<p>The final design brought VesselHaven’s complex operational workflows together within one scalable, responsive platform.</p>
-<p>Each user role receives a tailored dashboard, relevant tools, and appropriate permissions, while shared navigation, components, terminology, and interaction patterns keep the experience consistent across the entire product.</p>
-<p>Designed for real yachting environments, the interface works across desktop, tablet, and mobile devices.</p>
+<div class="case-story-copy vessel-final-copy">
+<p class="case-step-kicker">6. Product experience</p>
+<h2>One connected design across roles</h2>
+<p>The design brings operational information into a responsive structure for desktop, tablet, and mobile. Role-specific dashboards and navigation present relevant entry points while shared patterns connect related tasks.</p>
 </div>
-<div class="activity-panel">
-<p class="eyebrow">FINAL SOLUTION</p>
-<ul>
-<li>Role-based dashboards and permissions</li>
-<li>Vessel profiles and documentation</li>
-<li>Maintenance and service history</li>
-<li>Service-provider marketplace</li>
-<li>Budgeting, expenses, and payments</li>
-<li>Guests and trip management</li>
-<li>Crew coordination</li>
-<li>Responsive desktop, tablet, and mobile experiences</li>
-</ul>
-</div>
-</div>
-<figure class="case-wide-media"><img src="images/cases/vesselhaven-mobile-screens.png" width="1040" height="313" alt="Six VesselHaven mobile screens covering event planning, crew, budget, daily logs, communities, and map views" loading="lazy" decoding="async"></figure>
+<figure class="case-wide-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open VesselHaven mobile screen overview larger"><img src="images/cases/vesselhaven-mobile-screens.png" width="1040" height="313" alt="Six VesselHaven mobile screens showing trip tasks, budget, daily logs, community, and a map" loading="lazy" decoding="async"></button><figcaption>Mobile design overview. The event workflow above provides a closer view of individual screens.</figcaption></figure>
 </section>
 <section class="section vessel-outcome" aria-labelledby="vessel-outcome-title">
 <div class="vessel-outcome-copy">
-<p class="eyebrow">PRODUCT OUTCOME</p>
-<h2 id="vessel-outcome-title">A coherent product ecosystem.</h2>
-<p>VesselHaven evolved from a large collection of ideas, requirements, and interconnected workflows into one clear product experience.</p>
-<p>The final solution simplifies complex yacht operations, gives every user role access to the information that matters to them, and provides a scalable foundation for adding new modules as the platform grows.</p>
+<p class="eyebrow">DESIGN OUTCOME</p>
+<h2 id="vessel-outcome-title">A connected product direction.</h2>
+<p>The work turned research themes, role profiles, and interconnected requirements into an information architecture, interactive prototypes, responsive screens, and a reusable design system.</p>
 </div>
 <div class="outcome-grid">
 <article>
-<p class="eyebrow">INTERCONNECTED</p>
-<h3>A community on the water</h3>
-<p>Owners, crew, vendors, and guests connected in one place.</p>
+<p class="eyebrow">ROLE-SPECIFIC</p>
+<h3>Relevant access</h3>
+<p>Dashboard and navigation designs are organized around the information each role needs.</p>
 </article>
 <article>
-<p class="eyebrow">ORCHESTRATED</p>
-<h3>Effortless coordination</h3>
-<p>Trips, tasks, and payments designed to feel easier to manage.</p>
+<p class="eyebrow">CONNECTED</p>
+<h3>Related work in context</h3>
+<p>Trip planning, tasks, and operational information share a consistent structure.</p>
 </article>
 <article>
-<p class="eyebrow">SEAWORTHY</p>
-<h3>Ready, safe &amp; sound</h3>
-<p>A boat that is always prepared for the next voyage.</p>
+<p class="eyebrow">REUSABLE</p>
+<h3>Patterns across screens</h3>
+<p>Semantic tokens and components support responsive layouts in light and dark themes.</p>
 </article>
 </div>
 <div class="outcome-skills">
 <h3>Skills &amp; expertise</h3>
-<p>What this project drew on end-to-end.</p>
-<ul class="case-chip-list">
-<li>Product Design</li>
-<li>Product Discovery</li>
-<li>UX Strategy</li>
-<li>UX Research</li>
-<li>SaaS</li>
-<li>Marketplace Design</li>
-<li>Information Architecture</li>
-<li>Responsive Design</li>
-<li>Design Systems</li>
-<li>Developer Handoff</li>
-<li>Dashboard Design</li>
-</ul>
+<p class="vessel-skill-line">Product discovery · UX research · Information architecture · Responsive design · Design systems · Prototyping · Developer handoff</p>
 </div>
 </section>
 <section class="cta case-next">
@@ -242,11 +213,41 @@
 <a class="button" href="case-vaults.html">View next case ↗</a>
 </section>
 </main>
+<dialog class="vessel-image-dialog" aria-labelledby="vessel-image-title">
+<button type="button" class="vessel-image-close" aria-label="Close image" autofocus>×</button>
+<h2 id="vessel-image-title"></h2>
+<img alt="">
+</dialog>
 <footer>
 <a class="brand" href="./"><span class="brand-name">Olesya Levytska</span></a>
 <p>Real insights. Better products.</p>
 <a href="mailto:olesyalevytskaua@gmail.com">Let’s talk ↗</a>
 <small>© 2026 Olesya Levytska</small>
 </footer>
+<script>
+(() => {
+  const dialog = document.querySelector('.vessel-image-dialog');
+  const enlargedImage = dialog.querySelector('img');
+  const title = dialog.querySelector('#vessel-image-title');
+  let opener;
+
+  document.querySelectorAll('[data-vessel-zoom]').forEach(button => {
+    button.addEventListener('click', () => {
+      const source = button.querySelector('img');
+      opener = button;
+      enlargedImage.src = source.currentSrc || source.src;
+      enlargedImage.alt = source.alt;
+      title.textContent = button.closest('figure').querySelector('figcaption').textContent;
+      dialog.showModal();
+    });
+  });
+
+  dialog.querySelector('.vessel-image-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => opener?.focus());
+})();
+</script>
 </body>
 </html>
