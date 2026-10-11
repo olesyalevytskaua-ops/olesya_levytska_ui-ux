@@ -218,8 +218,7 @@ footer{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){.carousel-preview span,.carousel-preview img,.text-link,.real-work-card,.real-work-card .case-cover img,.real-work-card .case-link{transition:none!important;transform:none!important;translate:none!important}}
 /* Expertise: evidence-led capability cards and a logo toolkit. */
 .expertise .section-head h2{max-width:none}
-.capability-grid .capability-card{padding:24px 20px;border-radius:16px;box-shadow:0 8px 24px var(--shadow);transition:border-color .2s ease,transform .2s ease}
-.capability-grid .capability-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.capability-grid .capability-card{padding:24px 20px;border-radius:16px;box-shadow:0 8px 24px var(--shadow)}
 .capability-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
 .capability-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;color:var(--accent);background:var(--surface-2);border-radius:12px}
 .capability-icon svg{width:30px;height:30px}
@@ -236,7 +235,7 @@ footer{color:var(--muted)}
 .tool-logo{display:block;width:18px;height:18px;flex:0 0 18px;background:currentColor;mask:var(--tool-logo) center/contain no-repeat;-webkit-mask:var(--tool-logo) center/contain no-repeat}
 @media(min-width:981px){.expertise .capability-grid{gap:14px}.capability-heading{flex-direction:column;gap:14px}.capability-grid .capability-card{padding:22px 18px}}
 @media(max-width:650px){.tool-row-with-logos{flex-direction:column;gap:18px;padding:22px}.tool-row-heading{flex-basis:auto}.capability-grid .capability-heading h3{font-size:18px}.capability-chips li{font-size:13px}.capability-grid .capability-card{padding:22px}}
-@media(prefers-reduced-motion:reduce){.capability-grid .capability-card{transition:none}.capability-grid .capability-card:hover{transform:none}}
+
 
 /* Explicit heading colors keep expertise readable in both themes. */
 .expertise h2,.expertise h3{color:var(--ink)}
