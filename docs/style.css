@@ -255,3 +255,29 @@ header{z-index:50}
 @media(max-width:650px){header nav{z-index:1}header nav a{display:block;min-height:44px}header nav a[href="contact.html"]{display:block}.mobile-contact,.theme-toggle{flex-shrink:0}}
 @media(max-width:430px){.mobile-contact{display:none}.menu-toggle{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+
+/* Complete chips: icons, consistent baselines and responsive card alignment. */
+.expertise .capability-chips,.expertise .tool-chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;align-content:flex-start}
+.expertise .capability-chips li,.expertise .tool-chips li{list-style:none;display:inline-flex;align-items:center;gap:7px;border-radius:999px;background:var(--chip);color:var(--muted);line-height:1.5}
+.expertise .capability-chips li{padding:7px 10px;font-size:12px}
+.expertise .tool-chips li{padding:9px 14px;color:var(--ink);font-size:14px;border:1px solid var(--line)}
+.skill-chip-icon{width:16px;height:16px;flex:0 0 16px;display:block}
+.tool-logo-img{display:block;width:18px;height:18px;flex:0 0 18px;object-fit:contain}
+.capability-chips .tool-logo-img{width:16px;height:16px;flex-basis:16px}
+:root[data-theme="dark"] .tool-logo-img:not(.claude-logo){filter:invert(1)}
+:root[data-theme="light"] .tool-logo-img,:root[data-theme="dark"] .claude-logo{filter:none}
+.capability-grid .capability-card{display:grid;grid-template-rows:auto 1fr}
+@media(min-width:651px){
+ .capability-heading{display:grid;grid-template-rows:44px minmax(46px,auto) minmax(88px,auto);gap:12px;margin:0 0 20px}
+ .capability-heading>div{display:contents}
+ .capability-grid .capability-heading h3,.capability-grid .capability-heading p{margin:0}
+ @supports(grid-template-rows:subgrid){
+  .expertise .capability-grid{grid-auto-rows:auto;row-gap:0}
+  .expertise .capability-card{grid-row:span 4;grid-template-rows:subgrid;row-gap:0;margin-bottom:20px}
+  .capability-heading,.capability-heading>div{display:contents}
+  .capability-icon{margin-bottom:14px}
+  .capability-grid .capability-heading h3{margin-bottom:8px}
+  .capability-grid .capability-heading p{margin-bottom:20px}
+ }
+}
+@media(max-width:650px){.expertise .capability-chips li{font-size:13px}.capability-grid .capability-card{display:block}}
