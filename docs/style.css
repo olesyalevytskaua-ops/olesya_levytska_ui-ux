@@ -75,9 +75,10 @@ img{max-width:100%;height:auto}
 .vessel-hero-devices{position:relative;z-index:1;display:block}
 .vessel-hero-devices img{display:block;width:100%;height:auto;filter:drop-shadow(0 22px 26px #17324a2b)}
 .vessel-case-hero .case-facts,.vessel-case-hero .skill-list,.vessel-case-hero .button-outline{max-width:960px}
-.vessel-back-link{display:inline-block;margin-bottom:24px;color:var(--muted)}
+.vessel-case-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;margin-bottom:clamp(26px,4vw,44px)}
+.vessel-back-link{grid-column:1;justify-self:start;display:inline-block;margin-bottom:0;color:var(--muted)}
 .vessel-case-hero{padding-top:36px}
-.vessel-case-label{text-align:center;color:var(--accent);font-size:12px;margin:0 0 clamp(26px,4vw,44px)}
+.vessel-case-label{grid-column:2;text-align:center;color:var(--accent);font-size:12px;margin:0}
 .vessel-case-hero .vessel-hero-panel{grid-template-columns:minmax(260px,.78fr) minmax(360px,1.2fr);gap:clamp(26px,5vw,70px);align-items:center;margin-top:0;padding:clamp(42px,7vw,86px) 0 clamp(34px,5vw,58px);border:0;border-radius:0;background:transparent;box-shadow:none;color:#17284f}
 .vessel-case-hero .vessel-hero-panel:before,.vessel-case-hero .vessel-hero-panel:after{display:none}
 .vessel-case-hero .vessel-hero-copy{text-align:center;align-self:center;padding-bottom:0}
@@ -101,7 +102,7 @@ img{max-width:100%;height:auto}
 .vessel-case-hero .vessel-hero-devices img{filter:drop-shadow(0 24px 28px #17324a28);margin:auto}
 .vessel-process-map{position:relative;margin:0;padding:clamp(42px,6vw,72px) clamp(24px,6vw,70px);overflow:hidden;background:linear-gradient(135deg,#10223b 0%,#17304f 52%,#3a9fb4 100%);color:#fff}
 .vessel-process-map .process-copy{max-width:900px;margin-bottom:40px}
-.vessel-process-map .eyebrow{color:var(--accent)}
+.vessel-process-map .eyebrow{color:#fff}
 .vessel-process-map h2{color:#fff;font-size:clamp(34px,5vw,58px);letter-spacing:0;margin-bottom:14px}
 .vessel-process-map p{color:#dceaf0}
 .vessel-journey{position:relative;display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:16px;align-items:start}
@@ -211,6 +212,7 @@ img{max-width:100%;height:auto}
 @media(max-width:600px){.real-work-card:first-child .case-cover{aspect-ratio:16/10}.case-intro{padding-top:35px}.case-lead{font-size:20px}.process-grid{grid-template-columns:1fr}.process-grid article{padding:22px}.contact-profile{grid-template-columns:1fr;padding:26px;gap:24px}.contact-profile>img{max-width:160px}.contact-statement{font-size:30px}.contact-profile h2{font-size:28px}.contact-modal{padding:12px}.contact-modal__panel{max-height:calc(100vh - 24px);padding:26px}.contact-modal__portrait{width:96px;height:96px}.contact-modal__actions .button{width:100%;justify-content:center}.insight-modal{padding:10px}.insight-modal__panel{height:calc(100vh - 20px);padding:14px;gap:12px}.insight-modal__stage{grid-template-columns:1fr}.insight-modal__nav{display:none}.insight-modal__footer{justify-content:center}.insight-modal__link{width:100%;justify-content:center}.insight-modal__track{gap:14px;scroll-padding-inline:6%;padding-inline:6%}.insight-modal__slide{min-width:88%}.insight-modal__slide img{width:100%;height:auto;max-height:100%}.full-case img{border-radius:0}}
 @media(max-width:760px){.vessel-hero-panel{grid-template-columns:1fr;gap:26px;margin-top:22px;padding:32px 18px 28px}.vessel-hero-copy .eyebrow{margin-bottom:20px}.vessel-hero-logo{max-width:250px;margin-bottom:18px}.vessel-case-hero .case-lead{font-size:18px}.vessel-hero-devices img{max-width:520px;margin:auto}.vessel-hero-panel:before{width:110%;height:32%;bottom:4%;left:-38%}.vessel-hero-panel:after{width:82%;height:28%;right:-34%;top:12%}}
 @media(max-width:900px){.vessel-case-hero .vessel-hero-panel{grid-template-columns:1fr;align-items:start}.vessel-case-hero .vessel-hero-copy{padding-bottom:0}.case-product-overview{grid-template-columns:1fr}.vessel-journey{grid-template-columns:1fr}.vessel-journey:before{left:22px;right:auto;top:0;bottom:0;height:auto;border-top:0;border-left:5px dashed #dceaf080}.journey-step{min-height:0;padding-left:64px}.journey-step span{position:absolute;left:0;top:0}.journey-step small{max-width:none}.case-story-grid,.case-story-grid.reverse,.final-product-grid{grid-template-columns:1fr}.case-story-grid.reverse .case-story-copy{order:0}.case-story-media.compact img{max-width:none}.activity-panel{padding:22px}.outcome-grid{grid-template-columns:1fr;gap:24px}.vessel-outcome{padding-inline:28px}}
+@media(max-width:480px){.vessel-case-header{grid-template-columns:1fr;gap:12px}.vessel-back-link,.vessel-case-label{grid-column:1}.vessel-case-label{justify-self:center}}
 @media(max-width:600px){.vessel-case-hero{padding-top:24px}.vessel-case-hero .vessel-hero-panel{padding:34px 20px 0}.vessel-case-hero .vessel-hero-copy h1{font-size:42px}.case-product-overview{padding-top:28px}.case-product-copy p:not(.eyebrow):not(.case-lead),.role-note p:last-child{font-size:16px}.vessel-process-map{padding:38px 22px}.journey-step strong{font-size:20px}.case-story-copy p{font-size:16px}.case-wide-media{overflow-x:auto}.case-wide-media img{min-width:760px}.vessel-outcome{padding:42px 22px}.outcome-grid{margin-top:34px}.outcome-skills{margin-top:38px}}
 @media print{.case-intro,.case-summary{break-inside:auto}.full-case,.case-next,.portfolio-banner{display:none}}
 
