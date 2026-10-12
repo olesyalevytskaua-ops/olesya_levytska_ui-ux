@@ -6,7 +6,7 @@ const themeToggle = document.querySelector('[data-theme-toggle]');
 
 const setTheme = theme => {
   root.dataset.theme = theme;
-  themeMeta?.setAttribute('content', theme === 'dark' ? '#17151c' : '#f8f7ff');
+  themeMeta?.setAttribute('content', theme === 'dark' ? '#17151c' : '#f6f6f8');
   if (themeToggle) {
     const dark = theme === 'dark';
     themeToggle.setAttribute('aria-pressed', String(dark));
