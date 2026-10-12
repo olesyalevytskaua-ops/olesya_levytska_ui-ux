@@ -279,7 +279,7 @@ if (contactLinks.length) {
         <a class="text-link" href="https://www.linkedin.com/in/olesya-levytska-321363193/">LinkedIn ↗</a>
       </div>
       <p class="contact-email"><a href="mailto:olesyalevytskaua@gmail.com">olesyalevytskaua@gmail.com</a></p>
-      <p>Kyiv, Ukraine · Remote · Open to relocation</p>
+      <p>Kyiv, Ukraine · UTC+2/+3 · Remote (UK &amp; Europe) · Open to relocation</p>
     </section>`;
   document.body.append(modal);
 
