@@ -54,3 +54,13 @@ Owner-supplied mobile screenshots replace the white calendar and event-editor il
 - docs/images/cases/vesselhaven-event-details.jpg — source: IMG_0896.jpeg
 
 The case now shows two owner onboarding screens, two weekly calendar views, and one event-detail screen. It does not present these screenshots as an event-creation wizard or as proof of measured conversion improvement.
+
+## Photographer Portfolio side project — 12 October 2026
+Secondary case (card 10 on Work, after ThePause in the next-project chain). Source: Figma file "Portfolio-Photographer" and the owner's prototype screen recording.
+
+- docs/case-photographer.html — case page; links to the live Figma prototype
+- docs/images/cases/photographer-walkthrough.mp4 — 1440 px H.264, no audio, ~2.4 MB; source: Screen Recording 2026-10-12 at 14.25.38.mov (49 s)
+- docs/images/cases/photographer-walkthrough-poster.webp, photographer-cover.webp — frame from the recording
+- docs/images/cases/photographer-{home,portrait,family,events,about}.webp — owner-supplied page exports, 1200 px wide
+- docs/images/cases/photographer-components.webp — cropped component sheet
+- docs/images/cases/photographer-contact.webp — exported, not currently used on the page
