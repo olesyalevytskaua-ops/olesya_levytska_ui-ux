@@ -64,3 +64,7 @@ Secondary case (card 10 on Work, after ThePause in the next-project chain). Sour
 - docs/images/cases/photographer-{home,portrait,family,events,about}.webp — owner-supplied page exports, 1200 px wide
 - docs/images/cases/photographer-components.webp — cropped component sheet
 - docs/images/cases/photographer-contact.webp — exported, not currently used on the page
+
+## Midlife quiz case study — 12 October 2026
+
+Three character WebP files (Cat Queen, Gym Rat, Mountain Addict) copied unchanged from the user's published quiz repository into docs/images/quiz. These are original project illustrations, not interface screenshots. The case records illustration studies, emotional-pattern scoring, AI-assisted delivery, and a marketing hypothesis; it makes no audience-impact or psychological-validation claims.
