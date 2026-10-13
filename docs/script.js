@@ -76,15 +76,23 @@ if (headerActions && mainNav) {
 
 const marquee = document.querySelector('[data-marquee]');
 const marqueeToggle = document.querySelector('[data-marquee-toggle]');
+const marqueeHead = document.querySelector('[data-marquee-head]');
+const marqueeToggleText = document.querySelector('[data-marquee-toggle-text]');
 const marqueeStatus = document.querySelector('[data-marquee-status]');
 if (marquee && marqueeToggle) {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let userPaused = false;
   const updateMarquee = (announce = false) => {
-    const paused = userPaused || reducedMotion.matches;
+    const reduced = reducedMotion.matches;
+    const paused = userPaused || reduced;
     marquee.dataset.paused = String(paused);
     marqueeToggle.dataset.paused = String(paused);
-    marqueeToggle.setAttribute('aria-label', paused ? 'Resume skills line' : 'Pause skills line');
+    marqueeToggle.setAttribute('aria-pressed', String(paused));
+    // Visible label stays inside the accessible name (SC 2.5.3 Label in Name).
+    marqueeToggle.setAttribute('aria-label', paused ? 'Play the skills line' : 'Pause the skills line');
+    if (marqueeToggleText) marqueeToggleText.textContent = paused ? 'Play' : 'Pause';
+    // Reduced motion shows the static list instead, so the control has nothing to control.
+    if (marqueeHead) marqueeHead.hidden = reduced;
     if (announce && marqueeStatus) marqueeStatus.textContent = paused ? 'Skills line paused.' : 'Skills line moving.';
   };
   marqueeToggle.addEventListener('click', () => {
