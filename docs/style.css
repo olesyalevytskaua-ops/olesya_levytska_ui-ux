@@ -425,8 +425,8 @@ header{z-index:50}
 .hero-refined .hero-actions .button{min-height:48px;max-width:100%;white-space:normal}
 .hero-refined .button-outline{color:var(--accent-strong)}
 .hero-refined .button-outline:hover{color:var(--on-accent)}
-.hero-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;max-width:900px;list-style:none;padding:0;margin:28px 0 0}
-.hero-highlights li{display:flex;align-items:center;gap:16px;min-width:0;font-size:15px;line-height:1.5}
+.hero-highlights{display:flex;flex-wrap:wrap;gap:32px;max-width:900px;list-style:none;padding:0;margin:28px 0 0}
+.hero-highlights li{display:flex;flex:0 0 auto;align-items:center;gap:16px;min-width:0;max-width:100%;font-size:15px;line-height:1.5}
 .hero-highlights svg{display:block;flex:0 0 32px;width:32px;height:32px;color:var(--accent)}
 .hero-highlight-copy{display:flex;flex-direction:column;min-width:0;color:var(--muted)}
 .hero-highlight-copy strong{color:var(--ink);font-weight:600}
@@ -436,7 +436,7 @@ header{z-index:50}
  .hero-animate .hero-entrance:focus-within{animation:none;opacity:1;transform:none}
 }
 @media(max-width:650px){
- .hero-highlights{grid-template-columns:1fr;gap:20px}
+ .hero-highlights{display:grid;grid-template-columns:1fr;gap:20px}
  .hero-refined h1{letter-spacing:-1px}
 }
 /* Footer contact reuses text-link colors and focus, with movement confined to its arrow. */
