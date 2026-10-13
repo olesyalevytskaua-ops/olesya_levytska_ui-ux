@@ -74,33 +74,41 @@ if (headerActions && mainNav) {
   mobileViewport.addEventListener('change', () => setMenuOpen(false));
 }
 
-const marquee = document.querySelector('[data-marquee]');
-const marqueeToggle = document.querySelector('[data-marquee-toggle]');
-const marqueeHead = document.querySelector('[data-marquee-head]');
-const marqueeToggleText = document.querySelector('[data-marquee-toggle-text]');
-const marqueeStatus = document.querySelector('[data-marquee-status]');
-if (marquee && marqueeToggle) {
+// Skills line: moves only while the visitor scrolls, so nothing moves on its own
+// (WCAG 2.2 SC 2.2.2 is never triggered). Reduced motion keeps it static and wrapped.
+const skillsLine = document.querySelector('[data-skills-line]');
+if (skillsLine) {
+  const track = skillsLine.querySelector('[data-skills-track]');
+  const view = skillsLine.querySelector('[data-skills-view]');
+  const anchor = document.querySelector('#selected-work .section-head') || document.querySelector('#selected-work');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let userPaused = false;
-  const updateMarquee = (announce = false) => {
-    const reduced = reducedMotion.matches;
-    const paused = userPaused || reduced;
-    marquee.dataset.paused = String(paused);
-    marqueeToggle.dataset.paused = String(paused);
-    marqueeToggle.setAttribute('aria-pressed', String(paused));
-    // Visible label stays inside the accessible name (SC 2.5.3 Label in Name).
-    marqueeToggle.setAttribute('aria-label', paused ? 'Play the skills line' : 'Pause the skills line');
-    if (marqueeToggleText) marqueeToggleText.textContent = paused ? 'Play' : 'Pause';
-    // Reduced motion shows the static list instead, so the control has nothing to control.
-    if (marqueeHead) marqueeHead.hidden = reduced;
-    if (announce && marqueeStatus) marqueeStatus.textContent = paused ? 'Skills line paused.' : 'Skills line moving.';
+  const SPEED = 0.6;   // horizontal pixels per pixel of page scroll: a calm drift, readable while moving
+  let start = 0;
+  let queued = false;
+
+  const measure = () => {
+    track.style.transform = '';
+    // Align the first word with the content column below the line.
+    if (anchor) skillsLine.style.setProperty('--skills-inset', `${Math.round(anchor.getBoundingClientRect().left)}px`);
+    const top = skillsLine.getBoundingClientRect().top + scrollY;
+    start = top - Math.min(innerHeight, top);   // scroll position at which the line first comes into view
   };
-  marqueeToggle.addEventListener('click', () => {
-    userPaused = !userPaused;
-    updateMarquee(true);
-  });
-  reducedMotion.addEventListener('change', () => updateMarquee());
-  updateMarquee();
+
+  const update = () => {
+    queued = false;
+    if (reducedMotion.matches) { track.style.transform = ''; return; }
+    const distance = Math.max(0, track.scrollWidth - view.clientWidth);   // never drift past the last word
+    const travel = Math.min(distance, Math.max(0, (scrollY - start) * SPEED));
+    track.style.transform = `translate3d(${(-travel).toFixed(1)}px,0,0)`;
+  };
+
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  addEventListener('scroll', queue, {passive: true});
+  addEventListener('resize', () => { measure(); queue(); });
+  reducedMotion.addEventListener('change', () => { measure(); queue(); });
+  if (document.fonts?.ready) document.fonts.ready.then(() => { measure(); queue(); });
+  measure();
+  update();
 }
 
 const carousel = document.querySelector('.carousel');
