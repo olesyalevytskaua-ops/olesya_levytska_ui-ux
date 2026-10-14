@@ -481,3 +481,22 @@ header .brand,footer .brand{font-family:"Arial Black","Segoe UI",sans-serif;font
 .skills-line__track li:not(:last-child)::after{content:"";flex:none;width:clamp(7px,.9vw,11px);height:clamp(7px,.9vw,11px);margin-inline:clamp(14px,2.4vw,30px);border-radius:50%;background:var(--accent)}
 @media(prefers-reduced-motion:no-preference){.js .skills-line__track{flex-wrap:nowrap;width:max-content;font-size:clamp(11px,2.1vw,23px);will-change:transform}}
 @media print{.skills-line{width:auto;margin-inline:0}.skills-line__track{flex-wrap:wrap!important;width:auto!important;transform:none!important;font-size:18px}}
+/* Harmoni case */
+.harmoni-process-map{background:linear-gradient(135deg,#231a3f 0%,#3a2a6b 52%,#6f55c8 100%)}
+.harmoni-process-map p,.harmoni-process-map .journey-step small{color:#e6defc}
+.harmoni-process-map .vessel-journey:before{border-top-color:#e6defc80}
+.harmoni-process-map .journey-step span{background:#fff;color:#3a2a6b}
+.harmoni-story-copy{max-width:820px}
+.harmoni-funnel{margin:0;padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 18px 55px var(--shadow)}
+.harmoni-funnel ol{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.harmoni-funnel li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font-size:16px}
+.harmoni-funnel li:nth-child(2){margin-inline:4%}.harmoni-funnel li:nth-child(3){margin-inline:8%}.harmoni-funnel li:nth-child(4){margin-inline:12%}.harmoni-funnel li:nth-child(5){margin-inline:16%}.harmoni-funnel li:nth-child(6){margin-inline:20%}
+.harmoni-funnel em{font-style:normal;font-size:12px;font-weight:750;letter-spacing:1px;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.harmoni-funnel li.is-leak{border:2px dashed var(--accent)}
+.harmoni-funnel li.is-leak em{color:var(--accent)}
+.harmoni-funnel li.is-leak em:before{content:"▼ "}
+.harmoni-funnel li.is-ok em:before{content:"✓ "}
+.harmoni-funnel figcaption{margin-top:16px;font-size:13px;color:var(--muted)}
+.harmoni-earlier-note{margin:40px 0 0;font-size:15px}
+:root[data-theme="dark"] .harmoni-case-page .case-callout{background:color-mix(in srgb,var(--accent) 14%,var(--surface))}
+@media(max-width:600px){.harmoni-funnel{padding:18px}.harmoni-funnel li{font-size:15px;padding:12px 14px}.harmoni-funnel li:nth-child(n){margin-inline:0}}
