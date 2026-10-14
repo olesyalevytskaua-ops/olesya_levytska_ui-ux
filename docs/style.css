@@ -508,7 +508,7 @@ header .brand,footer .brand{font-family:"Arial Black","Segoe UI",sans-serif;font
 .harmoni-gap{margin-top:48px}.harmoni-gap-sm{margin-top:28px}
 .harmoni-subhead{margin:52px 0 20px;font-size:clamp(22px,2.4vw,30px)}
 .harmoni-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
-.harmoni-card-grid li{padding:22px 24px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;background:var(--surface);color:var(--ink);font-size:16px;line-height:1.65}
+.harmoni-card-grid li{padding:20px 24px;border:0;border-radius:14px;background:#ead9fb;color:#171329;font-size:16px;line-height:1.6}.harmoni-principles li::before{content:"💡" / "";display:inline-block;margin-right:8px;font-size:.95em}[data-theme="dark"] .harmoni-card-grid li{background:#33284a;color:var(--ink)}
 .harmoni-quotes{display:grid;gap:12px;list-style:none;margin:0;padding:0}
 .harmoni-quotes li{padding:12px 16px;border-radius:10px;background:var(--surface-2);color:var(--ink);font-family:Georgia,serif;font-style:italic;font-size:17px;line-height:1.5}
 .harmoni-feature{display:grid;grid-template-columns:minmax(0,.95fr) minmax(300px,1fr);gap:clamp(28px,5vw,64px);align-items:start;padding-top:56px;margin-top:56px;border-top:1px solid var(--line)}
