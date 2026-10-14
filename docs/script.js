@@ -395,3 +395,12 @@ if (contactLinks.length) {
     observer.disconnect();
   });
 })();
+
+// Sticky header: add a frosted band once the page has scrolled.
+{
+  const root = document.documentElement;
+  let ticking = false;
+  const update = () => { root.classList.toggle('is-scrolled', scrollY > 8); ticking = false; };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, {passive: true});
+  update();
+}
