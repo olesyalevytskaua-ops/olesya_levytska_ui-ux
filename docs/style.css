@@ -539,3 +539,14 @@ header .brand,footer .brand{font-family:"Arial Black","Segoe UI",sans-serif;font
 .harmoni-case-hero .vessel-hero-devices img{display:block;width:85%;max-width:578px;height:auto;margin:0 auto}
 @media(max-width:900px){.harmoni-case-hero .vessel-hero-panel{grid-template-columns:1fr}.harmoni-case-hero .vessel-hero-devices img{max-width:442px}}
 :root[data-theme="dark"] .harmoni-hero-wordmark{filter:brightness(1.7) saturate(.85)}
+/* Sticky header: stays reachable on long pages; frosted full-width band once the page scrolls. */
+header{position:sticky;top:0;z-index:50;isolation:isolate}
+/* Keep the fade-in, but no filter on the header: a filter on it would stop the backdrop blur. */
+header.motion-pending,header.motion-enter{filter:none!important}
+header::before{content:"";position:absolute;inset:0 calc(50% - 50vw);z-index:-1;background:var(--bg);background:color-mix(in srgb,var(--bg) 94%,transparent);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid transparent;opacity:0;transition:opacity .2s ease,box-shadow .2s ease,border-color .2s ease;pointer-events:none}
+.is-scrolled header{border-bottom-color:transparent}
+.is-scrolled header::before{opacity:1;border-bottom-color:var(--line);box-shadow:0 8px 30px var(--shadow)}
+.menu-open header::before{opacity:1}
+html{scroll-padding-top:128px}
+@media(prefers-reduced-motion:reduce){header::before{transition:none}}
+@media print{header{position:static}header::before{display:none}}
