@@ -534,5 +534,8 @@ header .brand,footer .brand{font-family:"Arial Black","Segoe UI",sans-serif;font
 .harmoni-brand-lockup{gap:18px}
 .harmoni-hero-mark{display:block;width:88px;height:88px;border-radius:50%}
 .harmoni-hero-wordmark{display:block;width:min(400px,100%);height:auto}
-.harmoni-case-hero .vessel-hero-devices img{display:block;width:100%;max-width:440px;height:auto}
+.harmoni-case-hero .vessel-hero-panel{grid-template-columns:minmax(280px,.8fr) minmax(400px,1.3fr);gap:clamp(24px,4vw,56px);align-items:center;padding-top:clamp(28px,4vw,48px)}
+.harmoni-case-hero .vessel-hero-copy,.harmoni-case-hero .vessel-hero-devices{align-self:center}
+.harmoni-case-hero .vessel-hero-devices img{display:block;width:100%;max-width:680px;height:auto;margin:0 auto}
+@media(max-width:900px){.harmoni-case-hero .vessel-hero-panel{grid-template-columns:1fr}.harmoni-case-hero .vessel-hero-devices img{max-width:520px}}
 :root[data-theme="dark"] .harmoni-hero-wordmark{filter:brightness(1.7) saturate(.85)}
