@@ -16,6 +16,7 @@
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#f6f6f8')}catch(e){}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css?v=20261014-sticky-header">
+<link rel="stylesheet" href="vessel-explorations.css?v=20261017">
 <script src="script.js?v=20261014-sticky-header" defer>
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
@@ -158,6 +159,28 @@
 <li>Frontend handoff with engineering</li>
 </ul>
 </div>
+</div>
+<div class="vessel-explorations" aria-labelledby="vessel-explorations-title">
+<p class="eyebrow" id="vessel-explorations-title">PRODUCT EXPLORATIONS · CONCEPTS &amp; PROTOTYPES</p>
+<article class="vessel-exploration" aria-labelledby="vessel-intake-title">
+<div class="case-story-copy">
+<h3 id="vessel-intake-title">A vessel profile without 18 screens of typing</h3>
+<p>A prototype walkthrough exposed an intake that asked for one typed field per screen. I mapped the 18 fields to existing data sources and explored four alternatives: document scanning, vessel lookup, voice input, and progressive capture from photos and invoices.</p>
+<p>The proposed flow brings extracted details into <strong>one review step</strong>, flags uncertain values, and asks only for missing information. Manual entry stays available. The next step is to test extraction accuracy and completion effort with owners and captains.</p>
+</div>
+<figure class="case-story-media vessel-intake-preview"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Enlarge document-scanning and voice-intake concepts"><img src="images/cases/vesselhaven-intake-concepts.webp" width="940" height="980" alt="Two intake concepts: review vessel details extracted from a document, or confirm structured values captured in a voice conversation" loading="lazy" decoding="async"></button><figcaption>Document and voice intake concepts. Sample vessel data; not shipped features.</figcaption></figure>
+</article>
+<article class="vessel-exploration vessel-fold-exploration" aria-labelledby="vessel-fold-title">
+<div class="case-story-copy">
+<h3 id="vessel-fold-title">One navigation system, folded and open</h3>
+<p>I compared a compact navigation rail with the existing tablet sidebar for a foldable-screen prototype. The chosen expanded layout exposes named sections and reuses established patterns; narrow and portrait views retain the phone layout.</p>
+<p><strong>The trade-off:</strong> less content width and controls moving when the screen unfolds. I documented layout rules and handoff checks for safe areas, split view, and preserving the user's task across layout changes. Device assumptions still need validation.</p>
+</div>
+<div class="vessel-fold-previews">
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Enlarge folded-screen navigation prototype"><img src="images/cases/vesselhaven-fold-cover.webp" width="918" height="1340" alt="Compact VesselHaven dashboard with a vessel switcher, actions and navigation grouped in a vertical rail" loading="lazy" decoding="async"></button><figcaption>Folded: compact navigation rail.</figcaption></figure>
+<figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Enlarge expanded-screen navigation prototype"><img src="images/cases/vesselhaven-fold-open.webp" width="1500" height="1055" alt="Expanded VesselHaven dashboard using the existing tablet sidebar with visible section names and top-bar actions" loading="lazy" decoding="async"></button><figcaption>Open: the existing tablet navigation. Exploratory prototype.</figcaption></figure>
+</div>
+</article>
 </div>
 </section>
 <section class="section case-story-section" id="testing">
