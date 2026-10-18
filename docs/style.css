@@ -565,3 +565,4 @@ html{scroll-padding-top:128px}
 .vaults-process-map .journey-step:hover strong,.vaults-process-map .journey-step:focus-visible strong{color:#f5c400}
 .vaults-process-map .journey-step:hover small,.vaults-process-map .journey-step:focus-visible small{color:#fff}
 .vaults-process-map .journey-step:focus-visible{outline-color:#f5c400}
+.featured-grid .featured-card:first-child .case-cover{aspect-ratio:16/11}
