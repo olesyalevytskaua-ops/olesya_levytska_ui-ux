@@ -566,3 +566,8 @@ html{scroll-padding-top:128px}
 .vaults-process-map .journey-step:hover small,.vaults-process-map .journey-step:focus-visible small{color:#fff}
 .vaults-process-map .journey-step:focus-visible{outline-color:#f5c400}
 .featured-grid .featured-card:first-child .case-cover{aspect-ratio:16/11}
+.ds-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin:0}
+.ds-stats div{padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.ds-stats dt{font-size:clamp(28px,3vw,40px);font-weight:700;line-height:1.1;color:var(--ink)}
+.ds-stats dd{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.4}
+@media(max-width:760px){.ds-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
