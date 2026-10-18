@@ -560,3 +560,5 @@ html{scroll-padding-top:128px}
 .vaults-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,.42fr);gap:24px;align-items:start;margin-top:32px}
 .vaults-screen .vessel-image-open{max-height:640px;overflow:hidden;border-radius:12px}
 @media(max-width:760px){.vaults-screens{grid-template-columns:1fr 1fr}.vaults-screen-mobile{grid-column:1/-1;max-width:260px;justify-self:center}.vaults-screen .vessel-image-open{max-height:420px}}
+.vaults-gap{margin-top:32px}
+.vaults-sitemap img{max-width:760px;margin-inline:auto}
