@@ -145,6 +145,18 @@
 <p>The hardest part was not a screen. Both sides had been stuck for months. We found common ground on the style and then on every screen, and reached sign-off with a client who had been very hard to satisfy. The approved design was handed off to their certified development team.</p>
 </div>
 </section>
+<section class="section case-story-section" id="screens">
+<div class="case-story-copy">
+<p class="case-step-kicker">The redesigned site</p>
+<h2>Home page, light and dark</h2>
+<p>The booking bar sits in the first screen, the three-step “how it works” explains the service before the price, and sizes appear as filled boxes in a carousel. The same layout holds on mobile. Select a screen to see the full page.</p>
+</div>
+<div class="vaults-screens">
+<figure class="case-story-media vaults-screen"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open home page, light version larger"><img src="images/cases/vaults-home-light.webp" width="1400" height="5426" alt="Vaults1 home page in the light version: hero with booking bar, how it works, 24/7 banner, pricing carousel with filled boxes, reasons to choose, locations, FAQ and footer" loading="lazy" decoding="async"></button><figcaption>Home page, light version.</figcaption></figure>
+<figure class="case-story-media vaults-screen"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open home page, dark version larger"><img src="images/cases/vaults-home-dark.webp" width="1400" height="5429" alt="Vaults1 home page in the dark version with the same sections on a black background" loading="lazy" decoding="async"></button><figcaption>Home page, dark version.</figcaption></figure>
+<figure class="case-story-media vaults-screen vaults-screen-mobile"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open mobile home page larger"><img src="images/cases/vaults-home-mobile.webp" width="592" height="8000" alt="Vaults1 home page on mobile: hero with map of locations, booking form, how it works, pricing carousel, FAQ, news and footer" loading="lazy" decoding="async"></button><figcaption>Home page on mobile.</figcaption></figure>
+</div>
+</section>
 <section class="section vessel-outcome" aria-labelledby="vaults-outcome-title">
 <div class="vessel-outcome-copy">
 <p class="eyebrow">DESIGN OUTCOME</p>
@@ -194,6 +206,33 @@
 <a class="button" href="case-design-system.html">View next case ↗</a>
 </section>
 </main>
+<dialog class="vessel-image-dialog" aria-labelledby="vessel-image-title">
+<button type="button" class="vessel-image-close" aria-label="Close image" autofocus>×</button>
+<h2 id="vessel-image-title"></h2>
+<img alt="">
+</dialog>
+<script>
+(() => {
+  const dialog = document.querySelector('.vessel-image-dialog');
+  const enlargedImage = dialog.querySelector('img');
+  const title = dialog.querySelector('#vessel-image-title');
+  let opener;
+  document.querySelectorAll('[data-vessel-zoom]').forEach(button => {
+    button.addEventListener('click', () => {
+      const source = button.querySelector('img');
+      opener = button;
+      enlargedImage.src = source.currentSrc || source.src;
+      enlargedImage.alt = source.alt;
+      title.textContent = button.closest('figure').querySelector('figcaption').textContent;
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('.vessel-image-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => opener?.focus());
+})();
+</script>
+
 <footer>
 <a class="brand" href="./"><span class="brand-name">Olesya Levytska</span><span class="brand-dot" aria-hidden="true"></span></a>
 <p>Making complex products easier to use.</p>
