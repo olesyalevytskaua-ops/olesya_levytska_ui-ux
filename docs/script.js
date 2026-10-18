@@ -285,7 +285,7 @@ if (contactLinks.length) {
     <div class="contact-modal__backdrop" data-contact-close></div>
     <section class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" tabindex="-1">
       <button class="contact-modal__close" type="button" data-contact-close aria-label="Close contact dialog">×</button>
-      <img class="contact-modal__portrait" src="images/olesya-portrait.png" width="1254" height="1254" alt="Olesya Levytska">
+      <img class="contact-modal__portrait" src="images/olesya-portrait.webp" width="256" height="256" alt="Olesya Levytska" loading="lazy" decoding="async">
       <p class="eyebrow">LET'S CONNECT</p>
       <h2 id="contact-modal-title">Olesya Levytska</h2>
       <p class="contact-role">Senior Product Designer · UI/UX</p>
