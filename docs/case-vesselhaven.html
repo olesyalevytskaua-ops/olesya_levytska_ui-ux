@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#f6f6f8">
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#f6f6f8')}catch(e){}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261014-sticky-header">
+<link rel="stylesheet" href="style.css?v=20261018-vh-ds">
 <link rel="stylesheet" href="vessel-explorations.css?v=20261017">
 <script src="script.js?v=20261014-sticky-header" defer>
 </script>
@@ -58,7 +58,7 @@
 <div class="case-product-copy">
 <h2 class="eyebrow" id="vessel-product-title">PROJECT OVERVIEW</h2>
 <dl class="vessel-project-facts">
-<div><dt>Role</dt><dd>Senior Product Designer</dd></div>
+<div><dt>Role</dt><dd>Senior Product &amp; UX/UI Designer</dd></div>
 <div><dt>Product</dt><dd>Multi-role yacht management, community, and services marketplace</dd></div>
 <div><dt>Platforms</dt><dd>Responsive web, tablet, and mobile</dd></div>
 </dl>
@@ -130,14 +130,89 @@
 <div class="case-story-copy">
 <p class="case-step-kicker">3. Design System</p>
 <h2>A flexible system for changing environments</h2>
+<p>A new product grows fast, and every new module risks a new way of doing things. So we built a comprehensive design system from the start, so the product can scale without being redesigned screen by screen.</p>
 <p>I created coordinated light and dark themes using semantic colour tokens, Nunito Sans typography, and reusable navigation, form, status, and dashboard patterns.</p>
 <p>Shared tokens and component states were designed to keep information hierarchy consistent across modules and responsive layouts. The service-history examples show the same content structure in both themes, including status indicators and data rows.</p>
-<p>The glass card is one surface treatment in the system. Its elevation and translucency were designed to preserve hierarchy over the brand gradient; readability in real lighting conditions still needs direct validation.</p>
+<p>The glass card is one surface treatment in the system. Its elevation and translucency were designed to preserve hierarchy over the brand gradient. Readability was measured at real positions on the page: on wide lists the right edge falls short of AA for small text, so the next step is a dedicated text colour for that spot.</p>
 </div>
 <div class="case-story-stack">
 <figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open light and dark service-history examples larger"><img src="images/cases/vesselhaven-ui-system.png" width="572" height="305" alt="Service History designs in dark and light themes, showing summary metrics, status markers, and rows" loading="lazy" decoding="async"></button><figcaption>Service History: matching information structure, light and dark states.</figcaption></figure>
 <figure class="case-story-media compact"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open glass card example larger"><img src="images/cases/vesselhaven-glass-card.png" width="371" height="282" alt="Translucent dashboard card with vessel status and earnings on a teal gradient" loading="lazy" decoding="async"></button><figcaption>Glass card: vessel status and earnings within one reusable surface.</figcaption></figure>
 </div>
+</div>
+<dl class="ds-stats vaults-gap" aria-label="Design system in numbers">
+<div><dt>65</dt><dd>components</dd></div>
+<div><dt>287</dt><dd>design tokens</dd></div>
+<div><dt>2</dt><dd>themes, light and dark</dd></div>
+<div><dt>23</dt><dd>documentation pages</dd></div>
+<div><dt>84%</dt><dd>of screens built from the kit</dd></div>
+</dl>
+<div class="case-story-copy vaults-gap">
+<h3>Proof that it scales</h3>
+<p>The Provider CRM, with Telegram-style messages, shipped with <strong>no new components</strong>: seven new screens built entirely from existing parts — cards, status pills, buttons, menus, modals, empty states, avatars and form fields. The marina berths module followed the same way: five new screens, zero new components.</p>
+<p>Reuse works in the other direction too. The dashed “add” tile appears on four screens in four sizes, from a grid cell to a full-width row. It is now one component that owns the look and states, so all four behave the same in both themes.</p>
+</div>
+<div class="harmoni-two-col vaults-gap">
+<div class="activity-panel">
+<p class="eyebrow">FIGMA ↔ CODE</p>
+<ul>
+<li>Tokens live in code, named after the Figma variables</li>
+<li>Two layers: raw colours only in primitives, screens use role tokens, so a theme switch never edits a component</li>
+<li>The documentation site is generated from the running app, so it can’t fall out of date</li>
+<li>Each component’s Figma spec sits next to what ships, property by property</li>
+<li>Every merge syncs components into the production frontend; developers take code, not redlines</li>
+</ul>
+</div>
+<div class="activity-panel">
+<p class="eyebrow">ACCESSIBILITY</p>
+<ul>
+<li>Every light-theme text colour passes WCAG AA on all four backgrounds</li>
+<li>Brand hues for fills and icons; text gets a darker version of the same hue that passes</li>
+<li>Field borders tuned to 3:1 so inputs are easy to find</li>
+<li>44px default control height, the phone tap-target minimum</li>
+<li>16px menu labels, set from iPad user feedback</li>
+<li>Visible two-tone focus ring and reduced-motion support</li>
+</ul>
+</div>
+</div>
+<div class="harmoni-two-col vaults-gap">
+<div class="activity-panel">
+<p class="eyebrow">FOUNDATIONS</p>
+<ul>
+<li>Principles</li>
+<li>Voice &amp; writing for six roles</li>
+<li>Colour, light and dark</li>
+<li>Type, elevation and shadow</li>
+<li>Shape, spacing, motion and icons</li>
+</ul>
+</div>
+<div class="activity-panel">
+<p class="eyebrow">FIVE LAWS</p>
+<ul>
+<li>No raw colour outside the primitive layer</li>
+<li>Only role tokens change between themes</li>
+<li>The production base stylesheet is never edited</li>
+<li>Nothing ships unmeasured: contrast is read from the live page</li>
+<li>Reuse before you add: extract a component on the second copy, never the first</li>
+</ul>
+</div>
+</div>
+<div class="case-story-copy vaults-gap">
+<p>Rules carry a status, decided or proposed, so nobody cites a proposal as a rule. Some are enforced by the build itself: a test fails if a colour is added without being filed in the catalogue.</p>
+</div>
+<div class="harmoni-two-col vaults-gap">
+<figure class="case-story-media">
+<button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open design system documentation, Voice and writing, larger">
+<img src="images/cases/vesselhaven-ds-docs.webp" width="1600" height="957" alt="VesselHaven design system documentation site in dark mode, showing the Voice and writing page with foundations and components in the sidebar" loading="lazy" decoding="async">
+</button>
+<figcaption>Documentation: the Voice &amp; writing foundation.</figcaption>
+</figure>
+<figure class="case-story-media">
+<button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open card usage guidelines larger">
+<img src="images/cases/vesselhaven-ds-card.webp" width="1600" height="956" alt="Card usage guidelines: three emphases, hero, default and quiet, and a do and don't example showing that a raised card never sits on another raised card" loading="lazy" decoding="async">
+</button>
+<figcaption>Card usage: three emphases and a do / don’t.</figcaption>
+</figure>
 </div>
 </section>
 <section class="section case-story-section" id="prototyping">
