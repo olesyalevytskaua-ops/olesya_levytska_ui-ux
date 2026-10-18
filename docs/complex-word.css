@@ -1,0 +1,29 @@
+/* "complex" → simple: kinetic word in the hero headline.
+   Uses theme tokens only, so light/dark follow :root[data-theme]. */
+.complex-word{display:inline-block;white-space:nowrap}
+.complex-word__l{
+  display:inline-block;
+  color:var(--ink);
+  transform:none;
+  opacity:1;
+  transition:
+    transform .76s cubic-bezier(.34,1.56,.64,1) var(--d,0ms),
+    opacity .4s ease var(--d,0ms),
+    color .5s ease var(--d,0ms);
+  will-change:transform;
+}
+.complex-word.is-scattered .complex-word__l{
+  color:var(--muted);
+  opacity:var(--o,.6);
+  transform:translate(var(--x,0),var(--y,0)) rotate(var(--r,0deg));
+  transition-duration:.32s,.25s,.25s;
+}
+.complex-word.is-instant .complex-word__l{transition:none}
+
+/* Static everywhere motion is unwanted */
+@media (prefers-reduced-motion:reduce){
+  .complex-word .complex-word__l{transform:none!important;opacity:1!important;color:var(--ink)!important;transition:none!important}
+}
+@media print{
+  .complex-word .complex-word__l{transform:none!important;opacity:1!important;color:#000!important}
+}
