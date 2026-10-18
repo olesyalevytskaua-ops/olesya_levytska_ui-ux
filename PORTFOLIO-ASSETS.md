@@ -30,7 +30,7 @@ Additional originals: docs/images/olesya-banner.png, docs/images/olesya-portrait
 The desktop and mobile contact exports and CV exports serve as layout references. Contact and CV are implemented as native HTML with functional links and selectable text. No screenshot-only contact form is used; the email button opens the visitor's mail application.
 
 ## Content
-Profile text and the six highlighted tools come from the owner's supplied LinkedIn About section. The CV preserves the broader skills, tools, and career history in the original repository CV. Case summaries are grounded in the owner's Figma exports and original CV. The original root CV and README are retained.
+Profile text and the six highlighted tools come from the owner's supplied LinkedIn About section. The CV preserves the broader skills, tools, and career history in the original repository CV. Case summaries are grounded in the owner's Figma exports and original CV. The README is retained; docs/cv.html is the single CV source.
 
 The #9 UX card links to the owner's profile until its direct post URL is supplied. #4 and #8 use their public post links. Automatic LinkedIn syncing is not configured.
 
