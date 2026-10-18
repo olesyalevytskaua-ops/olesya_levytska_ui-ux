@@ -275,7 +275,7 @@ nav{align-items:center;gap:24px;flex-wrap:wrap;justify-content:flex-end}
 :root[data-theme="dark"] .theme-knob{left:calc(100% - 3px - var(--theme-knob-size));background:var(--accent-strong)}
 :root[data-theme="dark"] .theme-icon-sun{color:var(--muted)}
 :root[data-theme="dark"] .theme-icon-moon{color:var(--on-accent)}
-@keyframes soft-dissolve{from{opacity:0;filter:blur(8px);transform:translateY(10px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@keyframes soft-dissolve{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .hero-refined{display:block;padding:72px 0 48px}
 .hero-refined .hero-copy{animation:soft-dissolve .7s ease-out both}
 .hero-refined h1{font-size:clamp(42px,6vw,78px);max-width:940px;letter-spacing:0;line-height:1.04;margin-bottom:24px}
@@ -406,9 +406,9 @@ header{z-index:50}
 
 /* One-time scroll dissolves: content stays visible when enhancement is unavailable. */
 .hero-refined .hero-copy,.section-head,.featured-card,.ux-card,.capability-grid article,.process,.tool-row{animation:none}
-@keyframes content-dissolve{from{opacity:0;filter:blur(3px)}to{opacity:1;filter:blur(0)}}
+@keyframes content-dissolve{from{opacity:0}to{opacity:1}}
 @media(prefers-reduced-motion:no-preference){
- .motion-pending{opacity:0;filter:blur(3px)}
+ .motion-pending{opacity:0}
  .motion-enter.motion-enter{animation:content-dissolve .6s ease-out both;animation-delay:var(--motion-delay,0ms)!important}
  .motion-pending:focus-within,.motion-enter:focus-within{opacity:1;filter:none;animation:none!important}
 }
@@ -433,7 +433,7 @@ header{z-index:50}
 .hero-highlight-copy strong{color:var(--ink);font-weight:600}
 @keyframes hero-dissolve{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:no-preference){
- .hero-animate .hero-entrance{animation:hero-dissolve 950ms cubic-bezier(.22,.61,.36,1) var(--hero-delay,0ms) both}
+ .hero-animate .hero-entrance{animation:hero-dissolve 480ms cubic-bezier(.22,.61,.36,1) var(--hero-delay,0ms) both}
  .hero-animate .hero-entrance:focus-within{animation:none;opacity:1;transform:none}
 }
 @media(max-width:650px){
