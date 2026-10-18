@@ -562,3 +562,6 @@ html{scroll-padding-top:128px}
 @media(max-width:760px){.vaults-screens{grid-template-columns:1fr 1fr}.vaults-screen-mobile{grid-column:1/-1;max-width:260px;justify-self:center}.vaults-screen .vessel-image-open{max-height:420px}}
 .vaults-gap{margin-top:32px}
 .vaults-sitemap img{max-width:760px;margin-inline:auto}
+.vaults-process-map .journey-step:hover strong,.vaults-process-map .journey-step:focus-visible strong{color:#f5c400}
+.vaults-process-map .journey-step:hover small,.vaults-process-map .journey-step:focus-visible small{color:#fff}
+.vaults-process-map .journey-step:focus-visible{outline-color:#f5c400}
