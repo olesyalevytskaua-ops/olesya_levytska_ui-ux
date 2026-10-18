@@ -526,9 +526,10 @@ header .brand,footer .brand{font-family:"Arial Black","Segoe UI",sans-serif;font
 .harmoni-wide img{max-width:1100px;margin-inline:auto}
 .harmoni-journey img{max-width:480px;margin-inline:auto}
 .harmoni-website .vessel-image-open{max-height:720px;overflow:hidden;border-radius:12px}
+.harmoni-website-frame{max-height:720px;overflow:hidden;border-radius:12px}
 .harmoni-website img{max-width:420px;margin-inline:auto}
 @media(max-width:900px){.harmoni-hero,.harmoni-two-col,.harmoni-feature{grid-template-columns:1fr}.harmoni-hero-devices img{max-width:340px}}
-@media(max-width:600px){.harmoni-facts{grid-template-columns:1fr}.harmoni-card-grid{grid-template-columns:1fr}.harmoni-screens-3{grid-template-columns:repeat(2,minmax(0,1fr))}.harmoni-screens{gap:14px}.harmoni-feature{padding-top:40px;margin-top:40px}.harmoni-website .vessel-image-open{max-height:560px}}
+@media(max-width:600px){.harmoni-facts{grid-template-columns:1fr}.harmoni-card-grid{grid-template-columns:1fr}.harmoni-screens-3{grid-template-columns:repeat(2,minmax(0,1fr))}.harmoni-screens{gap:14px}.harmoni-feature{padding-top:40px;margin-top:40px}.harmoni-website .vessel-image-open{max-height:560px}.harmoni-website-frame{max-height:560px}}
 .harmoni-hero .text-link{margin-bottom:22px}
 .harmoni-journey img{max-width:400px}
 .harmoni-brand-lockup{gap:18px}
