@@ -551,3 +551,5 @@ header::before{content:"";position:absolute;inset:0 calc(50% - 50vw);z-index:-1;
 html{scroll-padding-top:128px}
 @media(prefers-reduced-motion:reduce){header::before{transition:none}}
 @media print{header{position:static}header::before{display:none}}
+
+.vaults-case-hero .vessel-hero-logo{width:min(240px,70%)}
