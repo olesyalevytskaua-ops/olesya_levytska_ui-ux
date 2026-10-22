@@ -472,7 +472,7 @@ header .brand,footer .brand{font-family:"Arial Black","Segoe UI",sans-serif;font
 /* Skills line: scroll-linked. It moves only while the visitor scrolls, so nothing moves on its own
    and WCAG 2.2 SC 2.2.2 is never triggered. Without JavaScript, with reduced motion, or in print it
    is a static wrapped line. Full-bleed: body{overflow-x:clip} stops the 100vw breakout scrolling sideways. */
-.skills-line{--skills-inset:clamp(22px,6vw,80px);width:100vw;margin-inline:calc(50% - 50vw);margin-block:clamp(40px,6vw,64px) 0;border-block:1px solid var(--line);overflow:hidden}
+.skills-line{--skills-inset:clamp(16px,1.6vw,28px);width:100vw;margin-inline:calc(50% - 50vw);margin-block:clamp(40px,6vw,64px) 0;border-block:1px solid var(--line);overflow:hidden}
 .skills-line+.section{border-top:0}
 .skills-line__view{overflow:hidden;padding-block:26px}
 .skills-line__track{display:flex;flex-wrap:wrap;align-items:center;row-gap:6px;margin:0;padding:0 var(--skills-inset);list-style:none;color:var(--ink);font-size:clamp(10px,1.6vw,17px);font-weight:700;letter-spacing:-.6px;line-height:1.15}
