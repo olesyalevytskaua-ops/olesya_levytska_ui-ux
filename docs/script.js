@@ -80,7 +80,6 @@ const skillsLine = document.querySelector('[data-skills-line]');
 if (skillsLine) {
   const track = skillsLine.querySelector('[data-skills-track]');
   const view = skillsLine.querySelector('[data-skills-view]');
-  const anchor = document.querySelector('#selected-work .section-head') || document.querySelector('#selected-work');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const SPEED = 0.6;   // horizontal pixels per pixel of page scroll: a calm drift, readable while moving
   let start = 0;
@@ -88,8 +87,6 @@ if (skillsLine) {
 
   const measure = () => {
     track.style.transform = '';
-    // Align the first word with the content column below the line.
-    if (anchor) skillsLine.style.setProperty('--skills-inset', `${Math.round(anchor.getBoundingClientRect().left)}px`);
     const top = skillsLine.getBoundingClientRect().top + scrollY;
     start = top - Math.min(innerHeight, top);   // scroll position at which the line first comes into view
   };
