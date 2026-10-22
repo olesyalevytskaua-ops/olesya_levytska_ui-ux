@@ -589,3 +589,4 @@ html{scroll-padding-top:128px}
 :root[data-theme="dark"] .remedy-case-page .case-callout{background:color-mix(in srgb,var(--accent) 14%,var(--surface))}
 @media(max-width:900px){.remedy-case-hero .vessel-hero-panel{grid-template-columns:1fr}.remedy-case-hero .vessel-hero-copy{text-align:center}}
 @media(max-width:760px){.remedy-grid,.remedy-grid-blocks{grid-template-columns:1fr}.remedy-tall img{max-width:420px;margin-inline:auto}.remedy-crop .vessel-image-open{max-height:560px}}
+.remedy-grid-narrow{max-width:760px;margin-inline:auto}
