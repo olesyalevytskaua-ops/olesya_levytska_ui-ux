@@ -980,3 +980,9 @@ html{scroll-padding-top:128px}
 .real-work-card:hover .case-cover.cc .cc-l-hov,.real-work-card:focus-visible .case-cover.cc .cc-l-hov,:root[data-theme="dark"] .case-cover.cc .cc-l-hov{opacity:1}
 .case-cover.cc .cc-word-bt{font-weight:500;letter-spacing:0;line-height:1.1}
 .case-cover.cc-harmoni .cc-logo{justify-items:center;gap:14px}
+/* WCAG AA contrast on the coloured case pages */
+.bw-page p,.bw-page li,.bw-page .bw-label,.bw-page .bw-kicker,.bw-page .bw-facts dt,.bw-page .bw-fig figcaption,.bw-page .bw-skills,.bw-page .bw-step small{color:#fff!important}
+.bw-page .bw-kicker,.bw-page .bw-facts dt{opacity:1}
+.bw-band-light p{color:#3d5051!important}.bw-band-light .bw-fig figcaption{color:#4d5f60!important}
+.tp-page{background:linear-gradient(180deg,#9a35c8 0%,#8a45d6 14%,#7558db 30%,#6a4fcf 42%)!important}
+.tp-page p,.tp-page li,.tp-page .tp-label,.tp-page .tp-kicker,.tp-page .tp-facts dt,.tp-page .tp-fig figcaption,.tp-page .tp-skills,.tp-page .tp-step small{color:#fff!important}
