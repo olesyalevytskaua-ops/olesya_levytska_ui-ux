@@ -973,3 +973,9 @@ html{scroll-padding-top:128px}
 :root[data-theme="dark"] .case-cover.cc .cc-invert{filter:brightness(0) invert(1)}
 @media(hover:none){.case-cover.cc .cc-bg{transition:none}}
 @media(prefers-reduced-motion:reduce){.case-cover.cc .cc-bg,.case-cover.cc .cc-mock,.case-cover.cc .cc-logo{transition:opacity .2s ease,color .2s ease!important}.real-work-card:hover .case-cover.cc .cc-mock,.real-work-card:focus-visible .case-cover.cc .cc-mock{transform:translateY(-50%)!important}.real-work-card:hover .case-cover.cc .cc-logo,.real-work-card:focus-visible .case-cover.cc .cc-logo{transform:translateY(-50%)!important}.case-cover.cc .cc-bg{transform:none!important}}
+.case-cover.cc .cc-swap{display:grid;width:100%}
+.case-cover.cc .cc-swap img{grid-area:1/1;transition:opacity .35s ease}
+.case-cover.cc .cc-l-hov{opacity:0}
+.real-work-card:hover .case-cover.cc .cc-l-def,.real-work-card:focus-visible .case-cover.cc .cc-l-def,:root[data-theme="dark"] .case-cover.cc .cc-l-def{opacity:0}
+.real-work-card:hover .case-cover.cc .cc-l-hov,.real-work-card:focus-visible .case-cover.cc .cc-l-hov,:root[data-theme="dark"] .case-cover.cc .cc-l-hov{opacity:1}
+.case-cover.cc .cc-word-bt{font-weight:500;letter-spacing:0;line-height:1.1}
