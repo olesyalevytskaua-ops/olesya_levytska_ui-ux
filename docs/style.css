@@ -979,3 +979,4 @@ html{scroll-padding-top:128px}
 .real-work-card:hover .case-cover.cc .cc-l-def,.real-work-card:focus-visible .case-cover.cc .cc-l-def,:root[data-theme="dark"] .case-cover.cc .cc-l-def{opacity:0}
 .real-work-card:hover .case-cover.cc .cc-l-hov,.real-work-card:focus-visible .case-cover.cc .cc-l-hov,:root[data-theme="dark"] .case-cover.cc .cc-l-hov{opacity:1}
 .case-cover.cc .cc-word-bt{font-weight:500;letter-spacing:0;line-height:1.1}
+.case-cover.cc-harmoni .cc-logo{justify-items:center;gap:14px}
