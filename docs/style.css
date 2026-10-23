@@ -943,13 +943,13 @@ html{scroll-padding-top:128px}
 }
 /* Interactive case card covers: logo + product, colour and photo on hover */
 .cc{--cc-tint:#f3f1f6;--cc-ink:#2b2233}
-.case-cover.cc{position:relative;isolation:isolate;overflow:hidden;background:var(--cc-tint);border:1px solid var(--line)}
+.case-cover.cc{container-type:inline-size;position:relative;isolation:isolate;overflow:hidden;background:var(--cc-tint);border:1px solid var(--line)}
 .case-cover.cc .cc-bg{position:absolute;inset:0;z-index:0;background:var(--cc-bg);background-size:cover;background-position:center;opacity:0;transform:scale(1.08);transition:opacity .45s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .case-cover.cc .cc-logo{position:absolute;z-index:2;left:7%;top:50%;width:34%;transform:translateY(-50%);display:grid;gap:10px;justify-items:start;color:var(--cc-ink);transition:color .35s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
 .case-cover.cc .cc-logo img{display:block;width:100%;height:auto;object-fit:contain;transform:none;transition:filter .35s ease}
-.case-cover.cc .cc-word{display:grid;gap:6px;font-size:clamp(22px,2.6vw,36px);font-weight:650;line-height:1;letter-spacing:-.01em}
-.case-cover.cc .cc-word small{font-size:clamp(10px,.9vw,12px);font-weight:600;letter-spacing:1.5px;white-space:nowrap;text-transform:uppercase;opacity:.75}
-.case-cover.cc .cc-word-spaced{letter-spacing:.3em;text-transform:uppercase;font-weight:400;font-family:Georgia,"Times New Roman",serif}
+.case-cover.cc .cc-word{display:grid;gap:6px;font-size:clamp(16px,6cqw,40px);font-weight:650;line-height:1;letter-spacing:-.01em}
+.case-cover.cc .cc-word small{font-size:clamp(9px,1.9cqw,12px);font-weight:600;letter-spacing:1.5px;text-wrap:balance;text-transform:uppercase;opacity:.75}
+.case-cover.cc .cc-word-spaced{font-size:clamp(14px,4.2cqw,30px);letter-spacing:.24em;text-transform:uppercase;font-weight:400;font-family:Georgia,"Times New Roman",serif}
 .case-cover.cc .cc-mock{position:absolute;z-index:1;right:4%;top:50%;left:auto;width:54%;height:84%;object-fit:contain;object-position:center;transform:translateY(-50%);filter:drop-shadow(0 18px 30px #1b123033);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .real-work-card:hover .case-cover.cc .cc-bg,.real-work-card:focus-visible .case-cover.cc .cc-bg{opacity:1;transform:scale(1)}
 .real-work-card:hover .case-cover.cc .cc-mock,.real-work-card:focus-visible .case-cover.cc .cc-mock{transform:translateY(-52%) scale(1.07)}
@@ -966,7 +966,7 @@ html{scroll-padding-top:128px}
 .cc-pause{--cc-tint:#f5eefc;--cc-ink:#61256e;--cc-bg:linear-gradient(135deg,#b23ddf 0%,#8f50e0 50%,#6a4fcf 100%)}
 .cc-photo{--cc-tint:#f2f2f2;--cc-ink:#1d1d1f;--cc-bg:radial-gradient(circle at 80% 30%,#ff4f1f55 0%,#0000 45%),linear-gradient(135deg,#111 0%,#2a2a2a 100%)}
 .case-cover.cc-photo .cc-mock{border-radius:8px;width:50%;height:auto;filter:none;box-shadow:0 18px 40px #0004}
-.case-cover.cc-photo .cc-word{font-size:clamp(18px,2vw,28px)}
+.case-cover.cc-photo .cc-word,.case-cover.cc-breakthrough .cc-word{font-size:clamp(14px,4.6cqw,30px)}
 .case-cover.cc-photo .cc-logo{width:36%;left:6%}
 :root[data-theme="dark"] .case-cover.cc{background:color-mix(in srgb,var(--cc-ink) 22%,#1b1820)}
 :root[data-theme="dark"] .case-cover.cc .cc-logo{color:#f3eefa}
