@@ -986,3 +986,57 @@ html{scroll-padding-top:128px}
 .bw-band-light p{color:#3d5051!important}.bw-band-light .bw-fig figcaption{color:#4d5f60!important}
 .tp-page{background:linear-gradient(180deg,#9a35c8 0%,#8a45d6 14%,#7558db 30%,#6a4fcf 42%)!important}
 .tp-page p,.tp-page li,.tp-page .tp-label,.tp-page .tp-kicker,.tp-page .tp-facts dt,.tp-page .tp-fig figcaption,.tp-page .tp-skills,.tp-page .tp-step small{color:#fff!important}
+
+/* Coloured case pages: brand background, white text, brand accent (all AA) */
+.cc-p-harmoni{--pg:linear-gradient(180deg,#5a33ad 0%,#4a2894 30%,#3a1f78 100%);--pg-solid:#4a2894;--pg-acc:#d9c6ff}
+.cc-p-vessel{--pg:linear-gradient(180deg,#123a4d 0%,#0f2f3f 35%,#0b2230 100%);--pg-solid:#0f2f3f;--pg-acc:#7fd3e6}
+.cc-p-vaults{--pg:linear-gradient(180deg,#1c1c1c 0%,#141414 40%,#0d0d0d 100%);--pg-solid:#141414;--pg-acc:#ffd400}
+.cc-p-remedy{--pg:linear-gradient(180deg,#3a2378 0%,#2c1a5e 35%,#21134a 100%);--pg-solid:#2c1a5e;--pg-acc:#5fd4e2}
+.cc-p-sm{--pg:linear-gradient(180deg,#6b2482 0%,#5a1f6e 35%,#45175a 100%);--pg-solid:#5a1f6e;--pg-acc:#ff9ad0}
+.cc-p-caraway{--pg:linear-gradient(180deg,#4a2660 0%,#3f1f4f 35%,#311840 100%);--pg-solid:#3f1f4f;--pg-acc:#f3d9a4}
+.cc-page main{--ink:#fff;--muted:#ece6f5;--accent:var(--pg-acc);--accent-strong:#fff;--surface:rgba(255,255,255,.08);--surface-2:rgba(255,255,255,.12);--line:rgba(255,255,255,.22);--chip:rgba(255,255,255,.1);--shadow:#0004;--cw-head:#fff;--cw-num:color-mix(in srgb,var(--pg-acc) 45%,var(--pg-solid));
+ position:relative;color:#fff;background:var(--pg-solid);box-shadow:0 0 0 100vmax var(--pg-solid);clip-path:inset(0 -100vmax)}
+.cc-page main p,.cc-page main li,.cc-page main dd,.cc-page main figcaption,.cc-page main small{color:var(--muted)}
+.cc-page main h1,.cc-page main h2,.cc-page main h3,.cc-page main h4,.cc-page main dt,.cc-page main strong{color:#fff}
+.cc-page main .eyebrow,.cc-page main .case-step-kicker,.cc-page main .cw-card-label{color:var(--pg-acc)!important}
+.cc-page main .text-link{color:var(--pg-acc)}
+.cc-page main .activity-panel,.cc-page main .role-note,.cc-page main .case-callout,.cc-page main .vessel-project-facts,.cc-page main .outcome-grid article{background:var(--surface);border-color:var(--line);box-shadow:none}
+.cc-page main .role-note{border-left-color:var(--pg-acc)}
+.cc-page main .activity-panel li{color:#fff}
+.cc-page main .activity-panel li:before{background:var(--pg-acc)}
+.cc-page main .vessel-outcome,.cc-page main .case-next{background:transparent}
+.cc-page main .button{background:#fff;color:var(--pg-solid)}
+.cc-page main .button:hover,.cc-page main .button:focus-visible{background:var(--pg-acc);color:#111}
+.cc-page main a:focus-visible,.cc-page main button:focus-visible{outline-color:#fff}
+/* images keep a light frame so screens read clearly */
+.cc-page main .case-story-media img,.cc-page main .vessel-image-open{border-radius:12px}
+/* Caraway bands become soft tints of the page colour; white cards stay white */
+.cc-p-caraway .cw-band-cream,.cc-p-caraway .cw-band-grey{background:rgba(255,255,255,.07)}
+.cc-p-caraway .cw-card-white p,.cc-p-caraway .cw-card-white li,.cc-p-caraway .cw-decisions h3{color:#2b2233}
+.cc-p-caraway .cw-card-white .cw-card-label{color:#3f1f4f!important}
+.cc-p-caraway .cw-list li{color:#fff}
+.cc-p-caraway .cw-figure figcaption{color:var(--muted)}
+.cc-page main .harmoni-card-grid li{background:var(--surface);border-color:var(--line);color:#fff;box-shadow:none}
+.cc-page main .case-summary .eyebrow,.cc-page main .case-summary small,.cc-page main .case-summary p{color:#fff!important}
+.cc-p-caraway .cw-ds-figure figcaption{color:#5f5a69!important}
+/* Breakthrough coloured */
+.bt-page{background:#5a3c58!important;color:#fff}
+.bt-page p,.bt-page li{color:#efe4ee}
+.bt-page .bt-kicker{color:#f5b3a9!important}
+.bt-page .bt-numhead h2,.bt-page .bt-outcome h2,.bt-page .bt-outcomes h3,.bt-page .bt-next h2,.bt-page .bt-steps strong{color:#fff}
+.bt-page .bt-numhead span{color:#c9a9c6;opacity:.6}
+.bt-page .bt-facts{border-color:#ffffff38}.bt-page .bt-facts dt{color:#e6d4e4}.bt-page .bt-facts dd{color:#fff}
+.bt-page .bt-role,.bt-page .bt-callout{background:#ffffff14;border-left-color:#f5b3a9}
+.bt-band-sky{background:#4d334b}.bt-band-mist{background:#4d334b}
+.bt-page .bt-contours{opacity:.35}
+.bt-page .bt-card{background:#ffffff14;box-shadow:none;border:1px solid #ffffff2e}
+.bt-page .bt-card p,.bt-page .bt-card li{color:#efe4ee}
+.bt-page .bt-fig figcaption,.bt-page .bt-skills{color:#e6d4e4!important}
+.bt-page .bt-outcomes article,.bt-page .bt-next{border-color:#ffffff38}
+.bt-page .bt-next .button{background:#fff;color:#5a3c58}
+.bt-page .bt-next .button:hover{background:#f5b3a9;color:#2b1a2a}
+.bt-page a:focus-visible{outline-color:#fff}
+.cc-page .vessel-hero-logo-dark{display:none!important}
+.cc-page .vessel-hero-logo-light{display:block!important}
+.cc-p-vaults .vessel-hero-logo-light{filter:brightness(0) invert(1)!important;opacity:1!important}
+.cc-p-harmoni .harmoni-hero-wordmark{filter:brightness(0) invert(1)}
