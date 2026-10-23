@@ -704,3 +704,4 @@ html{scroll-padding-top:128px}
 .cw-decisions h3{font-size:20px;line-height:1.3;margin:0 0 8px;color:#2b2233}
 .cw-decisions .cw-card{border-radius:14px}
 @media (max-width:860px){.cw-phones{grid-template-columns:repeat(2,minmax(0,1fr))}.cw-decisions{grid-template-columns:1fr}}
+:root[data-theme="dark"] .cw-provider .case-callout{background:#2a2034}
