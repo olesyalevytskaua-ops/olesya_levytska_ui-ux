@@ -630,3 +630,11 @@ html{scroll-padding-top:128px}
 .about-ice{margin:28px 0 0}
 .about-ice img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 18px 55px var(--shadow)}
 .about-ice figcaption{margin-top:10px;font-size:14px;color:var(--muted,inherit)}
+/* Caraway case */
+.cw-process-map{background:linear-gradient(135deg,#2b1638 0%,#4a2459 55%,#7a4f86 100%)}
+.cw-process-map p,.cw-process-map .journey-step small{color:#efe6f2}
+.cw-process-map .vessel-journey:before{border-top-color:#efe6f280}
+.cw-portrait{margin:0;max-width:340px;justify-self:center}
+.cw-portrait img{display:block;width:100%;height:auto;border-radius:14px}
+.cw-case-hero .vessel-hero-devices{min-width:0}
+.cw-case-hero .vessel-hero-devices img{border-radius:18px;max-height:640px;width:auto;max-width:100%;height:auto;margin-inline:auto;display:block;object-fit:cover}
