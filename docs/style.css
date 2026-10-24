@@ -997,3 +997,8 @@ html{scroll-padding-top:128px}
 .sm-disc-board img{width:100%;height:auto}
 @media(max-width:860px){.sm-disc{grid-template-columns:1fr}.sm-disc-board{display:none}}
 @media(min-width:861px){.sm-disc>.case-story-copy{position:sticky;top:110px}}
+/* Centre visible devices (ignore the drop shadow baked into the image) */
+.case-cover.cc-between{--cc-dy:7.8%}.case-cover.cc-pause{--cc-dy:6.8%}.case-cover.cc-sm{--cc-dy:9.7%}
+.case-cover.cc .cc-mock{transform:translateY(calc(-50% + var(--cc-dy,0%)))}
+.real-work-card:hover .case-cover.cc .cc-mock,.real-work-card:focus-visible .case-cover.cc .cc-mock{transform:translateY(calc(-52% + var(--cc-dy,0%))) scale(1.07)}
+@media(prefers-reduced-motion:reduce){.real-work-card:hover .case-cover.cc .cc-mock,.real-work-card:focus-visible .case-cover.cc .cc-mock{transform:translateY(calc(-50% + var(--cc-dy,0%)))!important}}
