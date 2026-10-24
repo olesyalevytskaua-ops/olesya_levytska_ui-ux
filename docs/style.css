@@ -418,7 +418,7 @@ header{z-index:50}
 /* Homepage hero: open design highlights, natural height, and a single entrance sequence. */
 .hero-refined{padding:clamp(24px,2.5vw,36px) 0 clamp(10px,1vw,14px);overflow:visible}
 .hero-refined .hero-copy{min-width:0;animation:none}
-.hero-refined .eyebrow{color:var(--muted);font-size:12px;letter-spacing:1px;margin-bottom:16px}
+.hero-refined .eyebrow{color:var(--muted);font-size:11px;letter-spacing:2px;line-height:1.6;text-transform:uppercase;margin-bottom:16px}
 .hero-refined h1{font-size:clamp(34px,4.9vw,64px);line-height:1.08;letter-spacing:-1.5px;max-width:940px;margin-bottom:18px;color:var(--ink);overflow-wrap:break-word}
 .hero-refined .hero-copy>p:not(.eyebrow){font-size:clamp(17px,1.5vw,19px);line-height:1.6;max-width:720px;margin-bottom:0}
 .hero-refined .hero-actions{margin-top:28px;gap:12px}
