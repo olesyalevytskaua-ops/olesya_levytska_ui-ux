@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/case-she-matters.html">
 <meta name="theme-color" content="#f6f6f8">
 <script>try{const t=localStorage.getItem('theme')||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',t==='dark'?'#17151c':'#f6f6f8')}catch(e){}</script>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261024-mockc">
-<script src="script.js?v=20261024-mockc" defer>
+<link rel="preload" href="fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=20261024-smfig">
+<script src="script.js?v=20261024-smfig" defer>
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
 </head>
@@ -99,23 +99,20 @@
 </div>
 </div>
 </section>
-<section class="case-summary vessel-process-map sm-process-map" id="case-process" aria-labelledby="case-process-title">
-<div class="process-copy">
-<p class="eyebrow">PROCESS &amp; CONTRIBUTION</p>
-<h2 id="case-process-title">From a community’s voice to a watch on her wrist.</h2>
+<section class="sm-wave-wrap" id="case-process" aria-label="She Matters case study process">
+<div class="sm-timeline" role="navigation" aria-label="She Matters case study process">
+<svg class="sm-wave" viewBox="0 0 1200 340" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 190 C 200 80, 330 60, 470 120 S 760 270, 900 240 S 1120 150, 1200 130" fill="none" stroke="currentColor" stroke-width="6" vector-effect="non-scaling-stroke"/></svg>
+<a class="sm-step" style="--x:9.13%;--y:39.95%" href="#discovery"><i></i><span><small>Step 1</small>Discovery</span></a>
+<a class="sm-step sm-step-up" style="--x:27.47%;--y:25.59%" href="#design-system"><i></i><span><small>Step 2</small>Design system</span></a>
+<a class="sm-step" style="--x:48.32%;--y:49.93%" href="#watch"><i></i><span><small>Step 3</small>Designing for the wrist</span></a>
+<a class="sm-step" style="--x:68.36%;--y:72.12%" href="#check-in"><i></i><span><small>Step 4</small>Symptom check-in</span></a>
+<a class="sm-step sm-step-up sm-step-end" style="--x:88.35%;--y:54.91%" href="#feedback"><i></i><span><small>Step 5</small>Release feedback</span></a>
 </div>
-<nav class="vessel-journey" aria-label="She Matters case study process">
-<a class="journey-step" href="#discovery"><span>01</span><strong>Discovery</strong><small>The community, a persona and the features that matter first.</small></a>
-<a class="journey-step" href="#design-system"><span>02</span><strong>Design system</strong><small>The partners’ brand, plus a scale for pain and danger.</small></a>
-<a class="journey-step" href="#watch"><span>03</span><strong>Designing for the wrist</strong><small>Eleven pain levels on a tiny screen.</small></a>
-<a class="journey-step" href="#check-in"><span>04</span><strong>Symptom check-in</strong><small>One question at a time, a clear answer at the end.</small></a>
-<a class="journey-step" href="#feedback"><span>05</span><strong>Release feedback</strong><small>A tutorial for first-time users.</small></a>
-</nav>
 </section>
 <section class="section case-story-section" id="discovery">
 <div class="sm-disc">
 <div class="case-story-copy">
-<p class="case-step-kicker">1. Discovery</p>
+<div class="sm-numhead"><span aria-hidden="true">01</span><p>Discovery</p></div>
 <h2>Listening before designing</h2>
 <p>The partners gave us access to their online community, so we could hear women in their own words. Seven steps took us from their stories to a tested MVP.</p>
 <ol class="sm-steps">
@@ -140,9 +137,9 @@
 <figure class="case-story-media sm-disc-board"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open discovery board larger"><img src="images/cases/sm-discovery-board-v2.webp" width="984" height="5208" alt="Discovery board: competitor analysis of the Amila pregnancy tracker, a persona board, four user stories from the community, wearable and symptom tracker feature briefs, the onboarding user flow, preeclampsia symptom references and the app mind map" loading="lazy" decoding="async"></button><figcaption>Discovery board: competitors, persona, user stories, feature briefs, flow and mind map.</figcaption></figure>
 </div>
 </section>
-<section class="section case-story-section" id="design-system">
+<section class="section case-story-section sm-band sm-band-grey" id="design-system">
 <div class="case-story-copy">
-<p class="case-step-kicker">2. Design system</p>
+<div class="sm-numhead sm-numhead-right"><span aria-hidden="true">02</span><p>Design system</p></div>
 <h2>The partners’ brand, plus a scale for danger</h2>
 <p>The partners’ purple and pink brand stayed, so the app would feel familiar next to their other products. On top of it I added what a health app needs: a text palette and a separate eleven-step pain and danger scale, from green to red, used the same way on the phone and the watch.</p>
 <p>Components, from buttons and inputs to severity sliders and task cards, were built on these styles. To show where a symptom is felt, I used AI-generated images, which let us cover many symptoms quickly and consistently.</p>
@@ -152,9 +149,9 @@
 <figure class="case-story-media"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open components built on the shared styles larger"><img src="images/cases/sm-components.webp" width="1182" height="610" alt="Components: buttons, text fields with error states, severity sliders from 0 to 10, symptom checkboxes, task cards in three brand colours, avatars and the tab bar" loading="lazy" decoding="async"></button><figcaption>Components built on the shared styles.</figcaption></figure>
 </div>
 </section>
-<section class="section case-story-section" id="watch">
+<section class="section case-story-section sm-band sm-band-dark" id="watch">
 <div class="case-story-copy">
-<p class="case-step-kicker">3. Designing for the wrist</p>
+<div class="sm-numhead"><span aria-hidden="true">03</span><p>Designing for the wrist</p></div>
 <h2>Eleven pain levels on a tiny screen</h2>
 <p>This was my first Apple Watch project, and I designed it in close partnership with the developer, who brought his own research and observations of the platform into every decision.</p>
 <p>The hardest problem was the severity scale: 0 to 10, eleven options, on a screen too small for eleven tappable buttons. And it had to work for a woman under stress, possibly with blurred vision, high blood pressure and nausea.</p>
@@ -191,9 +188,9 @@
 </div>
 </div>
 </section>
-<section class="section case-story-section" id="check-in">
+<section class="section case-story-section sm-band sm-band-dark" id="check-in">
 <div class="case-story-copy">
-<p class="case-step-kicker">4. Symptom check-in</p>
+<div class="sm-numhead"><span aria-hidden="true">04</span><p>Symptom check-in</p></div>
 <h2>One question at a time, a clear answer at the end</h2>
 <p>On the phone, the check-in asks one question per screen, with a progress bar and an easy way back. Images show what a symptom looks or feels like, so women can recognise it rather than describe it.</p>
 <p>The result is graded by the same colour scale, from “We are happy you’re well” to “Urgent medical consultation required”, and is based on the latest guideline of the Cleveland Clinic. When the answers are dangerous, the alert reaches her chosen contacts.</p>
@@ -204,9 +201,9 @@
 </div>
 <figure class="case-story-media vaults-gap sm-natural"><button type="button" class="vessel-image-open" data-vessel-zoom aria-label="Open six results on the same green-to-red scale larger"><img src="images/cases/sm-results-v2.webp" width="1168" height="374" alt="Six completed check-in results with colour-coded icons, from green: we are happy you are well, through yellow: monitor symptoms and consult a healthcare provider, orange: seek medical advice, to red: urgent medical consultation required and seek immediate medical attention, potential emergency" loading="lazy" decoding="async"></button><figcaption>Six results on the same green-to-red scale, from “we are happy you’re well” to “potential emergency”.</figcaption></figure>
 </section>
-<section class="section case-story-section" id="feedback">
+<section class="section case-story-section sm-band sm-band-light" id="feedback">
 <div class="case-story-copy">
-<p class="case-step-kicker">5. Release feedback</p>
+<div class="sm-numhead sm-numhead-right"><span aria-hidden="true">05</span><p>Release feedback</p></div>
 <h2>“What do I tap next?”</h2>
 <p>We released the first version to a beta group. Its feedback showed that first-time users struggled to understand what to tap next, so I designed an illustrated tutorial that appears on first launch and walks through the daily tasks, the check-ins and the “+” button.</p>
 </div>
