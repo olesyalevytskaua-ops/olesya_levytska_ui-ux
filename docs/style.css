@@ -1047,3 +1047,17 @@ html{scroll-padding-top:128px}
 :root:not([data-theme="dark"]) .sm-case-page header::before{background:color-mix(in srgb,#fffdfc 94%,transparent)}
 :root:not([data-theme="dark"]):has(body.sm-case-page){background:#fffdfc}
 .sm-case-page .vessel-outcome,:root[data-theme="dark"] .sm-case-page .vessel-outcome{background:transparent;border-top:0;padding-inline:0}
+
+/* The chemistry illustration is decorative and desktop-only. */
+.tool-chemistry-art{display:none}
+.tool-chemistry-content{display:contents}
+@media(min-width:1024px){
+  .tool-row-chemistry{display:grid;grid-template-columns:minmax(220px,280px) minmax(0,1fr);align-items:center;gap:36px}
+  .tool-chemistry-art{display:block;margin:0;min-width:0}
+  .tool-chemistry-art img{display:block;width:100%;height:auto;border-radius:10px}
+  .tool-chemistry-art figcaption{margin-top:10px;font-size:14px;color:var(--muted)}
+  .tool-chemistry-content{display:block;min-width:0}
+  .tool-row-chemistry .tool-row-heading{margin-bottom:22px}
+  .tool-row-chemistry .tool-row-heading h3{font-size:24px;letter-spacing:-.5px}
+}
+@media print{.tool-chemistry-art{display:none}.tool-row-chemistry{display:block}.tool-chemistry-content{display:contents}}
