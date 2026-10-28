@@ -386,8 +386,8 @@ header{z-index:50}
 .skill-chip-icon{width:16px;height:16px;flex:0 0 16px;display:block}
 .tool-logo-img{display:block;width:18px;height:18px;flex:0 0 18px;object-fit:contain}
 .capability-chips .tool-logo-img{width:16px;height:16px;flex-basis:16px}
-:root[data-theme="dark"] .tool-logo-img:not(.claude-logo){filter:invert(1)}
-:root[data-theme="light"] .tool-logo-img,:root[data-theme="dark"] .claude-logo{filter:none}
+.tool-logo-img{filter:brightness(0)}
+:root[data-theme="dark"] .tool-logo-img{filter:brightness(0) invert(1)}
 .capability-grid .capability-card{display:grid;grid-template-rows:auto 1fr}
 @media(min-width:651px){
  .capability-heading{display:grid;grid-template-rows:44px minmax(46px,auto) minmax(88px,auto);gap:12px;margin:0 0 20px}
