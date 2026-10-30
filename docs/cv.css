@@ -14,7 +14,7 @@
 .resume section { margin-top:24px; }
 .resume section>h2 { margin-bottom:9px; padding-bottom:5px; border-bottom:1px solid var(--cv-line); color:var(--cv-accent); text-transform:uppercase; font-size:13px; line-height:1.3; font-weight:750; letter-spacing:1px; }
 .resume .summary p { font-size:15px; }
-.resume .expertise p { margin-bottom:5px; font-size:14px; }
+.resume .expertise p,.resume .tools p { margin-bottom:5px; font-size:14px; }
 .resume .company { margin-top:19px; }
 .resume .company-head,.resume .project-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
 .resume .company-head h3 { font-size:18px; font-weight:750; line-height:1.3; }
@@ -51,8 +51,8 @@
  .resume .location,.resume .language { margin-top:4pt; }
  .resume section { margin-top:12pt; }
  .resume section>h2 { font-size:10pt; margin-bottom:6pt; padding-bottom:3pt; }
- .resume .summary p,.resume .expertise p,.resume .pts li,.resume .desc,.resume .compact-project>p,.resume .compact-company>p,.resume #certifications>p { font-size:10.5pt; }
- .resume .expertise p { margin-bottom:3pt; }
+ .resume .summary p,.resume .expertise p,.resume .tools p,.resume .pts li,.resume .desc,.resume .compact-project>p,.resume .compact-company>p,.resume #certifications>p { font-size:10.5pt; }
+ .resume .expertise p,.resume .tools p { margin-bottom:3pt; }
  .resume .company { margin-top:11pt; }
  .resume .company-head h3 { font-size:12pt; }
  .resume .company-role { font-size:10.5pt; }
