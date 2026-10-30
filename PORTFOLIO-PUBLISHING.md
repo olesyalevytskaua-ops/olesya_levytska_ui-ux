@@ -15,7 +15,7 @@ Do not select the repository root: the site lives in docs.
 - Home: docs/index.html
 - Work: docs/work.html
 - About: docs/about.html (career path and how I work; facts mirror the CV)
-- CV: docs/cv.html (based on the original CV; use Save CV as PDF and your browser's PDF destination)
+- CV: docs/cv.html, styled by docs/cv.css. The Download CV button serves docs/Olesya-Levytska-CV.pdf, a checked three-page A4 version. Keep the HTML and PDF content in sync when editing; browser print remains available through the browser menu.
 - Contact: docs/contact.html
 - Styles: docs/style.css and docs/cv.css
 - Carousel: docs/script.js. Swipe, scroll, use buttons or keyboard arrows. No automatic rotation.
