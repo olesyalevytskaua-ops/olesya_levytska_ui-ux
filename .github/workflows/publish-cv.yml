@@ -1,0 +1,40 @@
+name: Publish approved CV PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_cv_3pages.py"
+      - ".github/workflows/publish-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install fonts and PDF renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-lato
+          python -m pip install --disable-pip-version-check reportlab PyMuPDF
+      - name: Render the approved three-page PDF
+        run: python scripts/build_cv_3pages.py
+      - name: Publish into existing website PDF path
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/Olesya-Levytska-CV.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish approved three-page Senior Product Designer CV"
+            git push
+          fi
