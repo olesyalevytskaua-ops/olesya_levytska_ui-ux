@@ -83,3 +83,6 @@
 .resume .cv-case-link{color:inherit;text-decoration:underline;text-decoration-color:#a1a8b3;text-underline-offset:2px}
 .resume .cv-case-link:hover,.resume .cv-case-link:focus-visible{color:var(--cv-accent)}
 @media print{.resume .cv-case-link{text-decoration:none;color:inherit}}
+
+/* Hide duplicate CV identity on website; print/PDF keeps candidate identification. */
+@media screen { .resume .cv-identity > .name, .resume .cv-identity > .role { display:none; } .resume .cv-identity{padding-top:0} }
