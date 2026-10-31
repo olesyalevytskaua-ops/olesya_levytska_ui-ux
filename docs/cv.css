@@ -78,3 +78,8 @@
  .resume .remedy-continuation { display:none !important; }
  .resume .research-note { font-size:9.4pt !important; margin-top:5pt !important; }
 }
+
+/* Keep project case links discreet in the compact CV layout. */
+.resume .cv-case-link{color:inherit;text-decoration:underline;text-decoration-color:#a1a8b3;text-underline-offset:2px}
+.resume .cv-case-link:hover,.resume .cv-case-link:focus-visible{color:var(--cv-accent)}
+@media print{.resume .cv-case-link{text-decoration:none;color:inherit}}
