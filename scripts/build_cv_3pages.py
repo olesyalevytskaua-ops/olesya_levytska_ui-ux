@@ -65,7 +65,7 @@ section('Selected impact')
 impact=[
  ('Registration drop-off','Nearly halved after identifying a broken social sign-in and redesigning trust cues.'),
  ('Design system at scale','65 components, 287 tokens; reusable patterns on 84% of VesselHaven screens.'),
- ('Healthcare UX validation','30% relative improvement in task accuracy during ThePause prototype testing.'),
+ ('Most-used interaction','Redesigned symptom check-ins with swipeable cards, making them the app’s most popular feature.'),
  ('Faster engineering handoff','~45% less development time reported by Remedy leadership after design system rollout.'),
 ]
 rows=[]
