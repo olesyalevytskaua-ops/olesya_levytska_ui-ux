@@ -70,9 +70,11 @@
 }
 
 .resume .remedy-continuation{display:none}
-@media print{
- .resume #the-pause{break-before:page}
- .resume .remedy-continuation{display:block;break-before:page;break-after:avoid;margin-bottom:7pt}
- .resume .remedy-continuation h3{font-size:12pt;line-height:1.3}
- .resume .remedy-continuation p{font-size:9.5pt}
+/* Avoid forced page breaks: let Remedy projects flow into remaining space. */
+.resume .research-note { margin-top:8px !important; font-size:13px !important; color:#4c5667; }
+.resume .research-note a { color:var(--cv-accent); text-decoration:underline; text-underline-offset:2px; }
+@media print {
+ .resume #the-pause { break-before:auto; }
+ .resume .remedy-continuation { display:none !important; }
+ .resume .research-note { font-size:9.4pt !important; margin-top:5pt !important; }
 }
