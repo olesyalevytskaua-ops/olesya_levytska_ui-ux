@@ -570,7 +570,8 @@ html{scroll-padding-top:128px}
 .ds-stats div{padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
 .ds-stats dt{font-size:clamp(28px,3vw,40px);font-weight:700;line-height:1.1;color:var(--ink)}
 .ds-stats dd{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.4}
-@media(max-width:760px){.ds-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ds-stats-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){.ds-stats,.ds-stats-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Remedy Design System case */
 .remedy-case-hero .vessel-hero-panel{grid-template-columns:minmax(260px,.75fr) minmax(360px,1.25fr)}
 .remedy-case-hero .vessel-hero-copy{text-align:left}
