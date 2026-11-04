@@ -87,7 +87,7 @@ compact('Multi-role yacht-management SaaS and services marketplace connecting ow
 bullet('<b>Led discovery and cross-role UX architecture</b>: synthesised research into role-specific dashboards, permissions and connected journeys for trips, crew coordination, guest invitations and service booking.')
 bullet('<b>Designed financial operations and payment workflows</b>, including transactions, quotations and branded Stripe payment experiences, translating complex business processes into usable interactions.')
 bullet('<b>Reduced onboarding friction</b>: used Hotjar insights to simplify owner registration and guest access through magic-link invitations and progressive data collection.')
-bullet('<b>Built a 65-component, 287-token coded design system</b> with Claude Code for light and dark themes, used on 84% of screens. Audited the codebase and moved 51 files (26 kit components, 25 screens) onto tokens and shared components, cutting <b>hardcoded colours 283 → 0</b>.')
+bullet('<b>Built a 65-component, 287-token coded design system</b> with Claude Code for light and dark themes, used on 84% of screens. Audited the codebase and moved 51 files (26 kit components, 25 screens) onto tokens and shared components, cutting <b>hardcoded colours 283 → 0</b>, and updated the Claude Code skills so new work reuses existing components and tokens.')
 bullet('In five months, shipped <b>29 prototypes (~18 flows)</b> and a full app prototype covering 32 product areas; everything syncs straight into the product frontend.')
 project('Vaults1','Sep 2025 – Dec 2025')
 compact('Designed end-to-end self-storage discovery, comparison, booking and payment journeys, from research and IA to reusable UI components, dashboards and responsive marketing pages.')
