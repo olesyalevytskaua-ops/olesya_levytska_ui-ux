@@ -9,3 +9,8 @@
 .quiz-journey li{counter-increment:journey;border-top:1px solid var(--line);padding-top:18px}.quiz-journey li:before{content:'0' counter(journey);display:block;color:var(--accent);font-size:13px;margin-bottom:12px}.quiz-journey strong{display:block;font-size:22px;margin-bottom:10px}.quiz-journey span{color:var(--muted)}
 @media(max-width:750px){.quiz-feature{grid-template-columns:1fr}.quiz-feature .quiz-art-strip{order:-1}.quiz-journey{grid-template-columns:repeat(2,minmax(0,1fr))}.quiz-case .case-facts{display:block}.quiz-case .case-facts>div{margin-bottom:20px}}
 @media(max-width:420px){.quiz-art-strip{gap:8px}.quiz-art-strip figcaption{font-size:12px}.quiz-journey{grid-template-columns:1fr}.quiz-case h1{letter-spacing:-2px}}
+
+.pockette-feature{margin-top:clamp(32px,6vw,72px);padding-top:clamp(24px,4vw,48px);border-top:1px solid var(--line)}
+.pockette-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;max-width:540px;margin:0}
+.pockette-screens img{display:block;width:100%;height:auto;border-radius:12px}
+.pockette-screens figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
