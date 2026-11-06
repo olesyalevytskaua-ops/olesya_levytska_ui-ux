@@ -68,3 +68,8 @@
 
 @media(max-width:750px){.quiz-cast-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 10px}.quiz-result-feature{grid-template-columns:1fr}.quiz-result-phone{max-width:300px;margin-inline:auto}.quiz-result-feature figcaption{position:static}.quiz-result-list li{grid-template-columns:1fr;gap:2px}}
 @media(prefers-reduced-motion:reduce){.quiz-cast-grid img{transition:none}.quiz-cast-grid figure:hover img{transform:none}}
+.case-cover.cc .cc-trio{width:44%;right:5%}
+.case-cover.cc .cc-trio img{width:44%}
+.case-cover.cc .cc-trio img+img{margin-left:-12%}
+.case-cover.cc-quiz .cc-logo{width:40%}
+.case-cover.cc .cc-trio{width:41%;right:4%}
