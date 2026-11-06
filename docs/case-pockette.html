@@ -39,6 +39,74 @@ html[data-theme="dark"] .pockette-map-node,html[data-theme="dark"] .pockette-map
 html[data-theme="dark"] .pockette-map-node strong,html[data-theme="dark"] .pockette-map-heading{color:#efbaca}
 html[data-theme="dark"] .pockette-flow-steps div{background:#382c35;border-color:#715563;color:#fff}
 html[data-theme="dark"] .pockette-flow-steps div:nth-of-type(3){background:#a14a68}
+
+/* Pockette visual case-study storytelling */
+.pk-label{display:block;font:700 10px/1.5 Inter,system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#762d46}
+.pk-journey,.pk-before-after,.pk-visual-research,.pk-moodboard{margin:26px 0;font-family:Inter,system-ui,sans-serif}
+.pk-journey{border:1px solid #e7dedc;background:#fbfaf8;border-radius:18px;padding:22px;color:#292429}
+.pk-journey-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:18px}
+.pk-jstep{min-width:0;background:#f3efed;border-radius:12px;padding:13px 10px;display:flex;flex-direction:column;gap:6px}
+.pk-jstep strong{font-size:14px;color:#282428}.pk-jstep small{font-size:11px;line-height:1.45;color:#5e575a;min-height:35px}
+.pk-step-num{font-size:10px;letter-spacing:.1em;font-weight:700;color:#762d46}
+.pk-emotion{margin:4px auto 0;font:600 29px/1 Inter,system-ui,sans-serif;color:#527462}.pk-emotion.pk-worried{color:#937049}
+.pk-jstep p{font-size:11px;line-height:1.45;margin:0;color:#534c50}
+.pk-jstep.pk-friction{background:#762d46}.pk-friction strong,.pk-friction small,.pk-friction .pk-step-num,.pk-friction p,.pk-friction .pk-emotion{color:#fff}
+.pk-insight{display:flex;align-items:center;gap:14px;margin-top:14px;padding:13px;border-left:4px solid #762d46;background:#eee8e7;border-radius:6px;font-size:13px;line-height:1.5}
+.pk-insight b{white-space:nowrap;color:#762d46}.pk-insight span{color:#342b30}
+.pk-before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pk-before-after>div{background:#eee9e6;border-radius:16px;padding:21px;color:#332c2c}
+.pk-before-after>div+div{background:#eadbe1}
+.pk-before-after strong{display:block;font-size:17px;line-height:1.55;margin:13px 0;color:#32262d}
+.pk-before-after p{font-size:13px;line-height:1.5;margin:0;color:#534a50}
+.pk-visual-research{padding:25px;background:#faf8f6;border-radius:20px;border:1px solid #e4dedb;color:#282428}
+.pk-visual-research h3{font-size:22px;line-height:1.25;margin:10px 0}.pk-visual-research>p{font-size:14px;line-height:1.6;max-width:750px}
+.pk-comparison-wrap{overflow-x:auto;margin-top:18px}
+.pk-style-table{width:100%;min-width:660px;border-collapse:collapse;font-size:12px;line-height:1.5;color:#332c31}
+.pk-style-table th,.pk-style-table td{text-align:left;vertical-align:middle;padding:14px 9px;border-bottom:1px solid #e4dad9}
+.pk-style-table thead th{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#65565e}
+.pk-style-table tbody th{font-size:12px;min-width:142px;font-weight:600}.pk-style-table .pk-selected{background:#ecdee3}
+.pk-style-table .pk-selected td:last-child{color:#762d46}
+.pk-style-table .pk-selected th:first-child{border-radius:8px 0 0 8px}
+.pk-swatch-group{display:inline-flex;gap:2px;vertical-align:middle;margin-right:6px}.pk-swatch-group i{display:inline-block;width:9px;height:16px;border-radius:3px}
+.pk-soft i:nth-child(1){background:#e9c8d7}.pk-soft i:nth-child(2){background:#ded2ec}.pk-soft i:nth-child(3){background:#f2ede9}
+.pk-editorial i:nth-child(1){background:#f2eee5}.pk-editorial i:nth-child(2){background:#a28d75}.pk-editorial i:nth-child(3){background:#292b28}
+.pk-glass i:nth-child(1){background:#d2e6f2}.pk-glass i:nth-child(2){background:#8daec5}.pk-glass i:nth-child(3){background:#f2f5fa}
+.pk-play i:nth-child(1){background:#ffb030}.pk-play i:nth-child(2){background:#ca3993}.pk-play i:nth-child(3){background:#2448df}
+.pk-bordeaux i:nth-child(1){background:#762d46}.pk-bordeaux i:nth-child(2){background:#f8f6f4;border:1px solid #b8aab0}.pk-bordeaux i:nth-child(3){background:#252326}
+.pk-table-note{font-size:12px!important;color:#6b6064}
+.pk-moodboard{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#eee9e7;border-radius:20px;padding:14px;color:#292529}
+.pk-moodboard>div{border-radius:12px;min-width:0}
+.pk-mood-intro{padding:26px;background:#f8f6f4;display:flex;flex-direction:column;justify-content:space-between;min-height:240px}
+.pk-mood-brand{display:block;font:600 clamp(40px,5vw,75px)/1 'Cormorant Garamond',Georgia,serif;color:#762d46;letter-spacing:-.035em}
+.pk-mood-brand span{color:#a57888}.pk-mood-intro p{font:500 14px/1.6 Inter,system-ui,sans-serif;color:#5e4e57;margin:0}
+.pk-mood-colors{display:grid;grid-template-columns:1fr 1fr;gap:5px;overflow:hidden}
+.pk-mood-colors>div{padding:13px;min-height:116px;display:flex;flex-direction:column;justify-content:end;gap:4px}
+.pk-mood-colors strong{font-size:12px}.pk-mood-colors small{font-size:10px}
+.pk-mood-type{background:#fff;padding:23px;display:flex;flex-direction:column;justify-content:space-around;gap:18px}
+.pk-mood-type>div{display:flex;flex-direction:column;gap:6px}.pk-mood-type small{font:600 10px/1.4 Inter,system-ui,sans-serif;letter-spacing:.1em;color:#762d46}
+.pk-mood-type strong{font:600 28px/1.18 'Cormorant Garamond',Georgia,serif;color:#292529}
+.pk-mood-type>div:nth-child(2) strong{font:600 18px/1.35 Inter,system-ui,sans-serif}
+.pk-mood-type span{font-size:12px;color:#655b61}
+.pk-mood-cards{background:#ddd1d0;position:relative;min-height:260px;overflow:hidden}
+.pk-mini-card{position:absolute;left:11%;width:78%;height:140px;border-radius:13px;padding:18px;box-shadow:0 7px 20px #30212a24;display:flex;flex-direction:column;justify-content:space-between}
+.pk-mini-card strong{font-size:20px}.pk-mini-card small{font-size:9px;letter-spacing:.13em}
+.pk-mini-one{top:18px;background:#762d46;color:#fff;transform:rotate(-5deg)}
+.pk-mini-two{top:62px;background:#f8f6f4;color:#282428;transform:rotate(3deg)}
+.pk-mini-three{top:113px;background:#252326;color:#fff;transform:rotate(-2deg)}
+.pk-mood-principles{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:14px 16px;background:#48232f;color:white;font-size:11px;font-weight:600;letter-spacing:.02em}
+@media(max-width:800px){.pk-journey-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.pk-journey{padding:15px}.pk-journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pk-insight{display:block}.pk-insight b{display:block;margin-bottom:5px}.pk-before-after{grid-template-columns:1fr}.pk-moodboard{grid-template-columns:1fr}.pk-mood-intro{min-height:190px}.pk-mood-principles{grid-column:1}.pk-visual-research{padding:16px}}
+html[data-theme="dark"] .pk-journey,html[data-theme="dark"] .pk-visual-research{background:#262129;color:#f5eff2;border-color:#614c55}
+html[data-theme="dark"] .pk-jstep{background:#3b3038}html[data-theme="dark"] .pk-jstep strong,html[data-theme="dark"] .pk-jstep p,html[data-theme="dark"] .pk-jstep small{color:#f3e9ed}
+html[data-theme="dark"] .pk-jstep.pk-friction{background:#762d46}
+html[data-theme="dark"] .pk-label,html[data-theme="dark"] .pk-step-num{color:#e7adc1}
+html[data-theme="dark"] .pk-insight{background:#44343c}html[data-theme="dark"] .pk-insight b{color:#f2bfce}html[data-theme="dark"] .pk-insight span{color:#fff}
+html[data-theme="dark"] .pk-before-after>div{background:#383039;color:#fff}html[data-theme="dark"] .pk-before-after>div+div{background:#593344}
+html[data-theme="dark"] .pk-before-after strong,html[data-theme="dark"] .pk-before-after p{color:#f5eff2}
+html[data-theme="dark"] .pk-style-table{color:#f3edf0}html[data-theme="dark"] .pk-style-table th,html[data-theme="dark"] .pk-style-table td{border-color:#5d4d55}
+html[data-theme="dark"] .pk-style-table thead th,html[data-theme="dark"] .pk-table-note{color:#cfc0c7}
+html[data-theme="dark"] .pk-style-table .pk-selected{background:#51303f}html[data-theme="dark"] .pk-style-table .pk-selected td:last-child{color:#f1c2d2}
+
 </style>
 </head>
 <body>
@@ -84,6 +152,23 @@ html[data-theme="dark"] .pockette-flow-steps div:nth-of-type(3){background:#a14a
       <h2 id="pockette-journey">Mapping the moment of friction</h2>
       <p>I mapped a provisional current-state journey: <strong>get a card → save it somewhere → arrive at checkout → search for it → present the code → leave.</strong> The pressure peaks between searching and presenting — the very steps an everyday wallet should simplify.</p>
       <p>The proposed future state is intentionally shorter: <strong>open Pockette → find or tap the store → show the code.</strong> Cards can be added once by scanning, importing an image or entering details manually; the regular checkout experience should require almost no thought.</p>
+      
+      <div class="pk-journey" role="group" aria-label="Hypothesized six-stage current user journey with frustration highest while searching at checkout">
+        <div class="pk-label">CURRENT STATE · HYPOTHESIS, NOT OBSERVED USER DATA</div>
+        <div class="pk-journey-grid">
+          <div class="pk-jstep"><span class="pk-step-num">01</span><strong>Receive</strong><small>Get a card at a store</small><span class="pk-emotion">◡</span><p>One more thing to keep</p></div>
+          <div class="pk-jstep"><span class="pk-step-num">02</span><strong>Store</strong><small>Wallet, app or screenshot</small><span class="pk-emotion">◡</span><p>Saved somewhere…</p></div>
+          <div class="pk-jstep"><span class="pk-step-num">03</span><strong>Arrive</strong><small>Queue at the checkout</small><span class="pk-emotion pk-worried">—</span><p>Where is it?</p></div>
+          <div class="pk-jstep pk-friction"><span class="pk-step-num">04 · FRICTION</span><strong>Search</strong><small>Jump between apps</small><span class="pk-emotion">⌢</span><p>People are waiting</p></div>
+          <div class="pk-jstep"><span class="pk-step-num">05</span><strong>Present</strong><small>Find the right code</small><span class="pk-emotion pk-worried">—</span><p>Will this scan?</p></div>
+          <div class="pk-jstep"><span class="pk-step-num">06</span><strong>Leave</strong><small>Complete shopping</small><span class="pk-emotion">◡</span><p>Relief, until next time</p></div>
+        </div>
+        <div class="pk-insight"><b>Design opportunity</b><span>Remove searching between the user and the checkout scanner. The reward is already theirs; access is the problem.</span></div>
+      </div>
+      <div class="pk-before-after" role="group" aria-label="Comparison of current fragmented process and proposed Pockette process">
+        <div><span class="pk-label">BEFORE · FRAGMENTED</span><strong>Store card → photo / email / retailer app → search → code</strong><p>Different locations, different interactions, extra effort under pressure.</p></div>
+        <div><span class="pk-label">WITH POCKETTE · INTENDED</span><strong>Open wallet → tap card → show code</strong><p>A familiar, repeatable path from store recognition to barcode.</p></div>
+      </div>
       <p>This is a design-led journey map based on assumptions and personal experience. Future interviews and checkout observations will be used to refine it.</p>
     </div>
   </section>
@@ -107,7 +192,49 @@ html[data-theme="dark"] .pockette-flow-steps div:nth-of-type(3){background:#a14a
         <p>Brand colors belong to the individual store cards, while the app's own navigation stays consistent. The barcode view intentionally drops the decoration: dark code, white background, adequate quiet zones and a clear way back.</p>
         <p><strong>Accessibility is part of the visual brief:</strong> WCAG-aware text and UI contrast, legible labels, sufficiently large touch targets, visible focus states and reduced-motion support. A good-looking interface still has to work in a bright shop, one-handed and under time pressure.</p>
       </div>
-      <figure class="pockette-screens">
+      
+    <div class="pk-visual-research">
+      <div class="pk-label">STYLE EXPLORATION · QUALITATIVE PRODUCT FIT, NOT MARKET POPULARITY DATA</div>
+      <h3>Choosing a visual language — not just a trend</h3>
+      <p>The evaluation was based on three product-specific criteria: recognizable personality, glanceability at checkout and accessible contrast. These are directional design judgments, not usability test scores.</p>
+      <div class="pk-comparison-wrap">
+      <table class="pk-style-table">
+        <thead><tr><th scope="col">Direction</th><th scope="col">Visual character</th><th scope="col">Advantage</th><th scope="col">Trade-off for Pockette</th><th scope="col">Decision</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span class="pk-swatch-group pk-soft"><i></i><i></i><i></i></span>Soft pastel</th><td>Blush, lavender, gentle surfaces</td><td>Warm and friendly</td><td>Too closely tied to a feminine lifestyle aesthetic</td><td>Not selected</td></tr>
+          <tr><th scope="row"><span class="pk-swatch-group pk-editorial"><i></i><i></i><i></i></span>Editorial minimalism</th><td>Warm neutrals, expressive serif, air</td><td>Elegant and timeless</td><td>Less suited as the entire visual system for fast store scanning</td><td>Reference only</td></tr>
+          <tr><th scope="row"><span class="pk-swatch-group pk-glass"><i></i><i></i><i></i></span>Glossy / glass</th><td>Translucent layers, floating controls</td><td>Contemporary depth</td><td>Effects may weaken legibility and barcode clarity</td><td>Use sparingly</td></tr>
+          <tr><th scope="row"><span class="pk-swatch-group pk-play"><i></i><i></i><i></i></span>Playful expressive</th><td>Loud accents, bold geometry</td><td>Memorable personality</td><td>Competes with many store brand colors</td><td>Not selected</td></tr>
+          <tr class="pk-selected"><th scope="row"><span class="pk-swatch-group pk-bordeaux"><i></i><i></i><i></i></span>Bordeaux minimalism</th><td>Wine accents, ivory, charcoal, branded cards</td><td>Distinctive but restrained</td><td>Contrast still needs testing in all states</td><td><strong>Selected ✓</strong></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="pk-table-note">Exploration references include current mobile interface trends and the needs of a time-sensitive utility. The visual choice is a design rationale, not evidence of preference among target users.</p>
+    </div>
+    <div class="pk-moodboard" role="group" aria-label="Pockette Bordeaux minimalism moodboard featuring color palette, typography, overlapping cards and brand principles">
+      <div class="pk-mood-intro">
+        <span class="pk-label">SELECTED MOODBOARD · GENDER-NEUTRAL / FUNCTIONAL / PREMIUM</span>
+        <span class="pk-mood-brand">pockette<span>.</span></span>
+        <p>Beautiful because it's simple.<br>Memorable because it works.</p>
+      </div>
+      <div class="pk-mood-colors">
+        <div style="background:#762D46;color:#fff"><strong>Bordeaux</strong><small>#762D46</small></div>
+        <div style="background:#48232F;color:#fff"><strong>Deep wine</strong><small>#48232F</small></div>
+        <div style="background:#F8F6F4;color:#282428"><strong>Ivory</strong><small>#F8F6F4</small></div>
+        <div style="background:#252326;color:#fff"><strong>Ink</strong><small>#252326</small></div>
+      </div>
+      <div class="pk-mood-type">
+        <div><small>DISPLAY · CORMORANT GARAMOND</small><strong>Thoughtful by design.</strong></div>
+        <div><small>INTERFACE · INTER</small><strong>Find a card. Tap. Scan.</strong><span>Readable controls. Clear store names. No visual noise.</span></div>
+      </div>
+      <div class="pk-mood-cards">
+        <div class="pk-mini-card pk-mini-one"><strong>Store cards</strong><small>BRAND COLOR · FIRST</small></div>
+        <div class="pk-mini-card pk-mini-two"><strong>One wallet</strong><small>FASTER ACCESS</small></div>
+        <div class="pk-mini-card pk-mini-three"><strong>One tap</strong><small>THE CODE IS READY</small></div>
+      </div>
+      <div class="pk-mood-principles"><span>01 · Clear hierarchy</span><span>02 · Brand-led cards</span><span>03 · High contrast</span><span>04 · Minimal motion</span></div>
+    </div>
+    <figure class="pockette-screens">
         <img src="images/pockette/stack-light.webp" width="303" height="657" alt="Pockette visual exploration: overlapping loyalty card stack in light mode, with recognizable store names" loading="lazy">
         <img src="images/pockette/tiles-dark.webp" width="303" height="657" alt="Alternative exploration: a two-column card layout in dark mode" loading="lazy">
         <figcaption>Visual explorations — overlapping card stack and alternative tile layout, not validated final screens.</figcaption>
