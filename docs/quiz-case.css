@@ -15,3 +15,30 @@
 .pockette-screens img{display:block;width:100%;height:auto;border-radius:12% / 5.5%}
 .pockette-screens figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
 .pockette-poster{display:block;width:100%;max-width:360px;height:auto;margin-inline:auto;border-radius:12px}
+/* Independent products — compact cards (match Selected Work) */
+.indie-card{position:relative}
+.indie-card h3 a{color:inherit}
+.indie-card .indie-main::after{content:"";position:absolute;inset:0;z-index:3;border-radius:inherit}
+.indie-card .indie-main:focus-visible{outline:none}
+.indie-card:has(.indie-main:focus-visible){outline:3px solid var(--accent);outline-offset:4px}
+.indie-actions{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px}
+.indie-actions .indie-alt{position:relative;z-index:4;display:inline-block;margin-top:12px;font-size:13px;color:var(--muted);border-bottom:1px solid currentColor;transition:color .2s ease}
+.indie-actions .indie-alt:hover,.indie-actions .indie-alt:focus-visible{color:var(--accent)}
+.real-work-card.indie-card:focus-within{translate:0 -6px;border-color:var(--accent)}
+.cc-quiz{--cc-tint:#fdf3ea;--cc-ink:#9a3d12;--cc-bg:linear-gradient(135deg,#f6b24a 0%,#ee6f3d 55%,#c8406a 100%)}
+.cc-pockette{--cc-tint:#f8f6f4;--cc-ink:#762d46;--cc-bg:radial-gradient(circle at 70% 60%,#762d4699 0%,#0000 60%),linear-gradient(135deg,#1c1418 0%,#2f1a22 100%)}
+.case-cover.cc .cc-word-serif{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.02em}
+.case-cover.cc .cc-trio,.case-cover.cc .cc-duo{display:flex;align-items:center;justify-content:flex-end;object-fit:initial}
+.case-cover.cc .cc-trio{width:58%}
+.case-cover.cc .cc-trio img{width:46%;aspect-ratio:1;height:auto;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 22px #1b123033;object-fit:cover}
+.case-cover.cc .cc-trio img+img{margin-left:-16%}
+.case-cover.cc .cc-trio img:nth-child(2){transform:translateY(-14%)}
+.case-cover.cc .cc-duo{width:50%;gap:6%;justify-content:center}
+.case-cover.cc .cc-duo img{height:100%;width:auto;border-radius:12% / 5.5%}
+.case-cover.cc .cc-duo img:nth-child(2){transform:translateY(8%)}
+@media(prefers-reduced-motion:reduce){.real-work-card.indie-card:focus-within{translate:none}}
+.case-cover.cc .cc-trio{width:50%;right:5%;filter:none}
+.case-cover.cc-quiz .cc-logo{width:36%}
+.case-cover.cc .cc-duo{height:78%}
+.case-cover.cc .cc-duo img{height:100%;box-shadow:0 12px 24px #1b123040}
+.case-cover.cc .cc-duo{filter:none}
