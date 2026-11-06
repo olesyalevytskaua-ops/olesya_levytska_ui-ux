@@ -107,6 +107,48 @@ html[data-theme="dark"] .pk-style-table{color:#f3edf0}html[data-theme="dark"] .p
 html[data-theme="dark"] .pk-style-table thead th,html[data-theme="dark"] .pk-table-note{color:#cfc0c7}
 html[data-theme="dark"] .pk-style-table .pk-selected{background:#51303f}html[data-theme="dark"] .pk-style-table .pk-selected td:last-child{color:#f1c2d2}
 
+
+/* Visual user journey and functional flows */
+.pk-research-viz{margin:26px 0;padding:26px;background:#fcfbfb;border:1px solid #ddd8da;border-radius:22px;color:#201e21}
+.pk-research-header{display:flex;align-items:start;justify-content:space-between;gap:18px}
+.pk-research-header h3{font:650 clamp(19px,2.2vw,26px)/1.25 Inter,system-ui,sans-serif;color:#262327;margin:0}
+.pk-research-header span{font:400 12px/1.5 Inter,system-ui,sans-serif;color:#696369;text-align:right}
+.pk-emotion-curve{display:block;width:100%;height:auto;margin:16px auto 5px}
+.pk-axis-label{font:500 25px Inter,system-ui,sans-serif}.pk-good{fill:#61856d}.pk-bad{fill:#aa707b}
+.pk-stage-labels{font:500 23px Inter,system-ui,sans-serif;fill:#292529}
+.pk-chart-caption{font:400 13px/1.6 Inter,system-ui,sans-serif;color:#696369;margin:12px 0 0}
+.pk-journey-table-block{margin:26px 0;padding:24px;background:#fcfbfb;border:1px solid #e5dee0;border-radius:20px;color:#252326}
+.pk-responsive-table{max-width:100%;overflow-x:auto;margin-top:12px}
+.pk-journey-table{border-collapse:collapse;width:100%;min-width:770px;font:400 13px/1.6 Inter,system-ui,sans-serif}
+.pk-journey-table th,.pk-journey-table td{vertical-align:top;padding:17px 13px;border-bottom:1px solid #e5e0e2;text-align:left;color:#302b2f}
+.pk-journey-table thead th{font-weight:650;color:#242124;font-size:13px}.pk-journey-table tbody th{font-weight:600;min-width:112px}
+.pk-journey-table tbody tr:last-child th,.pk-journey-table tbody tr:last-child td{border-bottom:0}
+.pk-journey-table .pk-pain-row{background:#f5e9ed}.pk-journey-table .pk-pain-row th{color:#762d46}
+.pk-flow-card{margin:26px 0;padding:24px;background:#f9f7f7;border:1px solid #e6dee2;border-radius:20px;color:#282428}
+.pk-flow-heading h3{font:650 clamp(18px,2vw,24px)/1.25 Inter,system-ui,sans-serif;margin:9px 0 23px;color:#282428}
+.pk-flow-track{display:flex;align-items:center;justify-content:space-between;gap:7px}
+.pk-flow-node{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:19px 10px;background:white;border:1px solid #e6dce0;border-radius:15px;min-height:177px}
+.pk-flow-no{align-self:flex-start;font:700 10px Inter,system-ui,sans-serif;letter-spacing:.07em;color:#762d46}
+.pk-flow-icon{font:700 28px/1 Inter,system-ui,sans-serif;color:#762d46;display:flex;align-items:center;justify-content:center;height:38px}
+.pk-flow-node strong{font:650 13px/1.3 Inter,system-ui,sans-serif;color:#282428}
+.pk-flow-node small{font:400 11px/1.5 Inter,system-ui,sans-serif;color:#696269}
+.pk-flow-arrow{flex:none;font-size:22px;color:#762d46}
+.pk-flow-node.pk-flow-key{background:#762d46;border-color:#762d46}.pk-flow-key .pk-flow-no,.pk-flow-key .pk-flow-icon,.pk-flow-key strong,.pk-flow-key small{color:#fff}
+.pk-flow-foot{font:400 12px/1.55 Inter,system-ui,sans-serif;color:#665d62;margin:18px 0 0}
+.pk-add-flow{padding:22px;background:#f1ebed;border-radius:16px;color:#2b2529;margin:18px 0 25px}
+.pk-add-track{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px}
+.pk-add-track span{flex:1;background:#fff;border:1px solid #e5d9de;border-radius:10px;padding:12px 8px;font:600 12px/1.5 Inter,system-ui,sans-serif;text-align:center}
+.pk-add-track b{font-size:20px;color:#762d46}
+@media(max-width:720px){.pk-research-viz,.pk-journey-table-block,.pk-flow-card{padding:16px}.pk-research-header{flex-direction:column;gap:5px}.pk-research-header span{text-align:left}.pk-flow-track{flex-direction:column}.pk-flow-node{width:100%;min-height:0;display:grid;grid-template-columns:24px 34px 1fr;grid-template-rows:auto auto;align-items:center;text-align:left;padding:12px 15px;column-gap:9px}.pk-flow-no{grid-row:1/3}.pk-flow-icon{grid-row:1/3;font-size:23px}.pk-flow-node strong{grid-column:3}.pk-flow-node small{grid-column:3}.pk-flow-arrow{transform:rotate(90deg)}.pk-add-track{flex-direction:column}.pk-add-track span{width:100%}.pk-add-track b{transform:rotate(90deg)}.pk-chart-caption{font-size:12px}}
+html[data-theme="dark"] .pk-research-viz,html[data-theme="dark"] .pk-journey-table-block,html[data-theme="dark"] .pk-flow-card{background:#272128;border-color:#65505a;color:#f5eff2}
+html[data-theme="dark"] .pk-research-header h3,html[data-theme="dark"] .pk-flow-heading h3{color:#f5eff2}
+html[data-theme="dark"] .pk-stage-labels{fill:#f4ebef}html[data-theme="dark"] .pk-research-header span,html[data-theme="dark"] .pk-chart-caption{color:#d4c9ce}
+html[data-theme="dark"] .pk-journey-table th,html[data-theme="dark"] .pk-journey-table td{color:#f5eff2;border-color:#5a4a53}
+html[data-theme="dark"] .pk-journey-table .pk-pain-row{background:#54303f}html[data-theme="dark"] .pk-journey-table .pk-pain-row th{color:#f5d2df}
+html[data-theme="dark"] .pk-flow-node{background:#3b3038;border-color:#6c5360}html[data-theme="dark"] .pk-flow-node strong,html[data-theme="dark"] .pk-flow-node small{color:#fff}
+html[data-theme="dark"] .pk-flow-node.pk-flow-key{background:#762d46}html[data-theme="dark"] .pk-flow-foot{color:#d6cbd0}
+html[data-theme="dark"] .pk-add-flow{background:#382b34;color:#fff}html[data-theme="dark"] .pk-add-track span{background:#4d3945;border-color:#715563;color:#fff}
+
 </style>
 </head>
 <body>
@@ -153,19 +195,42 @@ html[data-theme="dark"] .pk-style-table .pk-selected{background:#51303f}html[dat
       <p>I mapped a provisional current-state journey: <strong>get a card → save it somewhere → arrive at checkout → search for it → present the code → leave.</strong> The pressure peaks between searching and presenting — the very steps an everyday wallet should simplify.</p>
       <p>The proposed future state is intentionally shorter: <strong>open Pockette → find or tap the store → show the code.</strong> Cards can be added once by scanning, importing an image or entering details manually; the regular checkout experience should require almost no thought.</p>
       
-      <div class="pk-journey" role="group" aria-label="Hypothesized six-stage current user journey with frustration highest while searching at checkout">
-        <div class="pk-label">CURRENT STATE · HYPOTHESIS, NOT OBSERVED USER DATA</div>
-        <div class="pk-journey-grid">
-          <div class="pk-jstep"><span class="pk-step-num">01</span><strong>Receive</strong><small>Get a card at a store</small><span class="pk-emotion">◡</span><p>One more thing to keep</p></div>
-          <div class="pk-jstep"><span class="pk-step-num">02</span><strong>Store</strong><small>Wallet, app or screenshot</small><span class="pk-emotion">◡</span><p>Saved somewhere…</p></div>
-          <div class="pk-jstep"><span class="pk-step-num">03</span><strong>Arrive</strong><small>Queue at the checkout</small><span class="pk-emotion pk-worried">—</span><p>Where is it?</p></div>
-          <div class="pk-jstep pk-friction"><span class="pk-step-num">04 · FRICTION</span><strong>Search</strong><small>Jump between apps</small><span class="pk-emotion">⌢</span><p>People are waiting</p></div>
-          <div class="pk-jstep"><span class="pk-step-num">05</span><strong>Present</strong><small>Find the right code</small><span class="pk-emotion pk-worried">—</span><p>Will this scan?</p></div>
-          <div class="pk-jstep"><span class="pk-step-num">06</span><strong>Leave</strong><small>Complete shopping</small><span class="pk-emotion">◡</span><p>Relief, until next time</p></div>
-        </div>
-        <div class="pk-insight"><b>Design opportunity</b><span>Remove searching between the user and the checkout scanner. The reward is already theirs; access is the problem.</span></div>
+
+      <div class="pk-research-viz">
+        <div class="pk-research-header"><h3>Customer emotional journey</h3><span>Illustrative · Hypothesis, not research data</span></div>
+        <svg class="pk-emotion-curve" viewBox="0 0 1000 420" role="img" aria-labelledby="pk-em-title pk-em-desc" xmlns="http://www.w3.org/2000/svg">
+          <title id="pk-em-title">Illustrative emotional journey of finding a loyalty card</title>
+          <desc id="pk-em-desc">User sentiment declines from receiving and saving a card through searching for it in a checkout queue, then recovers after showing the barcode and leaving the store. The queue is the lowest point.</desc>
+          <g stroke="#ddd8da" stroke-width="2" stroke-dasharray="8 10"><path d="M126 65H956 M126 166H956 M126 268H956 M126 348H956"/></g>
+          <text x="18" y="74" class="pk-axis-label pk-good">Good</text>
+          <text x="21" y="352" class="pk-axis-label pk-bad">Bad</text>
+          <polyline points="150,121 306,158 462,273 618,344 774,220 930,135" fill="none" stroke="#762D46" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#762D46" stroke="#fff" stroke-width="7">
+            <circle cx="150" cy="121" r="14"/><circle cx="306" cy="158" r="14"/><circle cx="462" cy="273" r="14"/><circle cx="618" cy="344" r="14"/><circle cx="774" cy="220" r="14"/><circle cx="930" cy="135" r="14"/>
+          </g>
+          <g class="pk-stage-labels" text-anchor="middle">
+            <text x="150" y="405">Get</text><text x="306" y="405">Save</text><text x="462" y="405">Find</text><text x="618" y="405">Queue</text><text x="774" y="405">Scan</text><text x="930" y="405">Leave</text>
+          </g>
+        </svg>
+        <p class="pk-chart-caption">The biggest expected emotional dip happens when someone cannot immediately find the right card while others are waiting at checkout.</p>
       </div>
-      <div class="pk-before-after" role="group" aria-label="Comparison of current fragmented process and proposed Pockette process">
+      <div class="pk-journey-table-block">
+        <div class="pk-label">CURRENT-STATE JOURNEY · ASSUMPTION-BASED</div>
+        <div class="pk-responsive-table">
+          <table class="pk-journey-table">
+            <thead><tr><th scope="col">Stage</th><th scope="col">Actions &amp; touchpoints</th><th scope="col">Thoughts / feelings</th><th scope="col">Pain points</th><th scope="col">UX opportunity</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">01 · Get a card</th><td>Receives a loyalty card at a store</td><td>“I’ll probably need this again.”</td><td>Another card or retailer app to manage</td><td>Quick card capture</td></tr>
+              <tr><th scope="row">02 · Save it</th><td>Keeps physical card, screenshot or app</td><td>“I’ll find it later.”</td><td>Information scattered in different places</td><td>Centralized storage</td></tr>
+              <tr><th scope="row">03 · Need it</th><td>Arrives at a store checkout</td><td>“Where did I put that card?”</td><td>No consistent place to look</td><td>One wallet</td></tr>
+              <tr class="pk-pain-row"><th scope="row">04 · Search</th><td>Checks wallet, photos, messages, apps</td><td>“Why is this taking so long?”</td><td>Time pressure, queue, multiple steps</td><td>Search + pinned cards</td></tr>
+              <tr><th scope="row">05 · Redeem</th><td>Shows a barcode or promo code</td><td>“I hope this works.”</td><td>Small, unclear or unavailable code</td><td>Large scannable code</td></tr>
+              <tr><th scope="row">06 · Finish</th><td>Pays and leaves</td><td>Relief, sometimes frustration</td><td>Same problem may recur next visit</td><td>Repeatable, reliable access</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+            <div class="pk-before-after" role="group" aria-label="Comparison of current fragmented process and proposed Pockette process">
         <div><span class="pk-label">BEFORE · FRAGMENTED</span><strong>Store card → photo / email / retailer app → search → code</strong><p>Different locations, different interactions, extra effort under pressure.</p></div>
         <div><span class="pk-label">WITH POCKETTE · INTENDED</span><strong>Open wallet → tap card → show code</strong><p>A familiar, repeatable path from store recognition to barcode.</p></div>
       </div>
@@ -269,16 +334,25 @@ html[data-theme="dark"] .pk-style-table .pk-selected{background:#51303f}html[dat
           <div class="pockette-map-node"><strong>03 · Settings</strong><span>Light / dark / system</span><span>English / Ukrainian</span><span>Preferred card layout</span><span>Export / import backup</span></div>
         </div>
       </div>
-      <div class="pockette-map pockette-map-flow" role="group" aria-label="Primary checkout user flow: open wallet, select a card, show barcode, and scan at checkout">
-        <div class="pockette-map-heading">CORE CHECKOUT FLOW · MINIMUM FRICTION</div>
-        <div class="pockette-flow-steps">
-          <div>Open wallet</div><span aria-hidden="true">→</span>
-          <div>Tap store card</div><span aria-hidden="true">→</span>
-          <div>Show scannable code</div><span aria-hidden="true">→</span>
-          <div>Scan at checkout</div>
+
+      <div class="pk-flow-card">
+        <div class="pk-flow-heading"><span class="pk-label">PRIMARY TASK · CHECKOUT</span><h3>From wallet to scanner — no detours</h3></div>
+        <div class="pk-flow-track" role="img" aria-label="Open wallet, tap store card, display barcode, scan at checkout">
+          <div class="pk-flow-node"><span class="pk-flow-no">01</span><span class="pk-flow-icon" aria-hidden="true">▤</span><strong>Open wallet</strong><small>Cards appear first</small></div>
+          <span class="pk-flow-arrow" aria-hidden="true">→</span>
+          <div class="pk-flow-node"><span class="pk-flow-no">02</span><span class="pk-flow-icon" aria-hidden="true">◈</span><strong>Tap store</strong><small>Recognize its brand</small></div>
+          <span class="pk-flow-arrow" aria-hidden="true">→</span>
+          <div class="pk-flow-node pk-flow-key"><span class="pk-flow-no">03</span><span class="pk-flow-icon" aria-hidden="true">▥</span><strong>Show code</strong><small>High-contrast display</small></div>
+          <span class="pk-flow-arrow" aria-hidden="true">→</span>
+          <div class="pk-flow-node"><span class="pk-flow-no">04</span><span class="pk-flow-icon" aria-hidden="true">✓</span><strong>Scan &amp; go</strong><small>No extra screens</small></div>
         </div>
+        <p class="pk-flow-foot">Designed for repeat use: the capture flow happens once; the checkout flow should be effortless every time.</p>
       </div>
-      <p><strong>Implementation notes:</strong> ZXing handles on-device scanning; bwip-js draws supported codes. Data is stored in the browser, with an export/import feature because clearing site data can remove the wallet. The repo includes Playwright tests, but physical checkout scanner validation is still pending.</p>
+      <div class="pk-add-flow">
+        <span class="pk-label">SECONDARY TASK · ADD A CARD ONCE</span>
+        <div class="pk-add-track"><span>Scan / upload / enter manually</span><b aria-hidden="true">→</b><span>Review value &amp; code format</span><b aria-hidden="true">→</b><span>Save locally</span></div>
+      </div>
+            <p><strong>Implementation notes:</strong> ZXing handles on-device scanning; bwip-js draws supported codes. Data is stored in the browser, with an export/import feature because clearing site data can remove the wallet. The repo includes Playwright tests, but physical checkout scanner validation is still pending.</p>
       <p><a class="text-link" href="https://github.com/olesyalevytskaua-ops/pockette" target="_blank" rel="noopener noreferrer">Explore the Pockette prototype on GitHub ↗</a></p>
     </div>
   </section>
