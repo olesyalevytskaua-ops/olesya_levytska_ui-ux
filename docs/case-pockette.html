@@ -200,6 +200,43 @@ html[data-theme="dark"] .pk-proto-grid strong,html[data-theme="dark"] .pk-proto-
 @media(prefers-reduced-motion:reduce){.pk-gallery-slide{transition:none}}
 html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html[data-theme="dark"] .pk-gallery-description{color:#fff}html[data-theme="dark"] .pk-gallery-description span{color:#f0bace}html[data-theme="dark"] .pk-gallery-description small{color:#e5d7de}
 
+
+/* Pockette exported splash design — scaled for the case study carousel. */
+.pk-splash-stage{display:flex;align-items:center;justify-content:center;min-width:0;width:100%}
+.pk-splash-art{width:min(100%,250px);aspect-ratio:1290/2796;position:relative;overflow:hidden;border-radius:27px;font-family:Inter,system-ui,sans-serif;box-shadow:0 15px 45px #26151d2e}
+.pk-splash-light{background:#F8F6F4;color:#762D46}
+.pk-splash-dark{background:#140C0F;color:#F3EAE3}
+.pk-splash-center{position:absolute;top:32.9%;left:0;right:0;display:flex;align-items:center;flex-direction:column}
+.pk-splash-icon{position:relative;overflow:hidden;width:18%;aspect-ratio:1;border-radius:22%;background:linear-gradient(135deg,#8A3A55 0%,#4E1D2E 100%);display:flex;align-items:center;justify-content:center}
+.pk-splash-dark .pk-splash-icon{box-shadow:inset 0 0 0 1px #D9C29A73,0 10px 26px #0008}
+.pk-splash-icon svg{width:60%;height:60%}
+.pk-splash-sheen{position:absolute;top:-40%;left:0;width:31%;height:180%;background:linear-gradient(90deg,#ead9b800,#ead9b859,#ead9b800)}
+.pk-splash-word{margin-top:6.52%;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(25px,3.1vw,43px);line-height:1;letter-spacing:.005em;white-space:nowrap}
+.pk-splash-light .pk-splash-dot{color:#B08D57}.pk-splash-dark .pk-splash-dot{color:#D9C29A}
+.pk-splash-line{margin-top:4.35%;height:1px;width:25%;background:#C9B08A;opacity:.7}
+.pk-splash-dark .pk-splash-line{background:#D9C29A;opacity:.45}
+.pk-splash-tagline{position:absolute;bottom:8.94%;width:100%;padding:0 5%;text-align:center;font-size:clamp(5px,.68vw,9px);font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:#575157;white-space:nowrap;box-sizing:border-box}
+.pk-splash-dark .pk-splash-tagline{color:#B9A9A6}
+@keyframes pksp-icon-in{from{opacity:0;transform:translateY(24px) scale(.92)}to{opacity:1;transform:none}}
+@keyframes pksp-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes pksp-sheen{0%{transform:translateX(-260%) rotate(20deg);opacity:1}90%{opacity:1}100%{transform:translateX(480%) rotate(20deg);opacity:0}}
+@keyframes pksp-word-in{from{opacity:0;letter-spacing:.12em;filter:blur(8px)}to{opacity:1;letter-spacing:.005em;filter:blur(0)}}
+@keyframes pksp-dot-in{0%{opacity:0;transform:scale(.4)}70%{opacity:1;transform:scale(1.15)}100%{opacity:1;transform:scale(1)}}
+@keyframes pksp-line-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pksp-fade-up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-icon{animation:pksp-icon-in 1.1s cubic-bezier(.22,1,.36,1) .2s both}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-stroke{stroke-dasharray:1;stroke-dashoffset:1;animation:pksp-draw 1.4s cubic-bezier(.65,0,.35,1) .6s both}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-stroke-2{animation-delay:.85s}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-stroke-3{animation-delay:1.1s}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-stroke-4{animation-delay:1.35s;animation-duration:.6s}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-sheen{animation:pksp-sheen 1.4s cubic-bezier(.45,0,.2,1) 3.9s both}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-word{animation:pksp-word-in 1.4s cubic-bezier(.22,1,.36,1) 1.2s both}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-dot{display:inline-block;transform-origin:50% 80%;animation:pksp-dot-in .7s cubic-bezier(.22,1,.36,1) 2.3s both}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-line{transform-origin:50% 50%;animation:pksp-line-in 1.1s cubic-bezier(.65,0,.35,1) 2.4s both}
+.pk-splash-slide.is-active.pk-splash-play .pk-splash-tagline{animation:pksp-fade-up 1s cubic-bezier(.22,1,.36,1) 2.9s both}
+@media(max-width:650px){.pk-splash-art{width:min(60%,195px);border-radius:22px}.pk-splash-word{font-size:clamp(24px,8vw,34px)}.pk-splash-tagline{font-size:clamp(5px,1.5vw,7px)}}
+@media(prefers-reduced-motion:reduce){.pk-splash-slide.is-active.pk-splash-play .pk-splash-icon,.pk-splash-slide.is-active.pk-splash-play .pk-splash-stroke,.pk-splash-slide.is-active.pk-splash-play .pk-splash-sheen,.pk-splash-slide.is-active.pk-splash-play .pk-splash-word,.pk-splash-slide.is-active.pk-splash-play .pk-splash-dot,.pk-splash-slide.is-active.pk-splash-play .pk-splash-line,.pk-splash-slide.is-active.pk-splash-play .pk-splash-tagline{animation:none}.pk-splash-stroke{stroke-dashoffset:0}.pk-splash-sheen{display:none}}
+
 </style>
 </head>
 <body>
@@ -364,16 +401,58 @@ html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html
       </tbody></table></div>
     </div>
     <div class="pk-gallery-section" aria-labelledby="pk-gallery-title">
-      <div class="pk-gallery-heading"><div><span class="pk-label">CURRENT APP · ACTUAL REPOSITORY SCREENSHOTS</span><h3 id="pk-gallery-title">The wallet, in use.</h3><p>Two views from the working Pockette prototype. Switch between light and dark to see how the card-first experience adapts.</p></div><a href="https://github.com/olesyalevytskaua-ops/pockette/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer" class="pk-gallery-source">View original screenshots ↗</a></div>
-      <div class="pk-gallery" data-pk-gallery tabindex="0" aria-label="Pockette prototype screenshots" aria-roledescription="carousel">
+      <div class="pk-gallery-heading"><div><span class="pk-label">CURRENT APP · ACTUAL REPOSITORY SCREENSHOTS</span><h3 id="pk-gallery-title">The wallet, in use.</h3><p>Explore two real wallet screenshots and two animated splash-screen designs, recreated from the original light and dark exports.</p></div><a href="https://github.com/olesyalevytskaua-ops/pockette/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer" class="pk-gallery-source">View original screenshots ↗</a></div>
+      <div class="pk-gallery" data-pk-gallery tabindex="0" aria-label="Pockette product screens and animated splash concepts" aria-roledescription="carousel">
         <div class="pk-gallery-viewport">
-          <div class="pk-gallery-slide is-active" data-pk-slide role="group" aria-roledescription="slide" aria-label="1 of 2: Light wallet" aria-hidden="false">
+          <div class="pk-gallery-slide is-active" data-pk-slide role="group" aria-roledescription="slide" aria-label="1 of 4: Light wallet" aria-hidden="false">
             <img src="https://raw.githubusercontent.com/olesyalevytskaua-ops/pockette/main/docs/screenshots/wallet-light.jpg" alt="Real Pockette prototype screenshot showing the light-theme loyalty card wallet" loading="lazy" decoding="async" width="400" height="780">
             <div class="pk-gallery-description"><span>01 / LIGHT THEME</span><strong>Your cards at a glance</strong><small>Brand-led card stack, restrained wallet controls.</small></div>
           </div>
-          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="2 of 2: Dark wallet" aria-hidden="true" inert>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="2 of 4: Dark wallet" aria-hidden="true" inert>
             <img src="https://raw.githubusercontent.com/olesyalevytskaua-ops/pockette/main/docs/screenshots/wallet-dark.jpg" alt="Real Pockette prototype screenshot showing the dark-theme loyalty card wallet" loading="lazy" decoding="async" width="400" height="780">
             <div class="pk-gallery-description"><span>02 / DARK THEME</span><strong>The same flow, after dark</strong><small>High-contrast navigation with deep Bordeaux surfaces.</small></div>
+          </div>
+          <div class="pk-gallery-slide pk-splash-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="3 of 4: Animated light splash screen" aria-hidden="true" inert>
+            <div class="pk-splash-stage">
+              <div class="pk-splash-art pk-splash-light" role="img" aria-label="Animated Pockette light splash screen: Bordeaux wallet icon draws itself, brand wordmark appears, gold underline extends, then tagline fades in">
+                <div class="pk-splash-center">
+                  <div class="pk-splash-icon">
+                    <svg viewBox="0 0 100 100" fill="none" stroke="#D9C29A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect class="pk-splash-stroke" pathLength="1" x="24" y="22" width="52" height="30" rx="7"></rect>
+                      <rect class="pk-splash-stroke pk-splash-stroke-2" pathLength="1" x="16" y="34" width="68" height="46" rx="9"></rect>
+                      <rect class="pk-splash-stroke pk-splash-stroke-3" pathLength="1" x="60" y="50" width="24" height="16" rx="5"></rect>
+                      <circle class="pk-splash-stroke pk-splash-stroke-4" pathLength="1" cx="68" cy="58" r="2.6"></circle>
+                    </svg>
+                    <div class="pk-splash-sheen" aria-hidden="true"></div>
+                  </div>
+                  <div class="pk-splash-word">Pockette<span class="pk-splash-dot">.</span></div>
+                  <div class="pk-splash-line"></div>
+                </div>
+                <div class="pk-splash-tagline">Cards and promo codes, ready offline</div>
+              </div>
+            </div>
+            <div class="pk-gallery-description"><span>03 / ANIMATED SPLASH · LIGHT</span><strong>An entrance with personality</strong><small>Motion recreated from the supplied light splash design export. The animation plays when this slide opens.</small></div>
+          </div>
+          <div class="pk-gallery-slide pk-splash-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="4 of 4: Animated dark splash screen" aria-hidden="true" inert>
+            <div class="pk-splash-stage">
+              <div class="pk-splash-art pk-splash-dark" role="img" aria-label="Animated Pockette dark splash screen: Bordeaux wallet icon draws itself, brand wordmark appears, gold underline extends, then tagline fades in">
+                <div class="pk-splash-center">
+                  <div class="pk-splash-icon">
+                    <svg viewBox="0 0 100 100" fill="none" stroke="#D9C29A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect class="pk-splash-stroke" pathLength="1" x="24" y="22" width="52" height="30" rx="7"></rect>
+                      <rect class="pk-splash-stroke pk-splash-stroke-2" pathLength="1" x="16" y="34" width="68" height="46" rx="9"></rect>
+                      <rect class="pk-splash-stroke pk-splash-stroke-3" pathLength="1" x="60" y="50" width="24" height="16" rx="5"></rect>
+                      <circle class="pk-splash-stroke pk-splash-stroke-4" pathLength="1" cx="68" cy="58" r="2.6"></circle>
+                    </svg>
+                    <div class="pk-splash-sheen" aria-hidden="true"></div>
+                  </div>
+                  <div class="pk-splash-word">Pockette<span class="pk-splash-dot">.</span></div>
+                  <div class="pk-splash-line"></div>
+                </div>
+                <div class="pk-splash-tagline">Cards and promo codes, ready offline</div>
+              </div>
+            </div>
+            <div class="pk-gallery-description"><span>04 / ANIMATED SPLASH · DARK</span><strong>Bordeaux, after dark</strong><small>Motion recreated from the supplied dark splash design export. The animation plays when this slide opens.</small></div>
           </div>
         </div>
         <div class="pk-gallery-controls">
@@ -381,11 +460,13 @@ html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html
           <div class="pk-gallery-pagination" role="group" aria-label="Choose screenshot">
             <button type="button" class="pk-gallery-dot is-active" data-pk-dot="0" aria-label="Show light wallet screenshot" aria-current="true"></button>
             <button type="button" class="pk-gallery-dot" data-pk-dot="1" aria-label="Show dark wallet screenshot"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="2" aria-label="Show animated light splash screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="3" aria-label="Show animated dark splash screen"></button>
           </div>
           <button type="button" class="pk-gallery-arrow" data-pk-next aria-label="Next prototype screenshot">→</button>
         </div>
       </div>
-      <p class="pk-gallery-note">Screenshots from the Pockette source repository — not marketing mockups. Additional checkout and card-capture screens can be added after they are captured from the running app.</p>
+      <p class="pk-gallery-note">Slides 1–2 are actual prototype screenshots from GitHub; slides 3–4 are animated recreations of the two supplied design exports (not evidence that the splash has shipped in the app).</p>
     </div>
   </section>  <section class="section" aria-labelledby="pockette-priorities">
 
@@ -433,7 +514,7 @@ html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html
 </footer>
 
 <script>
-(()=>{const root=document.querySelector('[data-pk-gallery]');if(!root)return;const slides=[...root.querySelectorAll('[data-pk-slide]')],dots=[...root.querySelectorAll('[data-pk-dot]')];let current=0,touchX=null;function show(i){current=(i+slides.length)%slides.length;slides.forEach((slide,n)=>{const selected=n===current;slide.classList.toggle('is-active',selected);slide.setAttribute('aria-hidden',String(!selected));slide.inert=!selected});dots.forEach((dot,n)=>{dot.classList.toggle('is-active',n===current);if(n===current)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current')})}root.querySelector('[data-pk-prev]').addEventListener('click',()=>show(current-1));root.querySelector('[data-pk-next]').addEventListener('click',()=>show(current+1));dots.forEach((dot,n)=>dot.addEventListener('click',()=>show(n)));root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){if(e.target.matches('button'))return;e.preventDefault();show(current+(e.key==='ArrowRight'?1:-1))}});root.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});root.addEventListener('touchend',e=>{if(touchX===null)return;let dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>45)show(current+(dx<0?1:-1))},{passive:true});show(0)})();
+(()=>{const root=document.querySelector('[data-pk-gallery]');if(!root)return;const slides=[...root.querySelectorAll('[data-pk-slide]')],dots=[...root.querySelectorAll('[data-pk-dot]')];let current=0,touchX=null;function show(i){current=(i+slides.length)%slides.length;slides.forEach((slide,n)=>{const selected=n===current;slide.classList.toggle('is-active',selected);slide.setAttribute('aria-hidden',String(!selected));slide.inert=!selected;slide.classList.remove('pk-splash-play')});if(slides[current].classList.contains('pk-splash-slide')&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){void slides[current].offsetWidth;slides[current].classList.add('pk-splash-play')}dots.forEach((dot,n)=>{dot.classList.toggle('is-active',n===current);if(n===current)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current')})}root.querySelector('[data-pk-prev]').addEventListener('click',()=>show(current-1));root.querySelector('[data-pk-next]').addEventListener('click',()=>show(current+1));dots.forEach((dot,n)=>dot.addEventListener('click',()=>show(n)));root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){if(e.target.matches('button'))return;e.preventDefault();show(current+(e.key==='ArrowRight'?1:-1))}});root.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});root.addEventListener('touchend',e=>{if(touchX===null)return;let dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>45)show(current+(dx<0?1:-1))},{passive:true});show(0)})();
 </script>
 </body>
 </html>
