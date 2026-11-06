@@ -20,6 +20,26 @@
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Olesya Levytska","jobTitle":"Senior Product & UX/UI Designer","url":"https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/","sameAs":["https://www.linkedin.com/in/olesya-levytska-321363193/"],"email":"olesyalevytskaua@gmail.com"}</script>
 <link rel="stylesheet" href="quiz-case.css?v=20261106-pockette-preview">
+<style>
+.pockette-map{margin:24px 0;padding:22px;background:#f8f6f4;color:#282428;border:1px solid #e7e0df;border-radius:18px}
+.pockette-map-heading{font:600 11px/1.5 Inter,system-ui,sans-serif;letter-spacing:.13em;color:#762d46;margin-bottom:18px}
+.pockette-map-root{background:#762d46;color:#fff;border-radius:13px;padding:16px 20px;font:700 19px/1.4 Inter,system-ui,sans-serif;text-align:center}
+.pockette-map-root span{display:block;font-weight:400;font-size:12px;margin-top:3px}
+.pockette-map-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;position:relative}
+.pockette-map-node{display:flex;flex-direction:column;gap:9px;background:#fff;border:1px solid #e5dddc;border-radius:12px;padding:16px;font:400 13px/1.45 Inter,system-ui,sans-serif}
+.pockette-map-node strong{color:#762d46;font-size:15px;margin-bottom:6px}
+.pockette-map-flow{background:#fff}
+.pockette-flow-steps{display:flex;gap:9px;align-items:center;justify-content:space-between}
+.pockette-flow-steps div{flex:1;background:#f8f6f4;border:1px solid #e6dadf;border-radius:12px;padding:14px 9px;text-align:center;font:600 13px/1.4 Inter,system-ui,sans-serif}
+.pockette-flow-steps div:nth-of-type(3){background:#762d46;color:white}
+.pockette-flow-steps>span{color:#762d46;font-size:20px}
+@media(max-width:640px){.pockette-map{padding:16px}.pockette-map-columns{grid-template-columns:1fr}.pockette-flow-steps{flex-direction:column}.pockette-flow-steps div{width:100%}.pockette-flow-steps>span{transform:rotate(90deg)}}
+html[data-theme="dark"] .pockette-map{background:#231e23;color:#f5f0ee;border-color:#604854}
+html[data-theme="dark"] .pockette-map-node,html[data-theme="dark"] .pockette-map-flow{background:#2e2730;border-color:#604854;color:#f5f0ee}
+html[data-theme="dark"] .pockette-map-node strong,html[data-theme="dark"] .pockette-map-heading{color:#efbaca}
+html[data-theme="dark"] .pockette-flow-steps div{background:#382c35;border-color:#715563;color:#fff}
+html[data-theme="dark"] .pockette-flow-steps div:nth-of-type(3){background:#a14a68}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -74,7 +94,7 @@
       <p>The core experience is a collection of saved cards, search and a direct route to a full-screen barcode or QR code. A card tap should reveal the code immediately, not open another menu. Favorites or pinned cards help with repeat visits; a compact list remains an important alternative when a wallet grows.</p>
       <p><strong>Primary flow:</strong> My Wallet → tap a store → full-screen code → scan at checkout.</p>
       <p><strong>Add-card flow:</strong> Add → scan / upload / manual entry → verify the code and format → save.</p>
-      <p><strong>Secondary flow, planned:</strong> Coupons → find a saved offer → copy its text code or show its voucher. Discount codes belong here because they solve the same retrieval problem, but they should never complicate finding a loyalty card.</p>
+      <p><strong>Secondary flow, planned:</strong> Coupons → find a saved offer → copy its text code. Discount codes belong in a separate tab because they solve the same retrieval problem without complicating the loyalty card flow.</p>
     </div>
   </section>
   <section class="section" aria-labelledby="pockette-visual">
@@ -98,18 +118,49 @@
     <div class="quiz-story-copy">
       <p class="eyebrow">06 / PRODUCT DECISIONS</p>
       <h2 id="pockette-priorities">Choosing what not to build</h2>
-      <p>The first-release scope is deliberately narrow: add and verify static barcodes or QR codes, search and pin cards, present a scannable code, use saved data offline and export or restore the wallet. No mandatory account, shopping feed or AI features.</p>
-      <p>Coupon codes, expiry dates and links between a store card and its offers are a logical second release. Cloud sync and advanced reminders can wait. Not all retailer codes can be reproduced — dynamic or account-bound codes require explicit handling rather than promising universal compatibility.</p>
+      <p>The prototype implements static barcode and QR capture through camera, photo and manual entry, along with search, draggable card ordering, code display, local browser storage and backup/restore. It includes no mandatory account, shopping feed or AI features. Offline behavior is built into the PWA, with real-device verification still required.</p>
+      <p>The prototype already includes a separate Coupons tab, text-code copying and expiry dates. Associating offers directly with loyalty cards, cloud sync and advanced reminders can wait. Not all retailer codes can be reproduced — dynamic or account-bound codes require explicit handling rather than promising universal compatibility.</p>
       <p><strong>Key trade-off:</strong> The stacked design creates an appealing brand signature, but a compact list may outperform it with 30 or more cards. Both deserve real task-based comparison rather than choosing solely by appearance.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="pockette-prototype">
+    <div class="quiz-story-copy">
+      <p class="eyebrow">07 / WORKING PROTOTYPE</p>
+      <h2 id="pockette-prototype">From the moodboard to an actual wallet</h2>
+      <p>I inspected the current implementation rather than relying on early UI concepts. Pockette is now a React and TypeScript PWA, with a tactile overlapping stack, a tile-layout alternative, searchable cards, drag or button-based reordering, and a direct barcode viewer. The repository also includes a camera and photo scanner, manual entry, a separate coupons area, appearance and language settings, and local backup/import.</p>
+      <p>The screenshots above document the visual exploration. The diagram below reflects the current interface structure and the implemented interaction paths.</p>
+    </div>
+    <div class="quiz-story-copy">
+      <div class="pockette-map" role="group" aria-label="Pockette prototype information architecture: Cards, Coupons and Settings, with their working actions">
+        <div class="pockette-map-heading">CURRENT PROTOTYPE · APP STRUCTURE</div>
+        <div class="pockette-map-root">POCKETTE <span>Local-first mobile wallet</span></div>
+        <div class="pockette-map-columns">
+          <div class="pockette-map-node"><strong>01 · Cards</strong><span>Stack / tile views</span><span>Search and reorder</span><span>Tap → barcode or QR</span><span>Add: camera / photo / manual</span></div>
+          <div class="pockette-map-node"><strong>02 · Coupons</strong><span>Save promo code</span><span>Offer and expiry date</span><span>Search saved codes</span><span>Copy with one tap</span></div>
+          <div class="pockette-map-node"><strong>03 · Settings</strong><span>Light / dark / system</span><span>English / Ukrainian</span><span>Preferred card layout</span><span>Export / import backup</span></div>
+        </div>
+      </div>
+      <div class="pockette-map pockette-map-flow" role="group" aria-label="Primary checkout user flow: open wallet, select a card, show barcode, and scan at checkout">
+        <div class="pockette-map-heading">CORE CHECKOUT FLOW · MINIMUM FRICTION</div>
+        <div class="pockette-flow-steps">
+          <div>Open wallet</div><span aria-hidden="true">→</span>
+          <div>Tap store card</div><span aria-hidden="true">→</span>
+          <div>Show scannable code</div><span aria-hidden="true">→</span>
+          <div>Scan at checkout</div>
+        </div>
+      </div>
+      <p><strong>Implementation notes:</strong> ZXing handles on-device scanning; bwip-js draws supported codes. Data is stored in the browser, with an export/import feature because clearing site data can remove the wallet. The repo includes Playwright tests, but physical checkout scanner validation is still pending.</p>
+      <p><a class="text-link" href="https://github.com/olesyalevytskaua-ops/pockette" target="_blank" rel="noopener noreferrer">Explore the Pockette prototype on GitHub ↗</a></p>
     </div>
   </section>
   <section class="section" aria-labelledby="pockette-validation">
     <div class="quiz-story-copy">
-      <p class="eyebrow">07 / VALIDATION &amp; NEXT STEPS</p>
+      <p class="eyebrow">08 / VALIDATION &amp; NEXT STEPS</p>
       <h2 id="pockette-validation">Testing delight against real-world utility</h2>
-      <p>The next step is to compare stacked cards with a compact list using realistic checkout tasks. I'll measure first-attempt card selection, time to display the correct code and perceived ease of use. <strong>Three seconds is an initial retrieval target, not a measured result.</strong></p>
+      <p>The next step is to compare the implemented stacked cards with the available tile layout using realistic checkout tasks. A compact list remains a further option to evaluate as collections grow. I'll measure first-attempt card selection, time to display the correct code and perceived ease of use. <strong>Three seconds is an initial retrieval target, not a measured result.</strong></p>
       <p>I'll also test recognition and barcode readability with real store cards and scanners, confirm that saved codes remain available after reopening in airplane mode, and test import, backup and restore. Accessibility checks will cover contrast, keyboard and screen-reader access, text scaling and reduced motion.</p>
-      <p><strong>Project status:</strong> Independent product in development. The research framing, journey and flows presented here document design exploration; user-testing results and shipped outcomes will be added once they exist.</p>
+      <p><strong>Project status:</strong> Working React/TypeScript prototype in development, with code and an automated Playwright test suite in its GitHub repository. The research framing and journey are design hypotheses; I have not yet documented independent user-test results or verified scanning with physical checkout devices.</p>
     </div>
   </section>
 </main>
