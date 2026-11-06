@@ -237,7 +237,7 @@ html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html
 @media(max-width:650px){.pk-splash-art{width:min(60%,195px);border-radius:22px}.pk-splash-word{font-size:clamp(24px,8vw,34px)}.pk-splash-tagline{font-size:clamp(5px,1.5vw,7px)}}
 @media(prefers-reduced-motion:reduce){.pk-splash-slide.is-active.pk-splash-play .pk-splash-icon,.pk-splash-slide.is-active.pk-splash-play .pk-splash-stroke,.pk-splash-slide.is-active.pk-splash-play .pk-splash-sheen,.pk-splash-slide.is-active.pk-splash-play .pk-splash-word,.pk-splash-slide.is-active.pk-splash-play .pk-splash-dot,.pk-splash-slide.is-active.pk-splash-play .pk-splash-line,.pk-splash-slide.is-active.pk-splash-play .pk-splash-tagline{animation:none}.pk-splash-stroke{stroke-dashoffset:0}.pk-splash-sheen{display:none}}
 
-</style>
+.pk-gallery{position:relative}.pk-mode-switch{display:inline-flex;gap:2px;padding:3px;margin:0 0 14px;border:1px solid #d0bdc4;border-radius:999px;background:#fff}.pk-mode-switch button{border:0;background:transparent;color:#762d46;font:600 12px/1 inherit;letter-spacing:.06em;padding:8px 14px;border-radius:999px;cursor:pointer;min-height:32px}.pk-mode-switch button[aria-pressed="true"]{background:#762d46;color:#fff}html[data-theme="dark"] .pk-mode-switch{background:#2e2229;border-color:#604650}html[data-theme="dark"] .pk-mode-switch button{color:#f0d9e1}html[data-theme="dark"] .pk-mode-switch button[aria-pressed="true"]{background:#f0d9e1;color:#3a1622}@media(max-width:650px){.pk-gallery-controls{gap:10px}.pk-gallery-pagination{gap:6px}.pk-gallery-dot{width:10px;height:10px;min-width:10px}.pk-mode-switch{display:flex;width:max-content;margin-inline:auto}}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -401,92 +401,74 @@ html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html
       </tbody></table></div>
     </div>
     <div class="pk-gallery-section" aria-labelledby="pk-gallery-title">
-      <div class="pk-gallery-heading"><div><span class="pk-label">CURRENT APP · PROTOTYPE SCREENS</span><h3 id="pk-gallery-title">The wallet, in use.</h3><p>Six prepared screens from the working prototype, plus two animated splash concepts recreated from the light and dark design exports.</p></div><a href="https://github.com/olesyalevytskaua-ops/pockette/tree/main/docs/screenshots/demo" target="_blank" rel="noopener noreferrer" class="pk-gallery-source">View original screenshots ↗</a></div>
-      <div class="pk-gallery" data-pk-gallery tabindex="0" aria-label="Pockette product screens and animated splash concepts" aria-roledescription="carousel">
+      <div class="pk-gallery-heading"><div><span class="pk-label">CURRENT APP · PROTOTYPE SCREENS</span><h3 id="pk-gallery-title">The wallet, in use.</h3><p>Eleven screens from the working prototype, from splash to settings, each in light and dark.</p></div><a href="https://github.com/olesyalevytskaua-ops/pockette/tree/main/docs/screenshots/demo" target="_blank" rel="noopener noreferrer" class="pk-gallery-source">View original screenshots ↗</a></div>
+      <div class="pk-gallery" data-pk-gallery data-pk-mode="light" tabindex="0" aria-label="Pockette prototype screens" aria-roledescription="carousel">
+        <div class="pk-mode-switch" role="group" aria-label="Screen theme"><button type="button" data-pk-mode-btn="light" aria-pressed="true">Light</button><button type="button" data-pk-mode-btn="dark" aria-pressed="false">Dark</button></div>
         <div class="pk-gallery-viewport">
-          <div class="pk-gallery-slide is-active" data-pk-slide role="group" aria-roledescription="slide" aria-label="1 of 8: Card stack, light" aria-hidden="false">
-            <img src="images/pockette/screens/02-wallet-stack-light.webp" alt="Pockette card stack in light mode: search, overlapping store cards and an Add a card button" loading="eager" decoding="async" width="600" height="1298">
-            <div class="pk-gallery-description"><span>01 / LIGHT THEME</span><strong>Your cards at a glance</strong><small>Brand-led card stack, restrained wallet controls.</small></div>
+          <div class="pk-gallery-slide is-active" data-pk-slide role="group" aria-roledescription="slide" aria-label="1 of 11: Splash" aria-hidden="false">
+            <img src="images/pockette/screens/01-splash-light.webp" data-light="images/pockette/screens/01-splash-light.webp" data-dark="images/pockette/screens/01-splash-dark.webp" alt="Pockette splash screen with the wallet icon and wordmark, light mode" data-alt="Pockette splash screen with the wallet icon and wordmark" loading="eager" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>01 / SPLASH</span><strong>A calm first impression</strong><small>Wallet icon, wordmark and the offline promise, before anything loads.</small></div>
           </div>
-          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="2 of 8: Tile view, dark" aria-hidden="true" inert>
-            <img src="images/pockette/screens/03-wallet-tiles-dark.webp" alt="Pockette wallet as a grid of tiles in dark mode with Bordeaux accents" loading="lazy" decoding="async" width="600" height="1298">
-            <div class="pk-gallery-description"><span>02 / DARK THEME · TILES</span><strong>The same wallet, after dark</strong><small>A tile grid for bigger collections, with deep Bordeaux surfaces.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="2 of 11: Card stack" aria-hidden="true" inert>
+            <img src="images/pockette/screens/02-wallet-stack-light.webp" data-light="images/pockette/screens/02-wallet-stack-light.webp" data-dark="images/pockette/screens/02-wallet-stack-dark.webp" alt="Card stack: search, five overlapping demo cards and an Add a card button, light mode" data-alt="Card stack: search, five overlapping demo cards and an Add a card button" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>02 / CARD STACK</span><strong>Your cards at a glance</strong><small>Brand-led stacked cards; the front card shows its number and tap-to-show code.</small></div>
           </div>
-          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="3 of 8: Card with barcode" aria-hidden="true" inert>
-            <img src="images/pockette/screens/04-card-barcode-light.webp" alt="An opened IKEA card showing its barcode and card number" loading="lazy" decoding="async" width="600" height="1298">
-            <div class="pk-gallery-description"><span>03 / AT THE TILL</span><strong>One tap to barcode</strong><small>The barcode opens in a sheet, ready for the scanner.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="3 of 11: Tile view" aria-hidden="true" inert>
+            <img src="images/pockette/screens/03-wallet-tiles-light.webp" data-light="images/pockette/screens/03-wallet-tiles-light.webp" data-dark="images/pockette/screens/03-wallet-tiles-dark.webp" alt="The wallet as a grid of tiles with an Add a card tile, light mode" data-alt="The wallet as a grid of tiles with an Add a card tile" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>03 / TILE VIEW</span><strong>A grid for bigger collections</strong><small>Switch to tiles from the header when the stack gets long.</small></div>
           </div>
-          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="4 of 8: Add a card" aria-hidden="true" inert>
-            <img src="images/pockette/screens/07-add-card-manual-light.webp" alt="Adding a card by hand, with a live card preview and colour choices" loading="lazy" decoding="async" width="600" height="1298">
-            <div class="pk-gallery-description"><span>04 / ADD A CARD</span><strong>A preview as you type</strong><small>Scan or enter by hand; the card takes shape live.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="4 of 11: Barcode" aria-hidden="true" inert>
+            <img src="images/pockette/screens/04-card-barcode-light.webp" data-light="images/pockette/screens/04-card-barcode-light.webp" data-dark="images/pockette/screens/04-card-barcode-dark.webp" alt="An opened IKEA card showing its barcode and number, light mode" data-alt="An opened IKEA card showing its barcode and number" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>04 / AT THE TILL</span><strong>One tap to barcode</strong><small>The barcode opens in a sheet, ready for the scanner.</small></div>
           </div>
-          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="5 of 8: Coupons" aria-hidden="true" inert>
-            <img src="images/pockette/screens/08-coupons-light.webp" alt="Coupons list with promo codes, Copy buttons and an Expiring soon badge" loading="lazy" decoding="async" width="600" height="1298">
-            <div class="pk-gallery-description"><span>05 / COUPONS</span><strong>Promo codes, ready to copy</strong><small>Copy in one tap, with expiry flagged before it matters.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="5 of 11: QR code" aria-hidden="true" inert>
+            <img src="images/pockette/screens/04b-card-qr-light.webp" data-light="images/pockette/screens/04b-card-qr-light.webp" data-dark="images/pockette/screens/04b-card-qr-dark.webp" alt="An opened Decathlon card showing its QR code and number, light mode" data-alt="An opened Decathlon card showing its QR code and number" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>05 / QR CARDS</span><strong>QR codes, just as crisp</strong><small>QR-based cards render sharply, with the number underneath.</small></div>
           </div>
-          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="6 of 8: Settings, dark" aria-hidden="true" inert>
-            <img src="images/pockette/screens/09-settings-dark.webp" alt="Settings for language, appearance, default layout and backup in dark mode" loading="lazy" decoding="async" width="600" height="1298">
-            <div class="pk-gallery-description"><span>06 / SETTINGS</span><strong>Small, honest controls</strong><small>Language, appearance, default layout and a local backup.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="6 of 11: Search" aria-hidden="true" inert>
+            <img src="images/pockette/screens/05-search-light.webp" data-light="images/pockette/screens/05-search-light.webp" data-dark="images/pockette/screens/05-search-dark.webp" alt="Search narrowing the wallet to one card after typing two letters, light mode" data-alt="Search narrowing the wallet to one card after typing two letters" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>06 / SEARCH</span><strong>Found in two letters</strong><small>Results filter as you type, with one-tap clear.</small></div>
           </div>
-          <div class="pk-gallery-slide pk-splash-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="7 of 8: Animated light splash screen" aria-hidden="true" inert>
-            <div class="pk-splash-stage">
-              <div class="pk-splash-art pk-splash-light" role="img" aria-label="Animated Pockette light splash screen: Bordeaux wallet icon draws itself, brand wordmark appears, gold underline extends, then tagline fades in">
-                <div class="pk-splash-center">
-                  <div class="pk-splash-icon">
-                    <svg viewBox="0 0 100 100" fill="none" stroke="#D9C29A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect class="pk-splash-stroke" pathLength="1" x="24" y="22" width="52" height="30" rx="7"></rect>
-                      <rect class="pk-splash-stroke pk-splash-stroke-2" pathLength="1" x="16" y="34" width="68" height="46" rx="9"></rect>
-                      <rect class="pk-splash-stroke pk-splash-stroke-3" pathLength="1" x="60" y="50" width="24" height="16" rx="5"></rect>
-                      <circle class="pk-splash-stroke pk-splash-stroke-4" pathLength="1" cx="68" cy="58" r="2.6"></circle>
-                    </svg>
-                    <div class="pk-splash-sheen" aria-hidden="true"></div>
-                  </div>
-                  <div class="pk-splash-word">Pockette<span class="pk-splash-dot">.</span></div>
-                  <div class="pk-splash-line"></div>
-                </div>
-                <div class="pk-splash-tagline">Cards and promo codes, ready offline</div>
-              </div>
-            </div>
-            <div class="pk-gallery-description"><span>07 / ANIMATED SPLASH · LIGHT</span><strong>An entrance with personality</strong><small>Motion recreated from the supplied light splash design export. The animation plays when this slide opens.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="7 of 11: Add a card" aria-hidden="true" inert>
+            <img src="images/pockette/screens/06-add-card-light.webp" data-light="images/pockette/screens/06-add-card-light.webp" data-dark="images/pockette/screens/06-add-card-dark.webp" alt="Add a card sheet with colour choices, a scan button and Enter manually, light mode" data-alt="Add a card sheet with colour choices, a scan button and Enter manually" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>07 / ADD A CARD</span><strong>Scan first, type if you must</strong><small>Scan a barcode or QR, or enter the details by hand.</small></div>
           </div>
-          <div class="pk-gallery-slide pk-splash-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="8 of 8: Animated dark splash screen" aria-hidden="true" inert>
-            <div class="pk-splash-stage">
-              <div class="pk-splash-art pk-splash-dark" role="img" aria-label="Animated Pockette dark splash screen: Bordeaux wallet icon draws itself, brand wordmark appears, gold underline extends, then tagline fades in">
-                <div class="pk-splash-center">
-                  <div class="pk-splash-icon">
-                    <svg viewBox="0 0 100 100" fill="none" stroke="#D9C29A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect class="pk-splash-stroke" pathLength="1" x="24" y="22" width="52" height="30" rx="7"></rect>
-                      <rect class="pk-splash-stroke pk-splash-stroke-2" pathLength="1" x="16" y="34" width="68" height="46" rx="9"></rect>
-                      <rect class="pk-splash-stroke pk-splash-stroke-3" pathLength="1" x="60" y="50" width="24" height="16" rx="5"></rect>
-                      <circle class="pk-splash-stroke pk-splash-stroke-4" pathLength="1" cx="68" cy="58" r="2.6"></circle>
-                    </svg>
-                    <div class="pk-splash-sheen" aria-hidden="true"></div>
-                  </div>
-                  <div class="pk-splash-word">Pockette<span class="pk-splash-dot">.</span></div>
-                  <div class="pk-splash-line"></div>
-                </div>
-                <div class="pk-splash-tagline">Cards and promo codes, ready offline</div>
-              </div>
-            </div>
-            <div class="pk-gallery-description"><span>08 / ANIMATED SPLASH · DARK</span><strong>Bordeaux, after dark</strong><small>Motion recreated from the supplied dark splash design export. The animation plays when this slide opens.</small></div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="8 of 11: Manual entry" aria-hidden="true" inert>
+            <img src="images/pockette/screens/07-add-card-manual-light.webp" data-light="images/pockette/screens/07-add-card-manual-light.webp" data-dark="images/pockette/screens/07-add-card-manual-dark.webp" alt="Adding a card by hand, with a live card preview and colour choices, light mode" data-alt="Adding a card by hand, with a live card preview and colour choices" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>08 / MANUAL ENTRY</span><strong>A preview as you type</strong><small>Store, card name, code format and number, with the card taking shape live.</small></div>
+          </div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="9 of 11: Coupons" aria-hidden="true" inert>
+            <img src="images/pockette/screens/08-coupons-light.webp" data-light="images/pockette/screens/08-coupons-light.webp" data-dark="images/pockette/screens/08-coupons-dark.webp" alt="Coupons with promo codes, Copy buttons and an Expiring soon badge, light mode" data-alt="Coupons with promo codes, Copy buttons and an Expiring soon badge" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>09 / COUPONS</span><strong>Promo codes, ready to copy</strong><small>Copy in one tap, with expiry flagged before it matters.</small></div>
+          </div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="10 of 11: Settings" aria-hidden="true" inert>
+            <img src="images/pockette/screens/09-settings-light.webp" data-light="images/pockette/screens/09-settings-light.webp" data-dark="images/pockette/screens/09-settings-dark.webp" alt="Settings for language, appearance, default layout and backup, light mode" data-alt="Settings for language, appearance, default layout and backup" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>10 / SETTINGS</span><strong>Small, honest controls</strong><small>Language, appearance, default layout, and a local backup that never leaves the device unless shared.</small></div>
+          </div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="11 of 11: Ukrainian" aria-hidden="true" inert>
+            <img src="images/pockette/screens/10-wallet-uk-light.webp" data-light="images/pockette/screens/10-wallet-uk-light.webp" data-dark="images/pockette/screens/10-wallet-uk-dark.webp" alt="The card stack in Ukrainian, light mode" data-alt="The card stack in Ukrainian" loading="lazy" decoding="async" width="600" height="1298">
+            <div class="pk-gallery-description"><span>11 / LOCALISED</span><strong>English and Ukrainian</strong><small>Every screen is translated; switch language in Settings.</small></div>
           </div>
         </div>
         <div class="pk-gallery-controls">
-          <button type="button" class="pk-gallery-arrow" data-pk-prev aria-label="Previous prototype screenshot">←</button>
+          <button type="button" class="pk-gallery-arrow" data-pk-prev aria-label="Previous screen">←</button>
           <div class="pk-gallery-pagination" role="group" aria-label="Choose screen">
-            <button type="button" class="pk-gallery-dot is-active" data-pk-dot="0" aria-label="Show card stack, light screen" aria-current="true"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="1" aria-label="Show tile view, dark screen"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="2" aria-label="Show card with barcode screen"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="3" aria-label="Show add a card screen"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="4" aria-label="Show coupons screen"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="5" aria-label="Show settings, dark screen"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="6" aria-label="Show animated light splash screen"></button>
-            <button type="button" class="pk-gallery-dot" data-pk-dot="7" aria-label="Show animated dark splash screen"></button>
+            <button type="button" class="pk-gallery-dot is-active" data-pk-dot="0" aria-label="Show splash screen" aria-current="true"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="1" aria-label="Show card stack screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="2" aria-label="Show tile view screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="3" aria-label="Show barcode screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="4" aria-label="Show qr code screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="5" aria-label="Show search screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="6" aria-label="Show add a card screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="7" aria-label="Show manual entry screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="8" aria-label="Show coupons screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="9" aria-label="Show settings screen"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="10" aria-label="Show ukrainian screen"></button>
           </div>
-          <button type="button" class="pk-gallery-arrow" data-pk-next aria-label="Next prototype screenshot">→</button>
+          <button type="button" class="pk-gallery-arrow" data-pk-next aria-label="Next screen">→</button>
         </div>
       </div>
-      <p class="pk-gallery-note">Slides 1–6 are screens from the working prototype with demo cards; slides 7–8 are animated recreations of the two supplied splash designs (not evidence that the splash has shipped in the app).</p>
+      <p class="pk-gallery-note">Screens from the working prototype, shown with demo cards and made-up numbers. Switch between light and dark at the top of the gallery.</p>
     </div>
   </section>  <section class="section" aria-labelledby="pockette-priorities">
 
@@ -536,5 +518,5 @@ html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html
 <script>
 (()=>{const root=document.querySelector('[data-pk-gallery]');if(!root)return;const slides=[...root.querySelectorAll('[data-pk-slide]')],dots=[...root.querySelectorAll('[data-pk-dot]')];let current=0,touchX=null;function show(i){current=(i+slides.length)%slides.length;slides.forEach((slide,n)=>{const selected=n===current;slide.classList.toggle('is-active',selected);slide.setAttribute('aria-hidden',String(!selected));slide.inert=!selected;slide.classList.remove('pk-splash-play')});if(slides[current].classList.contains('pk-splash-slide')&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){void slides[current].offsetWidth;slides[current].classList.add('pk-splash-play')}dots.forEach((dot,n)=>{dot.classList.toggle('is-active',n===current);if(n===current)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current')})}root.querySelector('[data-pk-prev]').addEventListener('click',()=>show(current-1));root.querySelector('[data-pk-next]').addEventListener('click',()=>show(current+1));dots.forEach((dot,n)=>dot.addEventListener('click',()=>show(n)));root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){if(e.target.matches('button'))return;e.preventDefault();show(current+(e.key==='ArrowRight'?1:-1))}});root.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});root.addEventListener('touchend',e=>{if(touchX===null)return;let dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>45)show(current+(dx<0?1:-1))},{passive:true});show(0)})();
 </script>
-</body>
+<script>(()=>{const g=document.querySelector('[data-pk-gallery]');if(!g)return;const btns=[...g.querySelectorAll('[data-pk-mode-btn]')];function set(m){g.dataset.pkMode=m;btns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pkModeBtn===m)));g.querySelectorAll('img[data-light]').forEach(i=>{i.src=i.dataset[m];i.alt=i.dataset.alt+', '+m+' mode'})}btns.forEach(b=>b.addEventListener('click',()=>set(b.dataset.pkModeBtn)));if(document.documentElement.dataset.theme==='dark')set('dark')})();</script></body>
 </html>
