@@ -149,6 +149,36 @@ html[data-theme="dark"] .pk-flow-node{background:#3b3038;border-color:#6c5360}ht
 html[data-theme="dark"] .pk-flow-node.pk-flow-key{background:#762d46}html[data-theme="dark"] .pk-flow-foot{color:#d6cbd0}
 html[data-theme="dark"] .pk-add-flow{background:#382b34;color:#fff}html[data-theme="dark"] .pk-add-track span{background:#4d3945;border-color:#715563;color:#fff}
 
+
+/* Pockette clean visual case-study layout */
+.pk-clean-heading{max-width:820px;margin:0 0 24px}.pk-clean-heading h2{margin:10px 0 12px}.pk-clean-heading>p:last-child{font-size:16px;line-height:1.65;color:var(--text-muted,var(--muted,#68626a))}
+.pk-clean-panel{margin:22px 0;padding:28px;background:#faf8f7;border:1px solid #e9e0e2;border-radius:22px;color:#292428}.pk-clean-panel-head h3{font:650 clamp(19px,2vw,25px)/1.25 Inter,system-ui,sans-serif;color:#292428;margin:8px 0 22px}
+.pk-tree{max-width:900px;margin:0 auto}.pk-tree-root{width:max-content;margin:0 auto 32px;padding:14px 35px;border-radius:12px;background:#762d46;color:#fff;font:650 18px Inter,system-ui,sans-serif;position:relative}.pk-tree-root:after{content:"";position:absolute;top:100%;left:50%;height:32px;border-left:1px solid #9f9397}
+.pk-tree-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pk-tree-column{display:flex;flex-direction:column;gap:10px;align-items:stretch;position:relative}.pk-tree-column:before{content:"";width:1px;height:12px;background:#998b90;position:absolute;left:50%;top:-12px}
+.pk-tree-parent,.pk-tree-leaf{border:1px solid #e2cbd3;background:#f7e9ee;color:#672b43;border-radius:12px;padding:13px 10px;text-align:center;font:600 13px/1.45 Inter,system-ui,sans-serif}
+.pk-tree-parent{background:#e6d3dc;border-color:#bc91a5;font-size:15px}.pk-tree-leaf{background:#fff}.pk-tree-success{background:#e1eee2;border-color:#95b49d;color:#2c603b}
+.pk-decision-flow{max-width:620px;margin:0 auto;display:flex;flex-direction:column;align-items:center;color:#722e48}.pk-decision-step,.pk-decision-choice{background:#f7e6eb;border:1px solid #dcbac6;border-radius:16px;text-align:center;padding:14px 18px;width:min(100%,380px);font:650 15px/1.5 Inter,system-ui,sans-serif}
+.pk-decision-choice{border-style:dashed;background:#fff3f5}.pk-decision-connector{height:28px;width:1px;background:#ad9da3;position:relative}.pk-decision-connector:after{content:"";position:absolute;width:7px;height:7px;border-right:1px solid #ad9da3;border-bottom:1px solid #ad9da3;transform:rotate(45deg);bottom:0;left:-3px}
+.pk-decision-branches{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%;margin:14px 0}.pk-branch{display:flex;flex-direction:column;align-items:center;gap:8px}.pk-branch>span{font:700 11px Inter,system-ui,sans-serif;letter-spacing:.12em}.pk-branch .pk-decision-step{width:100%;min-height:66px;display:grid;place-items:center}.pk-decision-highlight{background:#ddeadd;border-color:#96b39a;color:#2c603b}.pk-decision-end{background:#762d46;color:white}
+.pk-flow-insight{margin:26px 0 0;padding:18px 20px;border-left:4px solid #762d46;background:#f0e6e9;display:flex;gap:18px;align-items:center;font:13px/1.55 Inter,system-ui,sans-serif}.pk-flow-insight strong{color:#762d46;min-width:150px}.pk-flow-insight span{color:#453b40}
+.pk-mini-flow{display:flex;gap:13px;align-items:center}.pk-mini-flow div{flex:1;background:#fff;border:1px solid #e7d7dd;border-radius:12px;padding:16px 10px;text-align:center;font:600 13px/1.45 Inter,system-ui,sans-serif}.pk-mini-flow span{color:#762d46;font-size:23px}.pk-clean-panel-slim{padding-bottom:26px}
+.pk-refboard{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px;background:#eee8e5;border-radius:22px;overflow:hidden}.pk-ref{height:280px;overflow:hidden;position:relative;border-radius:13px}.pk-ref-caption{position:absolute;z-index:4;top:16px;left:18px;color:#fff;font:700 10px/1.5 Inter,system-ui,sans-serif;letter-spacing:.13em}
+.pk-ref-note{position:absolute;z-index:4;bottom:0;left:0;right:0;background:linear-gradient(transparent,#1c111bbd);padding:28px 18px 14px;font:500 12px/1.5 Inter,system-ui,sans-serif;color:#fff}
+.pk-ref-app{background:radial-gradient(circle at 65% 15%,#571b2b,#1b0d12 70%);display:grid;place-items:center}.pk-ref-phone{border:2px solid #845560;border-radius:30px;background:#150a10;color:white;height:238px;width:135px;margin-top:24px;padding:23px 12px 8px;display:flex;flex-direction:column;gap:16px;box-shadow:0 18px 40px #0008}.pk-ref-line{font-size:9px;letter-spacing:.16em}.pk-ref-big{font:500 18px/1.2 Georgia,serif}.pk-ref-box{padding:10px;background:#54202e;border-radius:8px;display:flex;flex-direction:column;gap:3px}.pk-ref-box span{font-size:7px;letter-spacing:.1em}.pk-ref-box strong{font-size:10px}.pk-ref-bottom{font-size:6px;letter-spacing:.11em;margin-top:auto}
+.pk-ref-print{background:repeating-linear-gradient(35deg,#c5a997,#c5a997 3px,#e0cebd 4px,#e0cebd 9px);display:grid;place-items:center}.pk-ref-paper{height:190px;width:80%;background:#f5f2e9;transform:rotate(11deg);box-shadow:0 10px 20px #3620274d;display:grid;place-items:center;color:#74334b}.pk-ref-monogram{font:italic 85px Georgia,serif}.pk-ref-business{position:absolute;top:105px;left:25%;width:52%;height:100px;background:#762d46;color:#fff;transform:rotate(-10deg);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 5px 15px #0003}.pk-ref-business strong{font:500 23px Georgia,serif}.pk-ref-business small{font-size:7px;margin-top:10px;letter-spacing:.1em}
+.pk-ref-abstract{background:linear-gradient(120deg,#b18b93,#3b1c29 75%)}.pk-ref-arc{position:absolute;width:120%;height:165%;border:5px solid #ccb79c;border-radius:50%;transform:rotate(-23deg)}.pk-ref-arc-a{left:-65%;top:-95%;background:#eee9df}.pk-ref-arc-b{left:27%;top:20%;border-width:3px;background:radial-gradient(#39141f,#5d2b3b)}
+.pk-ref-type{background:linear-gradient(120deg,#36000c,#670711);display:flex;align-items:center;padding:40px}.pk-ref-type-big{font:500 clamp(36px,5vw,78px)/.98 Georgia,serif;color:#fff9ec;letter-spacing:-.065em}.pk-palette-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0 32px}.pk-palette-strip>div{min-height:110px;border-radius:12px;padding:14px;display:flex;flex-direction:column;justify-content:end;gap:4px}.pk-palette-strip b{font:650 12px Inter,system-ui,sans-serif}.pk-palette-strip small{font:400 10px Inter,system-ui,sans-serif}.pk-ref-disclaimer{font-size:12px!important;color:var(--muted,#746c70);margin:10px 0 16px}
+.pk-ui-preview{margin:28px 0;display:grid;grid-template-columns:1fr 1.5fr;gap:25px;align-items:center}.pk-ui-preview h3{font-size:25px;margin:12px 0}.pk-ui-preview p{font-size:14px;line-height:1.6}.pk-ui-preview .pockette-screens{margin:0}.pk-ui-preview .pockette-screens img{max-width:46%;height:auto}
+.pk-design-thesis{background:#762d46;color:#fff;padding:36px 32px;margin:28px 0;border-radius:20px}.pk-design-thesis span{display:block;font:700 10px Inter,system-ui,sans-serif;letter-spacing:.15em;margin-bottom:14px}.pk-design-thesis strong{display:block;font:500 clamp(24px,3vw,37px)/1.2 Georgia,serif;max-width:650px}.pk-design-thesis p{margin:13px 0 0;font-size:14px;color:#f7e9ed}
+.pk-prio td:nth-child(2){color:#25613a;font-weight:600}.pk-prio td:nth-child(3){color:#6e6267}
+@media(max-width:700px){.pk-clean-panel{padding:17px}.pk-tree-grid{gap:6px}.pk-tree-parent,.pk-tree-leaf{padding:11px 5px;font-size:10px}.pk-tree-parent{font-size:12px}.pk-flow-insight{flex-direction:column;align-items:start;gap:5px}.pk-mini-flow{flex-direction:column}.pk-mini-flow div{width:100%}.pk-mini-flow span{transform:rotate(90deg)}.pk-ref{height:235px}.pk-ui-preview{grid-template-columns:1fr}.pk-ref-caption{font-size:8px}.pk-ref-type-big{font-size:34px}.pk-ref-paper{width:90%}}
+@media(max-width:480px){.pk-refboard{gap:7px;padding:7px}.pk-ref{height:200px}.pk-ref-phone{transform:scale(.76)}.pk-ref-business{transform:scale(.8) rotate(-10deg)}.pk-ref-type{padding:20px}.pk-ref-type-big{font-size:29px}.pk-palette-strip>div{min-height:84px;padding:9px}}
+html[data-theme="dark"] .pk-clean-panel{background:#28222a;border-color:#59404c;color:#f3edf0}html[data-theme="dark"] .pk-clean-panel-head h3{color:#f3edf0}
+html[data-theme="dark"] .pk-tree-parent,html[data-theme="dark"] .pk-tree-leaf,html[data-theme="dark"] .pk-decision-step{background:#503440;color:#fff;border-color:#987285}html[data-theme="dark"] .pk-tree-success,html[data-theme="dark"] .pk-decision-highlight{background:#234a30;color:#fff;border-color:#749c7b}
+html[data-theme="dark"] .pk-decision-choice{background:#392735;color:#fff}html[data-theme="dark"] .pk-decision-end{background:#762d46}
+html[data-theme="dark"] .pk-flow-insight{background:#44303b}html[data-theme="dark"] .pk-flow-insight strong{color:#efc1d0}html[data-theme="dark"] .pk-flow-insight span{color:#fff}
+html[data-theme="dark"] .pk-mini-flow div{background:#433441;color:#fff;border-color:#705361}html[data-theme="dark"] .pk-prio td:nth-child(2){color:#9fd5ad}html[data-theme="dark"] .pk-prio td:nth-child(3){color:#d5c3cc}
+
 </style>
 </head>
 <body>
@@ -238,85 +268,101 @@ html[data-theme="dark"] .pk-add-flow{background:#382b34;color:#fff}html[data-the
     </div>
   </section>
   <section class="section" aria-labelledby="pockette-flow">
-    <div class="quiz-story-copy">
-      <p class="eyebrow">04 / INFORMATION ARCHITECTURE &amp; FLOW</p>
-      <h2 id="pockette-flow">One primary job. Very few steps.</h2>
-      <p>The core experience is a collection of saved cards, search and a direct route to a full-screen barcode or QR code. A card tap should reveal the code immediately, not open another menu. Favorites or pinned cards help with repeat visits; a compact list remains an important alternative when a wallet grows.</p>
-      <p><strong>Primary flow:</strong> My Wallet → tap a store → full-screen code → scan at checkout.</p>
-      <p><strong>Add-card flow:</strong> Add → scan / upload / manual entry → verify the code and format → save.</p>
-      <p><strong>Secondary flow, planned:</strong> Coupons → find a saved offer → copy its text code. Discount codes belong in a separate tab because they solve the same retrieval problem without complicating the loyalty card flow.</p>
-    </div>
-  </section>
-  <section class="section" aria-labelledby="pockette-visual">
-    <div class="quiz-feature">
-      <div>
-        <p class="eyebrow">05 / MOODBOARD &amp; VISUAL EXPLORATION</p>
-        <h2 id="pockette-visual">A wallet you want to open — designed for speed</h2>
-        <p>I explored different visual directions, from soft editorial layouts to expressive card interfaces. I ultimately moved towards <strong>gender-neutral Bordeaux minimalism</strong>: restrained neutral surfaces, deep burgundy accents, readable typography and recognizable store branding.</p>
-        <p>The overlapping card stack borrows a familiar physical-wallet metaphor. The store name must remain visible on every exposed card; search and an accessible compact-list option keep aesthetics from becoming friction when the collection grows.</p>
-        <p>Brand colors belong to the individual store cards, while the app's own navigation stays consistent. The barcode view intentionally drops the decoration: dark code, white background, adequate quiet zones and a clear way back.</p>
-        <p><strong>Accessibility is part of the visual brief:</strong> WCAG-aware text and UI contrast, legible labels, sufficiently large touch targets, visible focus states and reduced-motion support. A good-looking interface still has to work in a bright shop, one-handed and under time pressure.</p>
-      </div>
-      
-    <figure class="pockette-screens">
-        <img src="images/pockette/stack-light.webp" width="303" height="657" alt="Pockette visual exploration: overlapping loyalty card stack in light mode, with recognizable store names" loading="lazy">
-        <img src="images/pockette/tiles-dark.webp" width="303" height="657" alt="Alternative exploration: a two-column card layout in dark mode" loading="lazy">
-        <figcaption>Visual explorations — overlapping card stack and alternative tile layout, not validated final screens.</figcaption>
-      </figure>
-    </div>
-    <div class="pk-visual-research">
-      <div class="pk-label">STYLE EXPLORATION · QUALITATIVE PRODUCT FIT, NOT MARKET POPULARITY DATA</div>
-      <h3>Choosing a visual language — not just a trend</h3>
-      <p>The evaluation was based on three product-specific criteria: recognizable personality, glanceability at checkout and accessible contrast. These are directional design judgments, not usability test scores.</p>
-      <div class="pk-comparison-wrap">
-      <table class="pk-style-table">
-        <thead><tr><th scope="col">Direction</th><th scope="col">Visual character</th><th scope="col">Advantage</th><th scope="col">Trade-off for Pockette</th><th scope="col">Decision</th></tr></thead>
-        <tbody>
-          <tr><th scope="row"><span class="pk-swatch-group pk-soft"><i></i><i></i><i></i></span>Soft pastel</th><td>Blush, lavender, gentle surfaces</td><td>Warm and friendly</td><td>Too closely tied to a feminine lifestyle aesthetic</td><td>Not selected</td></tr>
-          <tr><th scope="row"><span class="pk-swatch-group pk-editorial"><i></i><i></i><i></i></span>Editorial minimalism</th><td>Warm neutrals, expressive serif, air</td><td>Elegant and timeless</td><td>Less suited as the entire visual system for fast store scanning</td><td>Reference only</td></tr>
-          <tr><th scope="row"><span class="pk-swatch-group pk-glass"><i></i><i></i><i></i></span>Glossy / glass</th><td>Translucent layers, floating controls</td><td>Contemporary depth</td><td>Effects may weaken legibility and barcode clarity</td><td>Use sparingly</td></tr>
-          <tr><th scope="row"><span class="pk-swatch-group pk-play"><i></i><i></i><i></i></span>Playful expressive</th><td>Loud accents, bold geometry</td><td>Memorable personality</td><td>Competes with many store brand colors</td><td>Not selected</td></tr>
-          <tr class="pk-selected"><th scope="row"><span class="pk-swatch-group pk-bordeaux"><i></i><i></i><i></i></span>Bordeaux minimalism</th><td>Wine accents, ivory, charcoal, branded cards</td><td>Distinctive but restrained</td><td>Contrast still needs testing in all states</td><td><strong>Selected ✓</strong></td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="pk-table-note">Exploration references include current mobile interface trends and the needs of a time-sensitive utility. The visual choice is a design rationale, not evidence of preference among target users.</p>
-    </div>
-    <div class="pk-moodboard" role="group" aria-label="Pockette Bordeaux minimalism moodboard featuring color palette, typography, overlapping cards and brand principles">
-      <div class="pk-mood-intro">
-        <span class="pk-label">SELECTED MOODBOARD · GENDER-NEUTRAL / FUNCTIONAL / PREMIUM</span>
-        <span class="pk-mood-brand">pockette<span>.</span></span>
-        <p>Beautiful because it's simple.<br>Memorable because it works.</p>
-      </div>
-      <div class="pk-mood-colors">
-        <div style="background:#762D46;color:#fff"><strong>Bordeaux</strong><small>#762D46</small></div>
-        <div style="background:#48232F;color:#fff"><strong>Deep wine</strong><small>#48232F</small></div>
-        <div style="background:#F8F6F4;color:#282428"><strong>Ivory</strong><small>#F8F6F4</small></div>
-        <div style="background:#252326;color:#fff"><strong>Ink</strong><small>#252326</small></div>
-      </div>
-      <div class="pk-mood-type">
-        <div><small>DISPLAY · CORMORANT GARAMOND</small><strong>Thoughtful by design.</strong></div>
-        <div><small>INTERFACE · INTER</small><strong>Find a card. Tap. Scan.</strong><span>Readable controls. Clear store names. No visual noise.</span></div>
-      </div>
-      <div class="pk-mood-cards">
-        <div class="pk-mini-card pk-mini-one"><strong>Store cards</strong><small>BRAND COLOR · FIRST</small></div>
-        <div class="pk-mini-card pk-mini-two"><strong>One wallet</strong><small>FASTER ACCESS</small></div>
-        <div class="pk-mini-card pk-mini-three"><strong>One tap</strong><small>THE CODE IS READY</small></div>
-      </div>
-      <div class="pk-mood-principles"><span>01 · Clear hierarchy</span><span>02 · Brand-led cards</span><span>03 · High contrast</span><span>04 · Minimal motion</span></div>
-    </div>
 
-  </section>
-  <section class="section" aria-labelledby="pockette-priorities">
-    <div class="quiz-story-copy">
-      <p class="eyebrow">06 / PRODUCT DECISIONS</p>
-      <h2 id="pockette-priorities">Choosing what not to build</h2>
-      <p>The prototype implements static barcode and QR capture through camera, photo and manual entry, along with search, draggable card ordering, code display, local browser storage and backup/restore. It includes no mandatory account, shopping feed or AI features. Offline behavior is built into the PWA, with real-device verification still required.</p>
-      <p>The prototype already includes a separate Coupons tab, text-code copying and expiry dates. Associating offers directly with loyalty cards, cloud sync and advanced reminders can wait. Not all retailer codes can be reproduced — dynamic or account-bound codes require explicit handling rather than promising universal compatibility.</p>
-      <p><strong>Key trade-off:</strong> The stacked design creates an appealing brand signature, but a compact list may outperform it with 30 or more cards. Both deserve real task-based comparison rather than choosing solely by appearance.</p>
+    <div class="pk-clean-heading">
+      <p class="eyebrow">04 / INFORMATION ARCHITECTURE &amp; USER FLOWS</p>
+      <h2 id="pockette-flow">One job. No unnecessary detours.</h2>
+      <p>Two distinct moments: save a card once, then retrieve it in seconds every time you shop.</p>
     </div>
-  </section>
+    <div class="pk-clean-panel">
+      <div class="pk-clean-panel-head"><span class="pk-label">INFORMATION ARCHITECTURE</span><h3>Three destinations, one primary task</h3></div>
+      <div class="pk-tree" role="group" aria-label="Pockette app structure: Cards, Coupons and Settings">
+        <div class="pk-tree-root">Pockette</div>
+        <div class="pk-tree-grid">
+          <div class="pk-tree-column"><div class="pk-tree-parent">My Cards</div><div class="pk-tree-leaf">Search / reorder</div><div class="pk-tree-leaf">Card viewer</div><div class="pk-tree-leaf pk-tree-success">Show barcode / QR</div><div class="pk-tree-leaf">Add: scan / upload / manual</div></div>
+          <div class="pk-tree-column"><div class="pk-tree-parent">Coupons</div><div class="pk-tree-leaf">Saved codes</div><div class="pk-tree-leaf">Offer and expiry</div><div class="pk-tree-leaf">Copy code</div></div>
+          <div class="pk-tree-column"><div class="pk-tree-parent">Settings</div><div class="pk-tree-leaf">Appearance / language</div><div class="pk-tree-leaf">Card layout</div><div class="pk-tree-leaf">Backup / restore</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="pk-clean-panel">
+      <div class="pk-clean-panel-head"><span class="pk-label">PRIMARY FLOW · AT CHECKOUT</span><h3>The shortest path to the code</h3></div>
+      <div class="pk-decision-flow" role="group" aria-label="Checkout decision flow: Open Pockette, show cards; if visible tap card, otherwise search then tap; show barcode or QR and scan">
+        <div class="pk-decision-step">Open Pockette</div><div class="pk-decision-connector"></div>
+        <div class="pk-decision-step">My Cards</div><div class="pk-decision-connector"></div>
+        <div class="pk-decision-choice">Card visible?</div>
+        <div class="pk-decision-branches">
+          <div class="pk-branch"><span>YES</span><div class="pk-decision-step">Tap card</div></div>
+          <div class="pk-branch"><span>NO</span><div class="pk-decision-step">Search store → Tap card</div></div>
+        </div>
+        <div class="pk-decision-connector"></div><div class="pk-decision-step pk-decision-highlight">Full-screen barcode / QR</div>
+        <div class="pk-decision-connector"></div><div class="pk-decision-step">Scan at checkout</div>
+        <div class="pk-decision-connector"></div><div class="pk-decision-step pk-decision-end">Done</div>
+      </div>
+      <div class="pk-flow-insight"><strong>Design target: ≤ 3 seconds</strong><span>From a familiar store card to its scannable code. A proposed goal, not a measured result.</span></div>
+    </div>
+    <div class="pk-clean-panel pk-clean-panel-slim">
+      <div class="pk-clean-panel-head"><span class="pk-label">SECONDARY FLOW · ONE-TIME SETUP</span><h3>Capture, verify, save</h3></div>
+      <div class="pk-mini-flow"><div>Scan / upload / enter</div><span aria-hidden="true">→</span><div>Review code + format</div><span aria-hidden="true">→</span><div>Save locally</div></div>
+    </div>
+  </section>  <section class="section" aria-labelledby="pockette-visual">
 
+    <div class="pk-clean-heading">
+      <p class="eyebrow">05 / VISUAL RESEARCH &amp; ART DIRECTION</p>
+      <h2 id="pockette-visual">A premium wallet, without the visual noise.</h2>
+      <p>We explored softer, editorial and more expressive trends, then chose a gender-neutral Bordeaux identity: rich color, restrained typography and store-led card recognition.</p>
+    </div>
+    <div class="pk-refboard" role="group" aria-label="Art direction based on four user-provided reference images: dark Bordeaux mobile UI, burgundy print stationery, abstract gold and plum composition, and editorial wine branding">
+      <div class="pk-ref pk-ref-app"><div class="pk-ref-caption">01 / APP INTERFACE</div><div class="pk-ref-phone"><div class="pk-ref-line">POCKETTE</div><div class="pk-ref-big">Everything<br>in its place.</div><div class="pk-ref-box"><span>MY CARDS</span><strong>4 saved cards</strong></div><div class="pk-ref-bottom">CARDS &nbsp; · &nbsp; COUPONS</div></div><span class="pk-ref-note">Dark Bordeaux, confident hierarchy, minimal UI</span></div>
+      <div class="pk-ref pk-ref-print"><div class="pk-ref-caption">02 / PRINT IDENTITY</div><div class="pk-ref-paper"><span class="pk-ref-monogram">p.</span></div><div class="pk-ref-business"><strong>pockette.</strong><small>THE LITTLE THINGS, READY.</small></div><span class="pk-ref-note">Tactile paper, structured composition, soft contrast</span></div>
+      <div class="pk-ref pk-ref-abstract"><div class="pk-ref-caption">03 / MATERIAL &amp; COLOR</div><div class="pk-ref-arc pk-ref-arc-a"></div><div class="pk-ref-arc pk-ref-arc-b"></div><span class="pk-ref-note">Deep plum, warm ivory, fine metallic accents</span></div>
+      <div class="pk-ref pk-ref-type"><div class="pk-ref-caption">04 / EDITORIAL TYPE</div><span class="pk-ref-type-big">Less,<br>but better.</span><span class="pk-ref-note">Expressive display, quiet functional text</span></div>
+    </div>
+    <p class="pk-ref-disclaimer">Art-direction studies recreated from the four supplied visual references, rather than screenshots of the Pockette product. The working UI appears below.</p>
+    <div class="pk-palette-strip"><div style="background:#762D46;color:#fff"><b>Bordeaux</b><small>#762D46</small></div><div style="background:#48232F;color:#fff"><b>Deep wine</b><small>#48232F</small></div><div style="background:#F8F6F4;color:#282428"><b>Ivory</b><small>#F8F6F4</small></div><div style="background:#252326;color:#fff"><b>Ink</b><small>#252326</small></div></div>
+    <div class="pk-clean-panel">
+      <div class="pk-clean-panel-head"><span class="pk-label">STYLE EVALUATION · QUALITATIVE</span><h3>Why this direction?</h3></div>
+      <div class="pk-responsive-table"><table class="pk-journey-table pk-cmp">
+        <thead><tr><th scope="col">Visual approach</th><th scope="col">Strength</th><th scope="col">Risk for checkout UX</th><th scope="col">Decision</th></tr></thead>
+        <tbody><tr><th scope="row">Soft pastel</th><td>Friendly</td><td>Less universal aesthetic</td><td>Not selected</td></tr>
+        <tr><th scope="row">Editorial minimalism</th><td>Premium, elegant</td><td>Display styling can crowd utility</td><td>Typographic influence</td></tr>
+        <tr><th scope="row">Liquid Glass</th><td>Contemporary</td><td>Potential contrast issues</td><td>Restrained use</td></tr>
+        <tr><th scope="row">Playful / Bento</th><td>Memorable</td><td>Competes with store identity</td><td>Not selected</td></tr>
+        <tr class="pk-pain-row"><th scope="row">Bordeaux minimalism</th><td>Distinctive, gender-neutral</td><td>Needs accessibility validation</td><td><strong>Selected ✓</strong></td></tr></tbody></table></div>
+      <p class="pk-table-note">This is a product-fit rationale, not quantified research or evidence of user preference.</p>
+    </div>
+    <div class="pk-clean-panel">
+      <div class="pk-clean-panel-head"><span class="pk-label">DESIGN SYSTEM DECISIONS</span><h3>Visual personality, practical behavior</h3></div>
+      <div class="pk-responsive-table"><table class="pk-journey-table"><thead><tr><th scope="col">Element</th><th scope="col">Decision</th><th scope="col">Reason</th></tr></thead><tbody>
+      <tr><th scope="row">Typography</th><td>Cormorant Garamond + Inter</td><td>Expressive headings, readable controls</td></tr>
+      <tr><th scope="row">Cards</th><td>Overlapping stack / tile alternative</td><td>Wallet metaphor without losing choice</td></tr>
+      <tr><th scope="row">Color</th><td>Bordeaux controls; individual store tones</td><td>Clear system plus fast recognition</td></tr>
+      <tr><th scope="row">Barcode</th><td>Black on white, sufficient quiet zone</td><td>Scanner readability over decoration</td></tr>
+      <tr><th scope="row">Motion</th><td>Subtle; respect reduced-motion</td><td>Feedback without distraction</td></tr>
+      <tr><th scope="row">Accessibility</th><td>Strong contrast, clear focus, large targets</td><td>Usable in bright, time-pressured spaces</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="pk-ui-preview"><div><span class="pk-label">WORKING PROTOTYPE · UI SCREENS</span><h3>From inspiration to product</h3><p>The store cards supply their own identity; the wallet stays calm, structured and predictable.</p></div>
+      <figure class="pockette-screens"><img src="images/pockette/stack-light.webp" width="303" height="657" alt="Pockette stacked wallet prototype in light mode" loading="lazy"><img src="images/pockette/tiles-dark.webp" width="303" height="657" alt="Pockette tile layout prototype in dark mode" loading="lazy"><figcaption>Prototype screenshots: stacked cards and tile alternative.</figcaption></figure>
+    </div>
+  </section>  <section class="section" aria-labelledby="pockette-priorities">
+
+    <div class="pk-clean-heading"><p class="eyebrow">06 / FEATURE PRIORITIZATION</p><h2 id="pockette-priorities">Build the utility first. Keep the rest optional.</h2><p>Early product scoping separated the checkout essentials from added conveniences. The current prototype already includes several later-stage ideas.</p></div>
+    <div class="pk-clean-panel">
+      <div class="pk-clean-panel-head"><span class="pk-label">PRODUCT SCOPE · PROTOTYPE STATUS</span><h3>What's implemented, what's next</h3></div>
+      <div class="pk-responsive-table"><table class="pk-journey-table pk-prio"><thead><tr><th scope="col">Feature</th><th scope="col">Current prototype</th><th scope="col">Later</th></tr></thead><tbody>
+      <tr><th scope="row">Scan barcode / QR</th><td>✓ Implemented</td><td></td></tr>
+      <tr><th scope="row">Photo import / manual entry</th><td>✓ Implemented</td><td></td></tr>
+      <tr><th scope="row">Search / reorder / stack or tiles</th><td>✓ Implemented</td><td></td></tr>
+      <tr><th scope="row">Offline PWA &amp; backup</th><td>✓ Implemented</td><td>Real-device verification</td></tr>
+      <tr><th scope="row">Coupons &amp; expiry dates</th><td>✓ Implemented</td><td></td></tr>
+      <tr><th scope="row">Connect coupons to cards</th><td></td><td>Planned</td></tr>
+      <tr><th scope="row">Expiration reminders / cloud sync</th><td></td><td>Future consideration</td></tr>
+      <tr><th scope="row">Dynamic retailer codes</th><td></td><td>Requires retailer-specific support</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="pk-design-thesis"><span>PRODUCT PRINCIPLE</span><strong>The fastest feature is the one that never gets in your way.</strong><p>No required account, no shopping feed, no AI, no clutter between a card and the scanner.</p></div>
+  </section>
   <section class="section" aria-labelledby="pockette-prototype">
     <div class="quiz-story-copy">
       <p class="eyebrow">07 / WORKING PROTOTYPE</p>
