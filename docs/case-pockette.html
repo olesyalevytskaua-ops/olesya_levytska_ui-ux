@@ -191,6 +191,15 @@ html[data-theme="dark"] .pk-mini-flow div{background:#433441;color:#fff;border-c
 html[data-theme="dark"] .pk-proto-grid>div{background:#2b242c;border-color:#634957;color:#fff}
 html[data-theme="dark"] .pk-proto-grid strong,html[data-theme="dark"] .pk-proto-grid p{color:#f3ecf0}html[data-theme="dark"] .pk-proto-grid span{color:#efc0d0}
 
+
+/* Actual Pockette prototype slideshow */
+.pk-gallery-section{margin:36px 0 16px}.pk-gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:20px}.pk-gallery-heading h3{font:600 clamp(27px,3.2vw,41px)/1.14 'Cormorant Garamond',Georgia,serif;margin:8px 0 7px}.pk-gallery-heading p{font-size:14px;line-height:1.6;max-width:620px;margin:0}.pk-gallery-source{flex:none;font:600 12px/1.5 Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:4px}
+.pk-gallery{border:1px solid #e4d9dc;border-radius:24px;background:#f2edea;padding:25px 22px 16px;outline-offset:4px}.pk-gallery-viewport{display:grid;grid-template-areas:"slide";min-height:470px;overflow:hidden}.pk-gallery-slide{grid-area:slide;min-width:0;display:grid;grid-template-columns:minmax(160px,360px) minmax(0,1fr);gap:clamp(16px,5vw,65px);align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s ease}.pk-gallery-slide.is-active{opacity:1;visibility:visible;pointer-events:auto}.pk-gallery-slide img{width:auto;max-width:100%;height:auto;max-height:495px;object-fit:contain;display:block;margin:auto;box-shadow:0 14px 40px #2b1a2530;border-radius:16px}.pk-gallery-description{display:flex;flex-direction:column;align-items:start;gap:14px;color:#2b2227}.pk-gallery-description span{font:700 11px Inter,system-ui,sans-serif;letter-spacing:.12em;color:#762d46}.pk-gallery-description strong{font:500 clamp(26px,3.4vw,46px)/1.12 Georgia,serif}.pk-gallery-description small{font:400 14px/1.6 Inter,system-ui,sans-serif;max-width:280px;color:#5f535a}
+.pk-gallery-controls{display:flex;align-items:center;justify-content:center;gap:30px;margin:18px 0 0}.pk-gallery-arrow{border:1px solid #d0bdc4;background:#fff;color:#762d46;border-radius:999px;width:44px;height:44px;font-size:22px;display:grid;place-items:center;cursor:pointer}.pk-gallery-arrow:hover{background:#762d46;color:white}.pk-gallery-arrow:focus-visible,.pk-gallery-dot:focus-visible{outline:3px solid #762d46;outline-offset:3px}.pk-gallery-pagination{display:flex;gap:12px;align-items:center}.pk-gallery-dot{width:13px;height:13px;padding:0;border:1px solid #762d46;border-radius:999px;background:transparent;cursor:pointer}.pk-gallery-dot.is-active{background:#762d46}.pk-gallery-note{font:400 12px/1.6 Inter,system-ui,sans-serif;color:var(--muted,#6d6267);margin-top:11px}
+@media(max-width:650px){.pk-gallery-heading{display:block}.pk-gallery-source{display:inline-block;margin-top:13px}.pk-gallery{padding:18px 12px}.pk-gallery-viewport{min-height:480px}.pk-gallery-slide{display:flex;flex-direction:column;gap:15px}.pk-gallery-slide img{max-height:360px}.pk-gallery-description{align-items:center;text-align:center;gap:6px}.pk-gallery-description strong{font-size:24px}.pk-gallery-description small{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.pk-gallery-slide{transition:none}}
+html[data-theme="dark"] .pk-gallery{background:#241b21;border-color:#604650}html[data-theme="dark"] .pk-gallery-description{color:#fff}html[data-theme="dark"] .pk-gallery-description span{color:#f0bace}html[data-theme="dark"] .pk-gallery-description small{color:#e5d7de}
+
 </style>
 </head>
 <body>
@@ -354,8 +363,29 @@ html[data-theme="dark"] .pk-proto-grid strong,html[data-theme="dark"] .pk-proto-
       <tr><th scope="row">Accessibility</th><td>Strong contrast, clear focus, large targets</td><td>Usable in bright, time-pressured spaces</td></tr>
       </tbody></table></div>
     </div>
-    <div class="pk-ui-preview"><div><span class="pk-label">WORKING PROTOTYPE · UI SCREENS</span><h3>From inspiration to product</h3><p>The store cards supply their own identity; the wallet stays calm, structured and predictable.</p></div>
-      <figure class="pockette-screens"><img src="images/pockette/stack-light.webp" width="303" height="657" alt="Pockette stacked wallet prototype in light mode" loading="lazy"><img src="images/pockette/tiles-dark.webp" width="303" height="657" alt="Pockette tile layout prototype in dark mode" loading="lazy"><figcaption>Prototype screenshots: stacked cards and tile alternative.</figcaption></figure>
+    <div class="pk-gallery-section" aria-labelledby="pk-gallery-title">
+      <div class="pk-gallery-heading"><div><span class="pk-label">CURRENT APP · ACTUAL REPOSITORY SCREENSHOTS</span><h3 id="pk-gallery-title">The wallet, in use.</h3><p>Two views from the working Pockette prototype. Switch between light and dark to see how the card-first experience adapts.</p></div><a href="https://github.com/olesyalevytskaua-ops/pockette/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer" class="pk-gallery-source">View original screenshots ↗</a></div>
+      <div class="pk-gallery" data-pk-gallery tabindex="0" aria-label="Pockette prototype screenshots" aria-roledescription="carousel">
+        <div class="pk-gallery-viewport">
+          <div class="pk-gallery-slide is-active" data-pk-slide role="group" aria-roledescription="slide" aria-label="1 of 2: Light wallet" aria-hidden="false">
+            <img src="https://raw.githubusercontent.com/olesyalevytskaua-ops/pockette/main/docs/screenshots/wallet-light.jpg" alt="Real Pockette prototype screenshot showing the light-theme loyalty card wallet" loading="lazy" decoding="async" width="400" height="780">
+            <div class="pk-gallery-description"><span>01 / LIGHT THEME</span><strong>Your cards at a glance</strong><small>Brand-led card stack, restrained wallet controls.</small></div>
+          </div>
+          <div class="pk-gallery-slide" data-pk-slide role="group" aria-roledescription="slide" aria-label="2 of 2: Dark wallet" aria-hidden="true" inert>
+            <img src="https://raw.githubusercontent.com/olesyalevytskaua-ops/pockette/main/docs/screenshots/wallet-dark.jpg" alt="Real Pockette prototype screenshot showing the dark-theme loyalty card wallet" loading="lazy" decoding="async" width="400" height="780">
+            <div class="pk-gallery-description"><span>02 / DARK THEME</span><strong>The same flow, after dark</strong><small>High-contrast navigation with deep Bordeaux surfaces.</small></div>
+          </div>
+        </div>
+        <div class="pk-gallery-controls">
+          <button type="button" class="pk-gallery-arrow" data-pk-prev aria-label="Previous prototype screenshot">←</button>
+          <div class="pk-gallery-pagination" role="group" aria-label="Choose screenshot">
+            <button type="button" class="pk-gallery-dot is-active" data-pk-dot="0" aria-label="Show light wallet screenshot" aria-current="true"></button>
+            <button type="button" class="pk-gallery-dot" data-pk-dot="1" aria-label="Show dark wallet screenshot"></button>
+          </div>
+          <button type="button" class="pk-gallery-arrow" data-pk-next aria-label="Next prototype screenshot">→</button>
+        </div>
+      </div>
+      <p class="pk-gallery-note">Screenshots from the Pockette source repository — not marketing mockups. Additional checkout and card-capture screens can be added after they are captured from the running app.</p>
     </div>
   </section>  <section class="section" aria-labelledby="pockette-priorities">
 
@@ -401,5 +431,9 @@ html[data-theme="dark"] .pk-proto-grid strong,html[data-theme="dark"] .pk-proto-
 <a href="mailto:olesyalevytskaua@gmail.com">Let’s talk ↗</a>
 <small>© 2026 Olesya Levytska</small>
 </footer>
+
+<script>
+(()=>{const root=document.querySelector('[data-pk-gallery]');if(!root)return;const slides=[...root.querySelectorAll('[data-pk-slide]')],dots=[...root.querySelectorAll('[data-pk-dot]')];let current=0,touchX=null;function show(i){current=(i+slides.length)%slides.length;slides.forEach((slide,n)=>{const selected=n===current;slide.classList.toggle('is-active',selected);slide.setAttribute('aria-hidden',String(!selected));slide.inert=!selected});dots.forEach((dot,n)=>{dot.classList.toggle('is-active',n===current);if(n===current)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current')})}root.querySelector('[data-pk-prev]').addEventListener('click',()=>show(current-1));root.querySelector('[data-pk-next]').addEventListener('click',()=>show(current+1));dots.forEach((dot,n)=>dot.addEventListener('click',()=>show(n)));root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){if(e.target.matches('button'))return;e.preventDefault();show(current+(e.key==='ArrowRight'?1:-1))}});root.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});root.addEventListener('touchend',e=>{if(touchX===null)return;let dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>45)show(current+(dx<0?1:-1))},{passive:true});show(0)})();
+</script>
 </body>
 </html>
