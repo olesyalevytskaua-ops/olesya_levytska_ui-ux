@@ -14,3 +14,4 @@
 .pockette-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;max-width:360px;margin:0 auto}
 .pockette-screens img{display:block;width:100%;height:auto;border-radius:12% / 5.5%}
 .pockette-screens figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
+.pockette-poster{display:block;width:100%;max-width:360px;height:auto;margin-inline:auto}
