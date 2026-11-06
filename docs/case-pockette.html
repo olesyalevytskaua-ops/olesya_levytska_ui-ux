@@ -179,6 +179,18 @@ html[data-theme="dark"] .pk-decision-choice{background:#392735;color:#fff}html[d
 html[data-theme="dark"] .pk-flow-insight{background:#44303b}html[data-theme="dark"] .pk-flow-insight strong{color:#efc1d0}html[data-theme="dark"] .pk-flow-insight span{color:#fff}
 html[data-theme="dark"] .pk-mini-flow div{background:#433441;color:#fff;border-color:#705361}html[data-theme="dark"] .pk-prio td:nth-child(2){color:#9fd5ad}html[data-theme="dark"] .pk-prio td:nth-child(3){color:#d5c3cc}
 
+
+.pk-hero-nav{display:flex;gap:9px;flex-wrap:wrap;margin:28px 0 0}.pk-hero-nav a{font:600 12px/1.4 Inter,system-ui,sans-serif;color:var(--text,#332e33);border:1px solid #ac9aa2;border-radius:999px;padding:9px 15px;text-decoration:none}.pk-hero-nav a:hover,.pk-hero-nav a:focus-visible{background:#762d46;color:#fff;border-color:#762d46}
+.pk-proto-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+.pk-proto-grid>div{padding:25px;border-radius:17px;background:#f7f3f2;border:1px solid #e8dfe1;color:#292428}
+.pk-proto-grid span{display:block;color:#762d46;font:700 10px/1.4 Inter,system-ui,sans-serif;letter-spacing:.14em;margin-bottom:14px}
+.pk-proto-grid strong{font:600 22px/1.2 'Cormorant Garamond',Georgia,serif;color:#292428}
+.pk-proto-grid p{font:400 13px/1.6 Inter,system-ui,sans-serif;color:#5b5358;margin:10px 0 0}
+.pk-proto-action{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin:23px 0}.pk-proto-action span{font:500 12px Inter,system-ui,sans-serif;color:var(--muted,#766c74)}
+@media(max-width:600px){.pk-proto-grid{grid-template-columns:1fr}.pk-proto-grid>div{padding:20px}}
+html[data-theme="dark"] .pk-proto-grid>div{background:#2b242c;border-color:#634957;color:#fff}
+html[data-theme="dark"] .pk-proto-grid strong,html[data-theme="dark"] .pk-proto-grid p{color:#f3ecf0}html[data-theme="dark"] .pk-proto-grid span{color:#efc0d0}
+
 </style>
 </head>
 <body>
@@ -197,7 +209,7 @@ html[data-theme="dark"] .pk-mini-flow div{background:#433441;color:#fff;border-c
     <a class="text-link" href="work.html#quiz-independent-title">← Independent products</a>
     <p class="eyebrow">INDEPENDENT PRODUCT · IN DEVELOPMENT</p>
     <h1>Pockette</h1>
-    <p class="case-lead">A beautifully simple, offline-first loyalty wallet — one tap from store to barcode.</p>
+    <p class="case-lead">A beautifully simple, offline-first loyalty wallet — one tap from store to barcode.</p><div class="pk-hero-nav" aria-label="Case study sections"><a href="#pockette-origin">Problem</a><a href="#pockette-journey">Journey</a><a href="#pockette-flow">User flows</a><a href="#pockette-visual">Art direction</a><a href="#pockette-prototype">Prototype</a></div>
   </section>
 
   <section class="section" aria-labelledby="pockette-origin">
@@ -364,43 +376,14 @@ html[data-theme="dark"] .pk-mini-flow div{background:#433441;color:#fff;border-c
     <div class="pk-design-thesis"><span>PRODUCT PRINCIPLE</span><strong>The fastest feature is the one that never gets in your way.</strong><p>No required account, no shopping feed, no AI, no clutter between a card and the scanner.</p></div>
   </section>
   <section class="section" aria-labelledby="pockette-prototype">
-    <div class="quiz-story-copy">
-      <p class="eyebrow">07 / WORKING PROTOTYPE</p>
-      <h2 id="pockette-prototype">From the moodboard to an actual wallet</h2>
-      <p>I inspected the current implementation rather than relying on early UI concepts. Pockette is now a React and TypeScript PWA, with a tactile overlapping stack, a tile-layout alternative, searchable cards, drag or button-based reordering, and a direct barcode viewer. The repository also includes a camera and photo scanner, manual entry, a separate coupons area, appearance and language settings, and local backup/import.</p>
-      <p>The screenshots above document the visual exploration. The diagram below reflects the current interface structure and the implemented interaction paths.</p>
+    <div class="pk-clean-heading"><p class="eyebrow">07 / WORKING PROTOTYPE</p><h2 id="pockette-prototype">A real app, not just a polished concept.</h2><p>A React + TypeScript PWA with on-device barcode scanning and local-first storage. The design exploration is already being translated into working interactions.</p></div>
+    <div class="pk-proto-grid">
+      <div><span>01 / CAPTURE</span><strong>Camera, photo or manual</strong><p>Recognize supported barcodes and QR codes; confirm the value and format before saving.</p></div>
+      <div><span>02 / RETRIEVE</span><strong>Search, stack or tiles</strong><p>Use a branded overlapping stack or tile layout and reorder cards for frequent access.</p></div>
+      <div><span>03 / REDEEM</span><strong>Code on demand</strong><p>Render a scannable code in a high-contrast viewer, without competing decoration.</p></div>
+      <div><span>04 / KEEP</span><strong>Offline-first &amp; backup</strong><p>Store cards and promo codes locally with export/import, no mandatory account.</p></div>
     </div>
-    <div class="quiz-story-copy">
-      <div class="pockette-map" role="group" aria-label="Pockette prototype information architecture: Cards, Coupons and Settings, with their working actions">
-        <div class="pockette-map-heading">CURRENT PROTOTYPE · APP STRUCTURE</div>
-        <div class="pockette-map-root">POCKETTE <span>Local-first mobile wallet</span></div>
-        <div class="pockette-map-columns">
-          <div class="pockette-map-node"><strong>01 · Cards</strong><span>Stack / tile views</span><span>Search and reorder</span><span>Tap → barcode or QR</span><span>Add: camera / photo / manual</span></div>
-          <div class="pockette-map-node"><strong>02 · Coupons</strong><span>Save promo code</span><span>Offer and expiry date</span><span>Search saved codes</span><span>Copy with one tap</span></div>
-          <div class="pockette-map-node"><strong>03 · Settings</strong><span>Light / dark / system</span><span>English / Ukrainian</span><span>Preferred card layout</span><span>Export / import backup</span></div>
-        </div>
-      </div>
-
-      <div class="pk-flow-card">
-        <div class="pk-flow-heading"><span class="pk-label">PRIMARY TASK · CHECKOUT</span><h3>From wallet to scanner — no detours</h3></div>
-        <div class="pk-flow-track" role="img" aria-label="Open wallet, tap store card, display barcode, scan at checkout">
-          <div class="pk-flow-node"><span class="pk-flow-no">01</span><span class="pk-flow-icon" aria-hidden="true">▤</span><strong>Open wallet</strong><small>Cards appear first</small></div>
-          <span class="pk-flow-arrow" aria-hidden="true">→</span>
-          <div class="pk-flow-node"><span class="pk-flow-no">02</span><span class="pk-flow-icon" aria-hidden="true">◈</span><strong>Tap store</strong><small>Recognize its brand</small></div>
-          <span class="pk-flow-arrow" aria-hidden="true">→</span>
-          <div class="pk-flow-node pk-flow-key"><span class="pk-flow-no">03</span><span class="pk-flow-icon" aria-hidden="true">▥</span><strong>Show code</strong><small>High-contrast display</small></div>
-          <span class="pk-flow-arrow" aria-hidden="true">→</span>
-          <div class="pk-flow-node"><span class="pk-flow-no">04</span><span class="pk-flow-icon" aria-hidden="true">✓</span><strong>Scan &amp; go</strong><small>No extra screens</small></div>
-        </div>
-        <p class="pk-flow-foot">Designed for repeat use: the capture flow happens once; the checkout flow should be effortless every time.</p>
-      </div>
-      <div class="pk-add-flow">
-        <span class="pk-label">SECONDARY TASK · ADD A CARD ONCE</span>
-        <div class="pk-add-track"><span>Scan / upload / enter manually</span><b aria-hidden="true">→</b><span>Review value &amp; code format</span><b aria-hidden="true">→</b><span>Save locally</span></div>
-      </div>
-            <p><strong>Implementation notes:</strong> ZXing handles on-device scanning; bwip-js draws supported codes. Data is stored in the browser, with an export/import feature because clearing site data can remove the wallet. The repo includes Playwright tests, but physical checkout scanner validation is still pending.</p>
-      <p><a class="text-link" href="https://github.com/olesyalevytskaua-ops/pockette" target="_blank" rel="noopener noreferrer">Explore the Pockette prototype on GitHub ↗</a></p>
-    </div>
+    <div class="pk-proto-action"><a class="button" href="https://github.com/olesyalevytskaua-ops/pockette" target="_blank" rel="noopener noreferrer">Explore the GitHub prototype ↗</a><span>React · TypeScript · Vite · PWA · ZXing · bwip-js</span></div>
   </section>
   <section class="section" aria-labelledby="pockette-validation">
     <div class="quiz-story-copy">
