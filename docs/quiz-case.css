@@ -29,16 +29,15 @@
 .cc-pockette{--cc-tint:#f8f6f4;--cc-ink:#762d46;--cc-bg:radial-gradient(circle at 70% 60%,#762d4699 0%,#0000 60%),linear-gradient(135deg,#1c1418 0%,#2f1a22 100%)}
 .case-cover.cc .cc-word-serif{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.02em}
 .case-cover.cc .cc-trio,.case-cover.cc .cc-duo{display:flex;align-items:center;justify-content:flex-end;object-fit:initial}
-.case-cover.cc .cc-trio{width:58%}
+.case-cover.cc .cc-trio{width:48%;right:4%;filter:none}
 .case-cover.cc .cc-trio img{width:46%;aspect-ratio:1;height:auto;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 22px #1b123033;object-fit:cover}
-.case-cover.cc .cc-trio img+img{margin-left:-16%}
+.case-cover.cc .cc-trio img+img{margin-left:-15%}
 .case-cover.cc .cc-trio img:nth-child(2){transform:translateY(-14%)}
 .case-cover.cc .cc-duo{width:50%;gap:6%;justify-content:center}
 .case-cover.cc .cc-duo img{height:100%;width:auto;border-radius:12% / 5.5%}
 .case-cover.cc .cc-duo img:nth-child(2){transform:translateY(8%)}
 @media(prefers-reduced-motion:reduce){.real-work-card.indie-card:focus-within{translate:none}}
-.case-cover.cc .cc-trio{width:50%;right:5%;filter:none}
-.case-cover.cc-quiz .cc-logo{width:36%}
+.case-cover.cc-quiz .cc-logo{width:40%}
 .case-cover.cc .cc-duo{height:78%}
 .case-cover.cc .cc-duo img{height:100%;box-shadow:0 12px 24px #1b123040}
 .case-cover.cc .cc-duo{filter:none}
@@ -68,8 +67,3 @@
 
 @media(max-width:750px){.quiz-cast-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 10px}.quiz-result-feature{grid-template-columns:1fr}.quiz-result-phone{max-width:300px;margin-inline:auto}.quiz-result-feature figcaption{position:static}.quiz-result-list li{grid-template-columns:1fr;gap:2px}}
 @media(prefers-reduced-motion:reduce){.quiz-cast-grid img{transition:none}.quiz-cast-grid figure:hover img{transform:none}}
-.case-cover.cc .cc-trio{width:44%;right:5%}
-.case-cover.cc .cc-trio img{width:44%}
-.case-cover.cc .cc-trio img+img{margin-left:-12%}
-.case-cover.cc-quiz .cc-logo{width:40%}
-.case-cover.cc .cc-trio{width:41%;right:4%}
