@@ -67,7 +67,7 @@
 <aside class="role-note">
 <p class="eyebrow">MY ROLE</p>
 <p>I synthesised research themes and role profiles into the information architecture, mapped connected workflows, and designed light and dark UI patterns and interactive prototypes.</p>
-<p>I worked with product stakeholders and engineers on priorities, design review, and handoff. Requirements, the test build, and feedback collection were wider team efforts.</p>
+<p>I implemented selected flows and design-system updates in the existing frontend, opened GitHub PRs, and iterated after engineering review; developers implemented the rest.</p>
 </aside>
 </section>
 <section class="case-summary vessel-process-map" id="case-process" aria-labelledby="case-process-title">
@@ -80,7 +80,7 @@
 <a class="journey-step" href="#discovery"><span>01</span><strong>Discovery</strong><small>Research mapped the ecosystem of roles, tasks, and communication needs.</small></a>
 <a class="journey-step" href="#ux-design"><span>02</span><strong>UX &amp; workflows</strong><small>Information architecture connected dashboards, workflows, and permissions.</small></a>
 <a class="journey-step" href="#design-system"><span>03</span><strong>Design system</strong><small>Reusable tokens, components, states, and responsive patterns.</small></a>
-<a class="journey-step" href="#prototyping"><span>04</span><strong>Prototyping</strong><small>Testable flows and AI-assisted design exploration.</small></a>
+<a class="journey-step" href="#prototyping"><span>04</span><strong>Prototype &amp; build</strong><small>Figma, selected builds, PRs, and review.</small></a>
 <a class="journey-step" href="#testing"><span>05</span><strong>Testing &amp; iteration</strong><small>Sessions with captains and owners informed design review.</small></a>
 <a class="journey-step" href="#final-product"><span>06</span><strong>Product experience</strong><small>Connected design across desktop, tablet, and mobile.</small></a>
 </nav>
@@ -163,8 +163,8 @@
 <li>Two layers: raw colours only in primitives, screens use role tokens, so a theme switch never edits a component</li>
 <li>The documentation site is generated from the running app, so it can’t fall out of date</li>
 <li>Each component’s Figma spec sits next to what ships, property by property</li>
-<li>Every merge syncs components into the production frontend; developers take code, not redlines</li>
-<li>Codebase audit: 51 files moved onto tokens and shared components; hardcoded colours 283 → 0</li>
+<li>Selected flows and design-system updates shipped through GitHub PRs and engineering review</li>
+<li>I personally migrated 51 frontend files (26 shared components, 25 screens) onto tokens and reusable components; hardcoded colours 283 → 0</li>
 <li>Claude Code skills updated to reuse existing components and style tokens, so new work doesn’t reintroduce hardcoded values</li>
 </ul>
 </div>
@@ -227,7 +227,7 @@
 <h2>Turning complex flows into testable experiences</h2>
 <p>The team created interactive Figma prototypes at three levels: individual screens, module interactions, and connected user journeys.</p>
 <p>I used Claude to generate and compare possible interaction directions, then reviewed and refined those outputs against the role profiles, information architecture, and visual system. Alternatives and edge cases could be explored before a direction moved forward.</p>
-<p>Approved prototypes also informed frontend code for engineering handoff. I worked with developers to review how the proposed patterns translated into the product.</p>
+<p>For selected flows and design-system updates, I moved from Figma to Next.js/React with Claude Code and Cursor, then opened GitHub PRs and iterated after engineering review.</p>
 </div>
 <div class="activity-panel">
 <p class="eyebrow">PROTOTYPING ACTIVITIES</p>
@@ -236,7 +236,7 @@
 <li>Module and connected journey flows</li>
 <li>Claude-assisted alternative exploration</li>
 <li>Design review and refinement</li>
-<li>Frontend handoff with engineering</li>
+<li>Selected frontend implementation and GitHub PRs</li>
 </ul>
 </div>
 </div>
@@ -293,7 +293,7 @@
 <section class="section case-summary" aria-labelledby="case-outcomes">
 <p class="eyebrow">BUILT WITH CLAUDE CODE · 5 MONTHS</p>
 <h2 id="case-outcomes">Outcomes</h2>
-<p>Over five months with Claude Code, I took the product from prototypes to a coded design system, then audited the codebase and moved it onto tokens and shared components. Everything syncs straight into the product frontend.</p>
+<p>Over five months, I built the coded design system and personally migrated 51 frontend files (26 shared components, 25 screens) onto tokens and reusable components, reducing hardcoded colours from 283 to 0. Selected changes shipped through GitHub PRs and engineering review.</p>
 <dl class="ds-stats ds-stats-4 vaults-gap" aria-label="Outcomes in numbers">
 <div><dt>29</dt><dd>prototypes across ~18 flows</dd></div>
 <div><dt>32</dt><dd>product areas in the full app prototype</dd></div>
@@ -326,7 +326,7 @@
 </div>
 <div class="outcome-skills">
 <h3>Skills &amp; expertise</h3>
-<p class="vessel-skill-line">Product discovery · UX research · Information architecture · Responsive design · Design systems · Prototyping · Developer handoff</p>
+<p class="vessel-skill-line">Product discovery · UX research · Information architecture · Responsive design · Design systems · AI-assisted design-to-code · GitHub PRs</p>
 </div>
 </section>
 <section class="cta case-next">
