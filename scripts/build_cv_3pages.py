@@ -56,7 +56,7 @@ def frame(c,doc):
 
 # Page 1 - immediate value and Computools
 add('Olesya Levytska','name');add('Senior Product Designer  |  HealthTech, AI &amp; SaaS','role')
-add('<link href="mailto:olesyalevytskaua@gmail.com" color="#5A35CE">olesyalevytskaua@gmail.com</link>  ·  +380 97 750 5802  ·  Open to UK-based and remote opportunities','contacts')
+add('<link href="mailto:olesyalevytskaua@gmail.com" color="#5A35CE">olesyalevytskaua@gmail.com</link>  ·  <link href="https://wa.me/380977505802" color="#5A35CE">WhatsApp: +380 97 750 5802</link>  ·  Open to UK-based and remote opportunities','contacts')
 add('<link href="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/work.html" color="#5A35CE">Portfolio</link>  ·  <link href="https://www.linkedin.com/in/olesya-levytska-321363193/" color="#5A35CE">LinkedIn</link>  ·  <link href="https://github.com/olesyalevytskaua-ops" color="#5A35CE">GitHub</link>  ·  English C1 (professional working proficiency)','contacts')
 section('Profile')
 add('Senior Product Designer with <b>7 years in product and UX design</b> across digital healthcare, AI-powered products and complex multi-role SaaS. Bring 10 years of earlier business analysis experience to research, strategy, workflow design and measurable product decisions. Work end-to-end from discovery and prototyping to design systems, analytics and implementation with engineering teams.','summary')
