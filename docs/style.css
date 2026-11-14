@@ -1082,3 +1082,14 @@ html{scroll-padding-top:128px}
 
 /* The CV shortcut is mobile-only; desktop keeps the original two hero actions. */
 @media(min-width:651px){.hero-cv-cta{display:none!important}}
+
+
+/* Misemio project cover: controlled crop, centered title, status. Shared across Home + Work. */
+.featured-grid .indie-card .mm-project-cover{position:relative;isolation:isolate;display:block;width:100%;min-width:0;min-height:0;aspect-ratio:16/11;overflow:hidden;border-radius:8px;background:#20392d}
+.featured-grid .indie-card .mm-project-cover>img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 9%;border:0;border-radius:0;transform:none}
+.featured-grid .indie-card .mm-project-cover-shade{position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(12,31,22,.25),rgba(12,31,22,.12)),linear-gradient(0deg,rgba(12,31,22,.25),transparent 38%);pointer-events:none}
+.featured-grid .indie-card .mm-project-cover-wordmark{position:absolute;z-index:2;top:52%;left:50%;transform:translate(-50%,-50%);font:italic 500 clamp(36px,4.2vw,67px)/1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.035em;color:#f6f3ed;white-space:nowrap;text-shadow:0 3px 22px rgba(10,32,19,.45);pointer-events:none}
+.featured-grid .indie-card .mm-project-cover-status{position:absolute;z-index:3;top:15px;right:15px;display:inline-flex;align-items:center;gap:7px;padding:9px 11px;border-radius:999px;background:#d3de66;color:#253b30;font:700 10px/1 'DM Sans',Arial,sans-serif;letter-spacing:.11em;white-space:nowrap}
+.featured-grid .indie-card .mm-project-status-dot{width:7px;height:7px;flex:none;border-radius:50%;background:#496540}
+.real-work-card:hover .mm-project-cover>img,.real-work-card:focus-visible .mm-project-cover>img{transform:none}
+@media(max-width:560px){.featured-grid .indie-card .mm-project-cover-wordmark{font-size:clamp(36px,11vw,55px)}.featured-grid .indie-card .mm-project-cover-status{top:12px;right:12px;font-size:9px}}
