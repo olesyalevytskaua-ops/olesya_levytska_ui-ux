@@ -46,10 +46,34 @@ h2{font-size:clamp(49px,7vw,87px);font-style:italic;letter-spacing:-.035em;line-
 @media(max-width:800px){.mm-hero{grid-template-columns:1fr}.mm-hero img{max-height:400px}.mm-cards,.mm-ia,.mm-decisions{grid-template-columns:repeat(2,1fr)}.mm-flow-steps{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:530px){.mm-wrap{padding:0 16px}.mm-header nav{gap:12px}.mm-hero{padding:40px 0}.mm-section{padding:54px 0}.mm-section-head{gap:10px}.mm-section-head span{width:25px}h2{font-size:48px}.mm-cards,.mm-ia,.mm-decisions{grid-template-columns:1fr}.mm-flow{padding:12px}.mm-flow-steps{grid-template-columns:repeat(2,1fr)}.mm-shot-grid,.mm-shot-grid.two{grid-template-columns:repeat(2,1fr);gap:10px}.mm-shot>div{min-height:200px;padding:8px}.mm-shot img{max-height:320px}.mm-pal{grid-template-columns:repeat(2,1fr)}.mm-footer{display:block}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Misemio hero — real WebP botanical background + subtle moving sunlight shadows. */
+.mm-hero-art{width:100%;aspect-ratio:1/1;position:relative;overflow:hidden;background:#183326;isolation:isolate}
+.mm-hero-art-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/olesyalevytskaua-ops/misemio/main/assets/img/splash-dark.webp');background-position:center;background-size:cover}
+.mm-hero-art-shadows{position:absolute;inset:-20%;z-index:1;pointer-events:none;opacity:.30;filter:blur(16px);background:linear-gradient(124deg,transparent 17%,#0614099e 28%,transparent 42%,#07180d9c 52%,transparent 67%);animation:mm-shadow-drift 12s ease-in-out infinite alternate}
+.mm-hero-art-brand{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5%;padding:9%;text-align:center;color:#f6f3ed;text-shadow:0 2px 14px #0b25136a}
+.mm-hero-art-monogram{width:21%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:#d3de66;color:#1a3829;font:italic 500 clamp(33px,4.6vw,64px)/1 'Cormorant Garamond',Georgia,serif;text-shadow:none;margin-bottom:2.5%}
+.mm-hero-art-name{font:italic 500 clamp(44px,6.9vw,100px)/.95 'Cormorant Garamond',Georgia,serif;letter-spacing:-.045em;white-space:nowrap}
+.mm-hero-art-name span{color:#d3de66}
+.mm-hero-art-slogan{font:500 clamp(8px,.88vw,12px)/1.7 'DM Mono',monospace;letter-spacing:.19em;white-space:nowrap}
+.mm-hero-art-rule{width:10%;height:3px;background:#d3de66;border-radius:3px;margin-top:5%}
+@keyframes mm-shadow-drift{from{transform:translate3d(-4%,-3%,0) rotate(-3deg);opacity:.20}to{transform:translate3d(4%,3%,0) rotate(2deg);opacity:.38}}
+@media(max-width:800px){.mm-hero-art-monogram{font-size:clamp(30px,9vw,64px)}.mm-hero-art-name{font-size:clamp(56px,14vw,95px)}.mm-hero-art-slogan{font-size:clamp(8px,2vw,12px)}}
+@media(prefers-reduced-motion:reduce){.mm-hero-art-shadows{animation:none}}
+
 </style></head><body>
 <header class="mm-header mm-wrap"><a href="./">Olesya Levytska</a><nav aria-label="Site navigation"><a href="./">Home</a><a href="work.html" aria-current="page">Work</a><a href="about.html">About</a><a href="cv.html">CV</a><a href="contact.html">Contact</a></nav></header>
 <main class="mm-wrap">
-<section class="mm-hero"><div><p class="mm-eyebrow">Independent product · Design concept · In development</p><h1>misemio.</h1><p class="mm-intro"><strong>Every recipe worth keeping.</strong><br>From the screenshots we never revisit to a personal cookbook we actually want to open.</p><p class="mm-mono">CAPTURE → ORGANISE → COOK</p><div class="mm-actions"><a href="#problem">Read the story ↗</a><a href="https://github.com/olesyalevytskaua-ops/misemio" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></div></div><div><img src="https://raw.githubusercontent.com/olesyalevytskaua-ops/misemio/main/docs/screens/splash-dark.png" alt="Misemio dark mode splash screen with sage and lime editorial branding"></div></section>
+<section class="mm-hero"><div><p class="mm-eyebrow">Independent product · Design concept · In development</p><h1>misemio.</h1><p class="mm-intro"><strong>Every recipe worth keeping.</strong><br>From the screenshots we never revisit to a personal cookbook we actually want to open.</p><p class="mm-mono">CAPTURE → ORGANISE → COOK</p><div class="mm-actions"><a href="#problem">Read the story ↗</a><a href="https://github.com/olesyalevytskaua-ops/misemio" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></div></div><div class="mm-hero-art" role="img" aria-label="Misemio botanical food cover on deep green with monogram and slogan; soft sunlight shadows drift gently across it">
+  <div class="mm-hero-art-bg" aria-hidden="true"></div>
+  <div class="mm-hero-art-shadows" aria-hidden="true"></div>
+  <div class="mm-hero-art-brand" aria-hidden="true">
+    <span class="mm-hero-art-monogram">m.</span>
+    <span class="mm-hero-art-name">misemio<span>.</span></span>
+    <span class="mm-hero-art-slogan">YOUR PERSONAL RECIPE LIBRARY</span>
+    <span class="mm-hero-art-rule"></span>
+  </div>
+</div></section>
 <nav class="mm-toc" aria-label="Case study sections"><a href="#problem">The origin</a><a href="#collector">The collector</a><a href="#flows">Three moments</a><a href="#structure">Architecture</a><a href="#visual">Visual identity</a><a href="#screens">Screen gallery</a><a href="#decisions">Decisions</a><a href="#next">Next steps</a></nav>
 <section class="mm-section" id="problem"><div class="mm-section-head"><span>01 /</span><h2>Recipes we save.<br>And can’t find again.</h2></div>
 <div class="mm-story"><p class="mm-lead">I wanted a beautiful personal cookbook. Instead, everything I wanted to cook lived somewhere else.</p><p>Recipes arrive from everywhere: Instagram, TikTok, screenshots, friends' messages, websites and handwritten notes. I save a dish in the moment, but when I finally want to cook it, I can't find it — or I have to piece together the ingredients and method from several images.</p><p>Misemio is my second independent product after Pockette. I wanted the same simplicity of access, but with the character of a beautifully printed cookbook: a calm, personal space rather than another endless recipe feed.</p></div>
