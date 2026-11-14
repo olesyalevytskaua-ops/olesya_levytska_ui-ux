@@ -1072,28 +1072,13 @@ html{scroll-padding-top:128px}
 .tp-evidence a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:720px){.tp-evidence{grid-template-columns:1fr}}
 
-/* Two prominent mobile destinations: Contact Me and CV, including narrow phones. */
-.mobile-cv{display:none}
+
+/* Home hero: pair the contact and CV links on mobile only. */
+.hero-mobile-cta{display:contents}
 @media(max-width:650px){
-  .header-actions{gap:6px}
-  .mobile-contact,.mobile-cv{display:inline-flex;align-items:center;justify-content:center;min-height:44px;box-shadow:none;white-space:nowrap;font-size:12px;padding:9px 10px;flex-shrink:0}
-  .mobile-cv{border:1px solid var(--accent);color:var(--accent);background:transparent}
-  .mobile-contact{padding-inline:10px}
-  header nav a[href="cv.html"]{display:none}
+  .hero-refined .hero-actions .hero-mobile-cta{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px;width:100%}
+  .hero-refined .hero-actions .hero-mobile-cta .button{width:100%;min-width:0;min-height:48px;padding-inline:12px;margin:0;white-space:nowrap}
 }
-@media(max-width:430px){
-  .mobile-contact,.mobile-cv{display:inline-flex}
-  header .brand-name{font-size:clamp(13px,3.8vw,16px)}
-  .header-actions{gap:5px}
-  .mobile-contact,.mobile-cv{font-size:11px;padding:8px;min-height:44px}
-  .theme-toggle{width:44px;--theme-knob-size:18px}
-  .menu-toggle{width:40px;flex-basis:40px}
-}
-@media(max-width:360px){
-  header{gap:6px}
-  header .brand-name{font-size:12px}
-  .header-actions{gap:4px}
-  .mobile-contact,.mobile-cv{font-size:10px;padding-inline:6px}
-  .theme-toggle{width:38px}
-  .menu-toggle{width:36px;flex-basis:36px}
-}
+
+/* The CV shortcut is mobile-only; desktop keeps the original two hero actions. */
+@media(min-width:651px){.hero-cv-cta{display:none!important}}
