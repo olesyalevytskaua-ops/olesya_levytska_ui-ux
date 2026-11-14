@@ -30,7 +30,12 @@ if (headerActions && mainNav) {
   const mobileContact = document.createElement('a');
   mobileContact.className = 'mobile-contact button';
   mobileContact.href = 'contact.html';
-  mobileContact.textContent = 'Contact';
+  mobileContact.textContent = 'Contact Me';
+
+  const mobileCV = document.createElement('a');
+  mobileCV.className = 'mobile-cv button';
+  mobileCV.href = 'cv.html';
+  mobileCV.textContent = 'CV';
 
   const menuToggle = document.createElement('button');
   menuToggle.className = 'menu-toggle';
@@ -41,6 +46,7 @@ if (headerActions && mainNav) {
   menuToggle.setAttribute('aria-controls', mainNav.id);
   menuToggle.innerHTML = '<span></span><span></span><span></span>';
 
+  headerActions.prepend(mobileCV);
   headerActions.prepend(mobileContact);
   headerActions.append(menuToggle);
 
@@ -54,6 +60,7 @@ if (headerActions && mainNav) {
 
   menuToggle.addEventListener('click', () => setMenuOpen(!document.body.classList.contains('menu-open')));
   mobileContact.addEventListener('click', () => setMenuOpen(false));
+  mobileCV.addEventListener('click', () => setMenuOpen(false));
   mainNav.addEventListener('click', event => {
     if (event.target.closest('a')) setMenuOpen(false);
   });
@@ -292,7 +299,7 @@ if (contactLinks.length) {
         <a class="text-link" href="https://www.linkedin.com/in/olesya-levytska-321363193/">LinkedIn ↗</a>
       </div>
       <p class="contact-email"><a href="mailto:olesyalevytskaua@gmail.com">olesyalevytskaua@gmail.com</a></p>
-      <p>Kyiv, Ukraine · UTC+2/+3 · Remote (UK &amp; Europe) · Open to relocation</p>
+      <p>England, UK · Available for remote and UK-based opportunities</p>
     </section>`;
   document.body.append(modal);
 
