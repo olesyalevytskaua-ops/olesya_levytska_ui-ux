@@ -24,6 +24,9 @@ Case studies: Harmoni, VesselHaven, Vaults1, Remedy Design System 2.0, She Matte
 - docs/images/cases/vaults-mobile.png — 375 × 7535 px; source: Vaults Mobile.png
 - docs/images/cases/vesselhaven-desktop.png — 1200 × 8035 px; source: VesselHaven.png
 - docs/images/cases/vesselhaven-mobile.png — 375 × 13590 px; source: VesselHaven mobile.png
+- docs/images/cases/mm-app-map.webp — 1600 × 1080 px; source: App_map1x.png (Misemio)
+- docs/images/cases/mm-empathy-map.webp — 1200 × 1040 px; source: Empathy_map1x.png (Misemio)
+- docs/images/cases/mm-user-flows.webp — 1600 × 1377 px; source: User_flows__emotions1x.png (Misemio)
 
 Additional originals: docs/images/olesya-banner.png, docs/images/olesya-portrait.png, docs/images/ux-button-contrast-09.png.
 
