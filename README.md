@@ -34,6 +34,7 @@ Snapshot: **16 November 2026**. These figures describe the build, not traffic, c
 - Responsive layouts, keyboard-focus styles and reduced-motion alternatives.
 - Theme-aware interface patterns and a downloadable three-page CV.
 - AI-assisted implementation reviewed and maintained through GitHub branches and pull requests.
+- Automated HTML, link, browser and accessibility tests on every pull request.
 
 ## Design approach
 
