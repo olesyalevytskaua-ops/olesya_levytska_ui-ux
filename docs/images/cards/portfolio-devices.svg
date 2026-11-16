@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800" fill="none">
+<title>Olesya Levytska portfolio — desktop and mobile device mockups</title>
+<desc>Vector-rendered previews of the portfolio homepage using its current headline, navigation, copy and purple accents. A laptop sits behind a phone.</desc>
+<defs>
+<linearGradient id="metal" x1="460" y1="614" x2="460" y2="689" gradientUnits="userSpaceOnUse"><stop stop-color="#dddce3"/><stop offset=".45" stop-color="#a5a5af"/><stop offset=".55" stop-color="#eaeaf0"/><stop offset="1" stop-color="#a9a9b4"/></linearGradient>
+<linearGradient id="rim" x1="62" y1="82" x2="817" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#5e5c69"/><stop offset=".3" stop-color="#24222c"/><stop offset="1" stop-color="#111016"/></linearGradient>
+<linearGradient id="screen" x1="69" y1="116" x2="797" y2="565" gradientUnits="userSpaceOnUse"><stop stop-color="#faf9fb"/><stop offset="1" stop-color="#f0eff5"/></linearGradient>
+<linearGradient id="phoneRim" x1="810" y1="241" x2="1052" y2="748" gradientUnits="userSpaceOnUse"><stop stop-color="#93909c"/><stop offset=".2" stop-color="#302d37"/><stop offset=".8" stop-color="#18161e"/><stop offset="1" stop-color="#65616d"/></linearGradient>
+<clipPath id="desktop"><rect x="66" y="115" width="764" height="471" rx="7"/></clipPath>
+<clipPath id="mobile"><rect x="811" y="245" width="226" height="488" rx="31"/></clipPath>
+</defs>
+<!-- Laptop: inset glass, slim aluminium chassis and subtle hinge. -->
+<ellipse cx="472" cy="698" rx="422" ry="24" fill="#171329" opacity=".12"/>
+<rect x="43" y="88" width="810" height="539" rx="23" fill="url(#rim)" stroke="#898592" stroke-width="3"/>
+<circle cx="448" cy="102" r="3" fill="#17151c"/><circle cx="449" cy="101" r="1" fill="#8b8798"/>
+<g clip-path="url(#desktop)">
+<rect x="66" y="115" width="764" height="471" fill="url(#screen)"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="102" y="155" fill="#17151c" font-size="15" font-weight="700">Olesya Levytska</text><circle cx="225" cy="151" r="3" fill="#6f55c8"/>
+<g fill="#5f5a69" font-size="9"><text x="447" y="154">Home</text><text x="488" y="154">Work</text><text x="527" y="154">About</text><text x="570" y="154">Insights</text><text x="619" y="154">CV</text><text x="647" y="154">Contact</text></g>
+<rect x="716" y="140" width="62" height="22" rx="11" fill="#e6e1ef"/><circle cx="728" cy="151" r="8" fill="#6f55c8"/>
+<path d="M102 177H790" stroke="#ded7e6"/>
+<text x="103" y="262" font-size="46" fill="#17151c" letter-spacing="-1.8">I make <tspan font-family="Georgia,serif" font-style="italic">complex</tspan> products</text>
+<text x="103" y="315" font-family="Georgia,serif" font-style="italic" font-size="50" fill="#6f55c8" letter-spacing="-1.7">feel simple.</text>
+<g fill="#5f5a69" font-size="12"><text x="104" y="351">I’m Olesya, a <tspan fill="#17151c" font-weight="700">Senior Product &amp; UX/UI Designer</tspan> working across</text><text x="104" y="371">healthcare, SaaS, and AI-powered products. I work with teams to understand</text><text x="104" y="391">what people need and turn it into clear, accessible experiences.</text></g>
+<rect x="103" y="423" width="148" height="37" rx="19" fill="#6f55c8"/><text x="121" y="447" fill="#fff" font-size="11" font-weight="700">See my projects  →</text>
+<rect x="264" y="423" width="117" height="37" rx="19" stroke="#6f55c8"/><text x="286" y="447" fill="#4f34aa" font-size="11" font-weight="600">Get in touch</text>
+<path d="M102 505H790" stroke="#ded7e6"/>
+<text x="104" y="532" fill="#5f5a69" font-size="7" font-weight="700" letter-spacing="1.5">01 / SELECTED WORK</text>
+<text x="104" y="565" fill="#17151c" font-size="24">Products for real people.</text>
+</g></g>
+<path d="M43 619H853L921 663Q923 676 893 681H30Q2 676 7 663Z" fill="url(#metal)" stroke="#b6b3c1" stroke-width="1.5"/>
+<path d="M9 663H920" stroke="#f1f0f6" stroke-width="2"/>
+<path d="M363 621H548L540 634Q536 638 529 638H383Q374 637 371 633Z" fill="#82818c"/>
+<rect x="371" y="607" width="168" height="6" rx="3" fill="#121117"/>
+<!-- Phone placed in front; viewport is a mobile adaptation, not a desktop crop. -->
+<ellipse cx="922" cy="758" rx="128" ry="19" fill="#171329" opacity=".15"/>
+<rect x="799" y="232" width="250" height="514" rx="44" fill="url(#phoneRim)" stroke="#aaa6b3" stroke-width="2"/>
+<rect x="806" y="239" width="236" height="500" rx="37" fill="#0f0d14"/>
+<rect x="1048" y="341" width="4" height="51" rx="2" fill="#74717e"/>
+<rect x="795" y="325" width="4" height="34" rx="2" fill="#74717e"/>
+<g clip-path="url(#mobile)">
+<rect x="811" y="245" width="226" height="488" fill="#f6f6f8"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="830" y="273" fill="#17151c" font-size="8" font-weight="700">9:41</text>
+<path d="M996 268v5m4-7v7m4-9v9" stroke="#17151c" stroke-width="1.5"/><rect x="1010" y="266" width="12" height="7" rx="2" stroke="#17151c"/><rect x="1012" y="268" width="8" height="3" rx=".5" fill="#17151c"/>
+<text x="829" y="309" fill="#17151c" font-size="9" font-weight="700">Olesya Levytska</text><circle cx="913" cy="306" r="2" fill="#6f55c8"/>
+<rect x="950" y="296" width="31" height="16" rx="8" fill="#e6e1ef"/><circle cx="958" cy="304" r="6" fill="#6f55c8"/>
+<path d="M997 300h14m-14 5h14m-14 5h14" stroke="#17151c" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M829 326h189" stroke="#ded7e6"/>
+<g font-size="29" fill="#17151c" letter-spacing="-1"><text x="830" y="373">I make</text><text x="830" y="405" font-family="Georgia,serif" font-style="italic">complex</text><text x="830" y="437">products</text></g>
+<text x="830" y="472" font-family="Georgia,serif" font-style="italic" font-size="31" fill="#6f55c8" letter-spacing="-1">feel simple.</text>
+<g fill="#5f5a69" font-size="9"><text x="830" y="501">I’m Olesya, a <tspan font-weight="700" fill="#17151c">Senior Product &amp;</tspan></text><text x="830" y="516"><tspan font-weight="700" fill="#17151c">UX/UI Designer</tspan> working across</text><text x="830" y="531">healthcare, SaaS, and AI-powered</text><text x="830" y="546">products. I work with teams to</text><text x="830" y="561">understand what people need and</text><text x="830" y="576">turn it into clear, accessible experiences.</text></g>
+<rect x="830" y="598" width="188" height="29" rx="15" fill="#6f55c8"/><text x="882" y="617" fill="#fff" font-size="8" font-weight="700">See my projects →</text>
+<rect x="830" y="637" width="115" height="28" rx="14" stroke="#6f55c8"/><text x="862" y="655" fill="#4f34aa" font-size="8" font-weight="600">Get in touch</text>
+<rect x="954" y="637" width="64" height="28" rx="14" stroke="#6f55c8"/><text x="980" y="655" fill="#4f34aa" font-size="8" font-weight="600">CV</text>
+<path d="M830 692h188" stroke="#ded7e6"/><text x="830" y="714" fill="#5f5a69" font-size="6" font-weight="700" letter-spacing="1">01 / SELECTED WORK</text>
+</g></g>
+<rect x="883" y="252" width="83" height="17" rx="9" fill="#0d0c11"/><circle cx="956" cy="260" r="3" fill="#211f2e"/>
+<rect x="889" y="720" width="71" height="3" rx="1.5" fill="#17151c"/>
+</svg>
