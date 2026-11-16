@@ -94,3 +94,6 @@
 @media print{.resume .cv-case-link{text-decoration:none;color:inherit}}
 
 /* Candidate name and title remain visible in both screen preview and print. */
+
+/* Comfortable tap targets for contact links (WCAG 2.5.8) */
+@media screen{.contact{row-gap:0}.contact a{padding-block:4px}}

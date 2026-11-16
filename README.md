@@ -1,5 +1,7 @@
 # Olesya Levytska — Product Design Portfolio
 
+[![Site tests](https://github.com/olesyalevytskaua-ops/olesya_levytska_ui-ux/actions/workflows/site-tests.yml/badge.svg)](https://github.com/olesyalevytskaua-ops/olesya_levytska_ui-ux/actions/workflows/site-tests.yml)
+
 **Complex products. From discovery to delivery.**
 
 A personal portfolio designed and built by **Olesya Levytska**, Senior Product & UX/UI Designer working across healthcare, AI-powered products and SaaS.
@@ -32,6 +34,7 @@ Snapshot: **16 November 2026**. These figures describe the build, not traffic, c
 - Responsive layouts, keyboard-focus styles and reduced-motion alternatives.
 - Theme-aware interface patterns and a downloadable three-page CV.
 - AI-assisted implementation reviewed and maintained through GitHub branches and pull requests.
+- Automated HTML, link, browser and accessibility tests on every pull request.
 
 ## Design approach
 
@@ -44,10 +47,23 @@ Follow [the design-system rules](DESIGN-SYSTEM-RULES.md) when updating component
 The site is served directly from `docs/` with **GitHub Pages**. No frontend build step is required.
 
 ```sh
-python3 -m http.server 8000 --directory docs
+npm install
+npm run serve        # http://localhost:4173
 ```
 
-Open `http://localhost:8000`. Optional Node tooling supports image optimisation; Python tooling builds the downloadable CV.
+Optional Node tooling supports image optimisation; Python tooling builds the downloadable CV.
+
+## Tests
+
+Every pull request runs the same checks in GitHub Actions:
+
+| Command | What it checks |
+| --- | --- |
+| `npm run test:html` | Valid, semantic HTML on every page ([html-validate](https://html-validate.org)) |
+| `npm run test:links` | Every internal link, image and anchor points to something that exists |
+| `npm run test:browser` | Each page on desktop and mobile, light and dark: no JS errors, no broken assets, no sideways scrolling, no serious axe-core accessibility violations (WCAG 2.2 AA rules); plus theme toggle, navigation, contact dialog and the mobile CV shortcut |
+
+Run everything with `npm test` (first time: `npx playwright install chromium`).
 
 ## Project structure
 
@@ -55,6 +71,7 @@ Open `http://localhost:8000`. Optional Node tooling supports image optimisation;
 docs/                    Published HTML, CSS, JavaScript and assets
 docs/case-portfolio.html Portfolio build story
 docs/cv.html             Website CV
+tests/                   HTML, link, browser and accessibility tests
 scripts/build_cv_3pages.py PDF CV generator
 DESIGN-SYSTEM-RULES.md   Shared interaction and accessibility conventions
 ```
@@ -63,7 +80,7 @@ DESIGN-SYSTEM-RULES.md   Shared interaction and accessibility conventions
 
 GitHub Pages serves `main` → `/docs`. Keep changes scoped and review them before merging. Changes to the CV generator trigger the existing PDF-publishing workflow.
 
-Before release, check internal links, image paths, keyboard navigation, mobile reflow, both themes and reduced motion. No automated browser-test suite or traffic outcomes are claimed.
+Automated tests cover links, assets, both themes and mobile reflow; before release, also check keyboard navigation and reduced motion by hand. Automated accessibility checks catch many issues but are not a full WCAG audit.
 
 ## Credits and reuse
 

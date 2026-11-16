@@ -25,7 +25,7 @@
 .indie-actions .indie-alt{position:relative;z-index:4;display:inline-block;margin-top:12px;font-size:13px;color:var(--muted);border-bottom:1px solid currentColor;transition:color .2s ease}
 .indie-actions .indie-alt:hover,.indie-actions .indie-alt:focus-visible{color:var(--accent)}
 .real-work-card.indie-card:focus-within{translate:0 -6px;border-color:var(--accent)}
-.cc-quiz{--cc-tint:#fdf3ea;--cc-ink:#9a3d12;--cc-bg:linear-gradient(135deg,#f6b24a 0%,#ee6f3d 55%,#c8406a 100%)}
+.cc-quiz{--cc-tint:#fdf3ea;--cc-ink:#8a3510;--cc-bg:linear-gradient(135deg,#f6b24a 0%,#ee6f3d 55%,#c8406a 100%)}
 .cc-pockette{--cc-tint:#f8f6f4;--cc-ink:#762d46;--cc-bg:radial-gradient(circle at 70% 60%,#762d4699 0%,#0000 60%),linear-gradient(135deg,#1c1418 0%,#2f1a22 100%)}
 .case-cover.cc .cc-word-serif{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.02em}
 .case-cover.cc .cc-trio,.case-cover.cc .cc-duo{display:flex;align-items:center;justify-content:flex-end;object-fit:initial}
