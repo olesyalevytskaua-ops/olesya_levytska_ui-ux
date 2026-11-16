@@ -67,3 +67,10 @@
 
 @media(max-width:750px){.quiz-cast-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 10px}.quiz-result-feature{grid-template-columns:1fr}.quiz-result-phone{max-width:300px;margin-inline:auto}.quiz-result-feature figcaption{position:static}.quiz-result-list li{grid-template-columns:1fr;gap:2px}}
 @media(prefers-reduced-motion:reduce){.quiz-cast-grid img{transition:none}.quiz-cast-grid figure:hover img{transform:none}}
+
+/* Portfolio build story: reuse the main site frame and theme tokens. */
+.portfolio-project-cover{position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--surface-2);color:var(--ink)}
+.portfolio-project-cover>img{display:block;width:100%;height:64%;object-fit:cover}
+.portfolio-project-label{display:grid;gap:5px;padding:clamp(12px,3vw,24px);font-size:clamp(20px,2.6vw,32px);line-height:1.1;font-weight:650;letter-spacing:-.03em}
+.portfolio-project-label small{font-size:13px;line-height:1.4;font-weight:500;letter-spacing:0;color:var(--muted)}
+.portfolio-scope-note{margin-top:18px;font-size:13px;color:var(--muted);max-width:760px}
