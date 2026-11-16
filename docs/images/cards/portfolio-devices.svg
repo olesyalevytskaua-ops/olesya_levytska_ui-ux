@@ -34,6 +34,7 @@
 <path d="M363 621H548L540 634Q536 638 529 638H383Q374 637 371 633Z" fill="#82818c"/>
 <rect x="371" y="607" width="168" height="6" rx="3" fill="#121117"/>
 <!-- Phone placed in front; viewport is a mobile adaptation, not a desktop crop. -->
+<g transform="translate(-32 0)">
 <ellipse cx="922" cy="758" rx="128" ry="19" fill="#171329" opacity=".15"/>
 <rect x="799" y="232" width="250" height="514" rx="44" fill="url(#phoneRim)" stroke="#aaa6b3" stroke-width="2"/>
 <rect x="806" y="239" width="236" height="500" rx="37" fill="#0f0d14"/>
@@ -58,4 +59,5 @@
 </g></g>
 <rect x="883" y="252" width="83" height="17" rx="9" fill="#0d0c11"/><circle cx="956" cy="260" r="3" fill="#211f2e"/>
 <rect x="889" y="720" width="71" height="3" rx="1.5" fill="#17151c"/>
+</g>
 </svg>
