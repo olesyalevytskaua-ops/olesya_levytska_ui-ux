@@ -1,27 +1,34 @@
 {
   "name": "olesya_levytska_ui-ux",
   "version": "1.0.0",
-  "description": "my portfolio site",
-  "main": "index.js",
+  "description": "Olesya Levytska — product design portfolio (static site served from docs/)",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node tests/serve.mjs",
+    "test": "npm run test:html && npm run test:links && npm run test:browser",
+    "test:html": "html-validate docs/*.html",
+    "test:links": "node tests/links.test.mjs",
+    "test:browser": "playwright test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olesyalevytskaua-ops/olesya_levytska_ui-ux.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Olesya Levytska",
+  "license": "UNLICENSED",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/olesyalevytskaua-ops/olesya_levytska_ui-ux/issues"
   },
   "homepage": "https://github.com/olesyalevytskaua-ops/olesya_levytska_ui-ux#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.63.0",
+    "html-validate": "^11.21.1",
     "sharp": "^0.35.5"
-  }
+  },
+  "private": true
 }
