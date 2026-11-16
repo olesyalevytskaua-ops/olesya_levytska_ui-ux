@@ -68,9 +68,17 @@
 @media(max-width:750px){.quiz-cast-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 10px}.quiz-result-feature{grid-template-columns:1fr}.quiz-result-phone{max-width:300px;margin-inline:auto}.quiz-result-feature figcaption{position:static}.quiz-result-list li{grid-template-columns:1fr;gap:2px}}
 @media(prefers-reduced-motion:reduce){.quiz-cast-grid img{transition:none}.quiz-cast-grid figure:hover img{transform:none}}
 
-/* Portfolio build story: reuse the main site frame and theme tokens. */
-.portfolio-project-cover{position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--surface-2);color:var(--ink)}
-.portfolio-project-cover>img{display:block;width:100%;height:64%;object-fit:cover}
-.portfolio-project-label{display:grid;gap:5px;padding:clamp(12px,3vw,24px);font-size:clamp(20px,2.6vw,32px);line-height:1.1;font-weight:650;letter-spacing:-.03em}
-.portfolio-project-label small{font-size:13px;line-height:1.4;font-weight:500;letter-spacing:0;color:var(--muted)}
+
+/* Portfolio build story: shared card interaction, theme-aware frame. */
+.cc-portfolio{--cc-tint:#eeeaf6;--cc-ink:#4f34aa;--cc-bg:radial-gradient(ellipse at 75% 35%,#ac91ee2e 0%,transparent 58%),linear-gradient(135deg,#302052 0%,#5631a5 58%,#6540b3 100%)}
+.case-cover.cc-portfolio .cc-logo{left:6%;width:32%}
+.case-cover.cc-portfolio .cc-word{font-size:clamp(17px,5.5cqw,34px);line-height:1.06;letter-spacing:-.045em}
+.case-cover.cc-portfolio .cc-word small{font-size:clamp(8px,1.65cqw,11px);line-height:1.5;letter-spacing:.09em;margin-top:8px;opacity:1}
+.case-cover.cc-portfolio .cc-mock{right:-1%;width:67%;height:90%;object-fit:contain;filter:drop-shadow(0 16px 22px #22133433)}
+:root[data-theme="dark"] .case-cover.cc-portfolio{background:#2b2635;--cc-tint:#2b2635;--cc-ink:#d4c7ff}
+.real-work-card:focus-within .case-cover.cc-portfolio .cc-bg{opacity:1;transform:scale(1)}
+.real-work-card:focus-within .case-cover.cc-portfolio .cc-logo{color:#fff;transform:translateY(-50%) translateX(4px)}
+.real-work-card:focus-within .case-cover.cc-portfolio .cc-mock{transform:translateY(-52%) scale(1.07)}
 .portfolio-scope-note{margin-top:18px;font-size:13px;color:var(--muted);max-width:760px}
+@media(hover:none){.case-cover.cc-portfolio .cc-bg{opacity:1;transform:none}.case-cover.cc-portfolio .cc-logo{color:#fff}}
+@media(prefers-reduced-motion:reduce){.real-work-card:focus-within .case-cover.cc-portfolio .cc-logo,.real-work-card:focus-within .case-cover.cc-portfolio .cc-mock{transform:translateY(-50%)!important}}
