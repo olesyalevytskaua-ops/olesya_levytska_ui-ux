@@ -1096,3 +1096,7 @@ html{scroll-padding-top:128px}
 @media(hover:hover){.featured-grid .indie-card:hover .mm-project-cover{--mm-active:1;--mm-zoom:1.07;--mm-wordmark:#f6f3ed;--mm-shadow:0 3px 22px rgba(10,32,19,.45)}}
 @media(prefers-reduced-motion:reduce){.featured-grid .indie-card .mm-project-cover>img{transform:none!important;transition:none!important}.featured-grid .indie-card .mm-project-cover-shade,.featured-grid .indie-card .mm-project-cover-wordmark{transition:none!important}}
 @media(max-width:560px){.featured-grid .indie-card .mm-project-cover-wordmark{font-size:clamp(36px,11vw,55px)}.featured-grid .indie-card .mm-project-cover-status{top:12px;right:12px;font-size:9px}}
+
+/* Home insights: 4th card fills the 2-column (tablet) grid, hidden at 3 and 1 columns */
+.insight-tablet-only{display:none}
+@media(min-width:651px) and (max-width:980px){.insight-tablet-only{display:flex}}
