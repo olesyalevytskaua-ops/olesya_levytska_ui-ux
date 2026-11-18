@@ -55,11 +55,11 @@ def frame(c,doc):
  c.setFont('LatoM',9);c.setFillColor(GRAY);c.drawRightString(PAGE_W-14*mm,11.1*mm,f'{doc.page} / 3');c.restoreState()
 
 # Page 1 - immediate value and Computools
-add('Olesya Levytska','name');add('Senior Product Designer  |  HealthTech, AI &amp; SaaS','role')
+add('Olesya Levytska','name');add('Senior Product Designer  |  Design Engineering  |  HealthTech &amp; AI','role')
 add('<link href="mailto:olesyalevytskaua@gmail.com" color="#5A35CE">olesyalevytskaua@gmail.com</link>  ·  <link href="https://wa.me/380977505802" color="#5A35CE">WhatsApp: +380 97 750 5802</link>  ·  Open to UK-based and remote opportunities','contacts')
 add('<link href="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/work.html" color="#5A35CE">Portfolio</link>  ·  <link href="https://www.linkedin.com/in/olesya-levytska-321363193/" color="#5A35CE">LinkedIn</link>  ·  <link href="https://github.com/olesyalevytskaua-ops" color="#5A35CE">GitHub</link>  ·  English C1 (professional working proficiency)','contacts')
 section('Profile')
-add('Senior Product Designer with <b>7 years in product and UX design</b> across digital healthcare, AI-powered products and complex multi-role SaaS. Bring 10 years of earlier business analysis experience to research, strategy, workflow design and measurable product decisions. Work end-to-end from discovery and prototyping to design systems, analytics and implementation with engineering teams.','summary')
+add('Senior Product Designer with <b>7 years in product and UX design</b> across HealthTech, AI-powered products and complex SaaS, building on 10 years in business analysis. Combine research, analytics and accessible UX/UI with hands-on design engineering: Figma-to-React/Next.js, design systems and AI-assisted UI implementation through GitHub PRs and engineering review.','summary')
 section('Selected impact')
 # compact 2 columns
 impact=[
@@ -79,7 +79,7 @@ t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),PALE),('BOX',(0,0),(-1,-1),.5
 flow.append(t)
 section('Core expertise')
 compact('<b>Product &amp; UX:</b> Product discovery, user research, journeys, information architecture, usability testing, mobile/web SaaS, accessibility, AI experience design, growth funnels and monetisation.')
-compact('<b>Systems &amp; delivery:</b> Figma design systems, tokens, prototyping, responsive UI, developer collaboration, GitHub, design-to-code, analytics and experimentation.')
+compact('<b>Design engineering &amp; delivery:</b> Figma-to-React/Next.js, design systems, tokens, responsive UI, AI-assisted implementation, GitHub PRs, engineering review, design QA, analytics and experimentation.')
 section('Professional experience')
 company('Computools','Sep 2025 – Present','Senior Product &amp; UX/UI Designer  ·  Full-time')
 project('VesselHaven','Dec 2025 – Present')
@@ -135,7 +135,7 @@ compact('<b>Seven · UI Designer (2021):</b> Structured Figma design files and h
 compact('<b>Business Analyst · Various companies (2010–2020):</b> Analysed business processes, data and operational workflows, and customised accounting and office software.')
 section('Tools & technology')
 compact('<b>Product &amp; research:</b> Figma, FigJam, Miro, Jira, Hotjar, Mixpanel, Google Analytics, Amplitude, RevenueCat.')
-compact('<b>Design &amp; delivery:</b> GitHub, Git, VS Code, HTML/CSS, React/Next.js collaboration, WordPress, Elementor, Lottie.')
+compact('<b>Design engineering &amp; delivery:</b> GitHub, Git, VS Code, HTML/CSS, React/Next.js UI implementation, WordPress, Elementor, Lottie.')
 compact('<b>AI workflows:</b> Claude, ChatGPT, Cursor, Lovable, Midjourney, Higgsfield, AI-assisted prototyping and design-to-code.')
 section('Education & certifications')
 compact('<b>2026:</b> Google Analytics Certification · Amplitude Practitioner – Acquisition · Mixpanel Fundamentals · Hotjar Certification (Contentsquare).')
