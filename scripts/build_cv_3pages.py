@@ -56,8 +56,8 @@ def frame(c,doc):
 
 # Page 1 - immediate value and Computools
 add('Olesya Levytska','name');add('Senior Product Designer  |  Design Engineering  |  HealthTech &amp; AI','role')
-add('<link href="mailto:olesyalevytskaua@gmail.com" color="#5A35CE">olesyalevytskaua@gmail.com</link>  ·  <link href="https://wa.me/380977505802" color="#5A35CE">WhatsApp: +380 97 750 5802</link>  ·  Open to UK-based and remote opportunities','contacts')
-add('<link href="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/work.html" color="#5A35CE">Portfolio</link>  ·  <link href="https://www.linkedin.com/in/olesya-levytska-321363193/" color="#5A35CE">LinkedIn</link>  ·  <link href="https://github.com/olesyalevytskaua-ops" color="#5A35CE">GitHub</link>  ·  English C1 (professional working proficiency)','contacts')
+add('<link href="mailto:olesyalevytskaua@gmail.com" color="#5A35CE">olesyalevytskaua@gmail.com</link>  ·  <link href="https://wa.me/380977505802" color="#5A35CE">WhatsApp: +380 97 750 5802</link>  ·  <link href="tel:+447774277746" color="#5A35CE">UK: +44 7774 277746</link>','contacts')
+add('<link href="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/work.html" color="#5A35CE">Portfolio</link>  ·  <link href="https://www.linkedin.com/in/olesya-levytska-321363193/" color="#5A35CE">LinkedIn</link>  ·  <link href="https://github.com/olesyalevytskaua-ops" color="#5A35CE">GitHub</link>  ·  English C1 (professional working proficiency)  ·  Open to UK-based and remote opportunities','contacts')
 section('Profile')
 add('Senior Product Designer with <b>7 years in product and UX design</b> across HealthTech, AI-powered products and complex SaaS, building on 10 years in business analysis. Combine research, analytics and accessible UX/UI with hands-on design engineering: Figma-to-React/Next.js, design systems and AI-assisted UI implementation through GitHub PRs and engineering review.','summary')
 section('Selected impact')
@@ -66,7 +66,7 @@ impact=[
  ('Registration drop-off','Nearly halved after identifying a broken social sign-in and redesigning trust cues.'),
  ('Design system at scale','65 components, 287 tokens on 84% of VesselHaven screens; hardcoded colours 283 → 0.'),
  ('Most-used interaction','Redesigned symptom check-ins with swipeable cards, making them the app’s most popular feature.'),
- ('Faster engineering handoff','~45% less development time reported by Remedy leadership after design system rollout.'),
+ ('Shipped UI through GitHub','Built product flows and design-system updates in React/Next.js and iterated on GitHub PRs after engineering review.'),
 ]
 rows=[]
 for i in range(0,4,2):
