@@ -57,7 +57,7 @@ def frame(c,doc):
 # Page 1 - immediate value and Computools
 add('Olesya Levytska','name');add('Senior Product Designer  |  Design Engineering  |  HealthTech &amp; AI','role')
 add('<link href="mailto:olesyalevytskaua@gmail.com" color="#5A35CE">olesyalevytskaua@gmail.com</link>  ·  <link href="https://wa.me/380977505802" color="#5A35CE">WhatsApp: +380 97 750 5802</link>  ·  <link href="tel:+447774277746" color="#5A35CE">UK: +44 7774 277746</link>','contacts')
-add('<link href="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/work.html" color="#5A35CE">Portfolio</link>  ·  <link href="https://www.linkedin.com/in/olesya-levytska-321363193/" color="#5A35CE">LinkedIn</link>  ·  <link href="https://github.com/olesyalevytskaua-ops" color="#5A35CE">GitHub</link>  ·  English C1 (professional working proficiency)  ·  Open to UK-based and remote opportunities','contacts')
+add('<link href="https://olesyalevytskaua-ops.github.io/olesya_levytska_ui-ux/work.html" color="#5A35CE">Portfolio</link>  ·  <link href="https://www.linkedin.com/in/olesya-levytska-321363193/" color="#5A35CE">LinkedIn</link>  ·  <link href="https://github.com/olesyalevytskaua-ops" color="#5A35CE">GitHub</link>  ·  English C1 (professional working proficiency)  ·  Right to work in the UK. No sponsorship required.','contacts')
 section('Profile')
 add('Senior Product Designer with <b>7 years in product and UX design</b> across HealthTech, AI-powered products and complex SaaS, building on 10 years in business analysis. Combine research, analytics and accessible UX/UI with hands-on design engineering: Figma-to-React/Next.js, design systems and AI-assisted UI implementation through GitHub PRs and engineering review.','summary')
 section('Selected impact')
