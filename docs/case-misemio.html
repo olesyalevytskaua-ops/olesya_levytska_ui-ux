@@ -52,6 +52,16 @@ h2{font-size:clamp(49px,7vw,87px);font-style:italic;letter-spacing:-.035em;line-
 @media(max-width:530px){.mm-wrap{padding:0 16px}.mm-header nav{gap:12px}.mm-hero{padding:40px 0}.mm-section{padding:54px 0}.mm-section-head{flex-direction:column;gap:10px}.mm-section-head span{font-size:30px}h2{font-size:48px}.mm-cards,.mm-ia,.mm-decisions{grid-template-columns:1fr}.mm-flow{padding:12px}.mm-flow-steps{grid-template-columns:repeat(2,1fr)}.mm-shot-grid,.mm-shot-grid.two{grid-template-columns:repeat(2,1fr);gap:10px}.mm-shot>div{min-height:200px;padding:8px}.mm-shot img{max-height:320px}.mm-pal{grid-template-columns:repeat(2,1fr)}.mm-footer{display:block}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+
+/* Static iPhone Duo screen studies */
+.mm-duo .mm-shot>div{padding:0;min-height:0;background:transparent}
+.mm-duo .mm-shot img{width:100%;height:auto;max-height:none;box-shadow:none}
+.mm-duo .mm-shot figcaption span{font-size:14px}
+.mm-duo .mm-duo-pair{max-width:760px}
+.mm-duo .mm-duo-reference{font-size:14px}
+.mm-duo .mm-duo-reference a{text-underline-offset:.18em}
+@media(max-width:620px){.mm-duo .mm-duo-landscape{grid-template-columns:1fr}}
+
 /* Misemio hero — real WebP botanical background + subtle moving sunlight shadows. */
 .mm-hero-art{width:100%;aspect-ratio:1/1;position:relative;overflow:hidden;background:#183326;isolation:isolate}
 .mm-hero-art-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/olesyalevytskaua-ops/misemio/main/assets/img/splash-dark.webp');background-position:center;background-size:cover}
@@ -102,7 +112,7 @@ h2{font-size:clamp(49px,7vw,87px);font-style:italic;letter-spacing:-.035em;line-
     <span class="mm-hero-art-rule"></span>
   </div>
 </div></section>
-<nav class="mm-toc" aria-label="Case study sections"><a href="#problem">The origin</a><a href="#collector">The collector</a><a href="#flows">Three moments</a><a href="#structure">Architecture</a><a href="#visual">Visual identity</a><a href="#screens">Screen gallery</a><a href="#decisions">Decisions</a><a href="#next">Next steps</a></nav>
+<nav class="mm-toc" aria-label="Case study sections"><a href="#problem">The origin</a><a href="#collector">The collector</a><a href="#flows">Three moments</a><a href="#structure">Architecture</a><a href="#visual">Visual identity</a><a href="#screens">Screen gallery</a><a href="#decisions">Decisions</a><a href="#duo">iPhone Duo</a><a href="#next">Next steps</a></nav>
 <section class="mm-section" id="problem"><div class="mm-section-head"><span>01 /</span><h2>Recipes we save.<br>And can’t find again.</h2></div>
 <div class="mm-story"><p class="mm-lead">I wanted a beautiful personal cookbook. Instead, everything I wanted to cook lived somewhere else.</p><p>Recipes arrive from everywhere: Instagram, TikTok, screenshots, friends' messages, websites and handwritten notes. I save a dish in the moment, but when I finally want to cook it, I can't find it — or I have to piece together the ingredients and method from several images.</p><p>Misemio is my second independent product after Pockette. I wanted the same simplicity of access, but with the character of a beautifully printed cookbook: a calm, personal space rather than another endless recipe feed.</p></div>
 <div class="mm-quote">What if saving a recipe could take seconds — and the result felt like a cookbook you made yourself?<span>PRODUCT HYPOTHESIS · NOT YET USER-VALIDATED</span></div>
@@ -136,7 +146,50 @@ h2{font-size:clamp(49px,7vw,87px);font-style:italic;letter-spacing:-.035em;line-
 <div class="mm-note"><strong>Import — the most important flow to validate next.</strong> The PDF explores selecting multiple screenshots, processing the content, highlighting uncertain amounts, correcting the parsed recipe, and saving to Unsorted. Real automated extraction from screenshots and websites isn't working yet.</div></section>
 <section class="mm-section" id="decisions"><div class="mm-section-head"><span>07 /</span><h2>Choosing what<br>not to add.</h2></div><div class="mm-cards"><div class="mm-card"><span class="mm-mono">COLLECTIONS</span><h3>Not another photo grid.</h3><p>Compared three structures: list with covers, typographic index and rich image previews. The selected prototype uses a numbered editorial index for scanability.</p></div><div class="mm-card"><span class="mm-mono">IMPORT</span><h3>No required sorting.</h3><p>Everything can go to Unsorted. Custom collections are optional and can be created later.</p></div><div class="mm-card"><span class="mm-mono">COOKING</span><h3>Not a long recipe page.</h3><p>Cook mode isolates one step, keeps text large and introduces a timer only when useful.</p></div></div>
 <p class="mm-story" style="margin-top:20px">The wider PDF also explores a share-sheet entry, nutrition estimates, export formats and grocery aggregation. These are design explorations, not a promise that the entire set has been implemented.</p></section>
-<section class="mm-section" id="next"><div class="mm-section-head"><span>08 /</span><h2>Beautiful is<br>only the beginning.</h2></div><p class="mm-story">Misemio is an <strong>in-development UI concept and front-end prototype</strong>, not yet a functioning end-to-end recipe product. The immediate milestone is a reliable <strong>Screenshot → Review → Edit → Save → Find → Cook</strong> flow. After that: real-world import accuracy, user testing, collection organisation behaviour and accessible device testing.</p>
+<section class="mm-section mm-duo" id="duo">
+  <div class="mm-section-head"><span>08 /</span><h2>A cookbook<br>that unfolds.</h2></div>
+  <div class="mm-story">
+    <p class="mm-lead">What if unfolding your iPhone felt like opening your own cookbook?</p>
+    <p>For this iPhone Duo concept, I used the fold as the spine of Misemio. The contents sit on the left, and recipes from the selected collection sit on the right. When space is limited, that same hierarchy becomes a single page.</p>
+  </div>
+  <div class="mm-shot-grid two mm-duo-landscape">
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/book-spread.webp" width="1200" height="846" loading="lazy" decoding="async" alt="Landscape Misemio with collections on the left, Weeknight dinners recipes on the right and a vertical far-right navigation rail"></div>
+      <figcaption><strong>Unfolded · Book spread</strong><span>See collections and the selected collection’s recipes at once. Navigation sits on the far right.</span></figcaption>
+    </figure>
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/open-recipe.webp" width="1200" height="846" loading="lazy" decoding="async" alt="Landscape Misemio with Lemon and herb pasta on the left and its ingredients on the right"></div>
+      <figcaption><strong>Unfolded · Open recipe</strong><span>Read the recipe overview on one page and check ingredients on the other.</span></figcaption>
+    </figure>
+  </div>
+  <p class="mm-story">On the outer display, the light and deep-sage covers fill the screen. The wordmark and owner’s name sit over the photograph. Inside, the compact collections view leaves space on the right for the camera, status area and app controls.</p>
+  <div class="mm-shot-grid ">
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/cover-light.webp" width="721" height="1050" loading="lazy" decoding="async" alt="Misemio open-cookbook cover with Olesya’s recipe book on warm ivory, surrounded by figs, herbs and blueberries"></div>
+      <figcaption><strong>Outer · Light cover</strong><span>Warm ivory and afternoon light.</span></figcaption>
+    </figure>
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/cover-dark.webp" width="721" height="1050" loading="lazy" decoding="async" alt="Misemio cover with Olesya’s recipe book on deep green, surrounded by herbs and fruit"></div>
+      <figcaption><strong>Outer · Dark cover</strong><span>Deep sage with the same personal title.</span></figcaption>
+    </figure>
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/compact-collections.webp" width="721" height="1050" loading="lazy" decoding="async" alt="Compact collections index with a camera at the upper right and a vertical tab bar below"></div>
+      <figcaption><strong>Outer · Collections</strong><span>The catalogue fits into one column, with navigation on the right.</span></figcaption>
+    </figure>
+  </div>
+  <div class="mm-shot-grid two mm-duo-pair">
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/inner-portrait.webp" width="737" height="1050" loading="lazy" decoding="async" alt="Portrait view of the lemon and herb pasta recipe with a horizontal tab bar"></div>
+      <figcaption><strong>Inner · Portrait</strong><span>The recipe reads as one page, with a horizontal tab bar below.</span></figcaption>
+    </figure>
+    <figure class="mm-shot">
+      <div><img src="images/misemio-duo/tabletop.webp" width="737" height="1050" loading="lazy" decoding="async" alt="Tabletop layout with a pasta photo above the fold and the current cooking step and Back and Next controls below"></div>
+      <figcaption><strong>Tabletop · Cook mode</strong><span>The image stays above the fold. The cooking step and controls stay on the lower half.</span></figcaption>
+    </figure>
+  </div>
+  <p class="mm-story mm-duo-reference">These are static design explorations. Navigation, camera placement and fold-aware layouts follow <a href="https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo">Apple’s iPhone Duo guidance</a>.</p>
+</section>
+<section class="mm-section" id="next"><div class="mm-section-head"><span>09 /</span><h2>Beautiful is<br>only the beginning.</h2></div><p class="mm-story">Misemio is an <strong>in-development UI concept and front-end prototype</strong>, not yet a functioning end-to-end recipe product. The immediate milestone is a reliable <strong>Screenshot → Review → Edit → Save → Find → Cook</strong> flow. After that: real-world import accuracy, user testing, collection organisation behaviour and accessible device testing.</p>
 <div class="mm-note"><strong>What is proven — and what isn't</strong> The repository contains designed screens, code and design-system documentation. The user journeys, persona and value proposition remain hypotheses until we can test with people. Screenshot/link extraction is simulated, and the full prototype is not yet reliably functional.</div></section>
 <section class="mm-end"><p class="mm-eyebrow">INDEPENDENT PRODUCT · 2026</p><h2>Every recipe<br>worth keeping.</h2><p>Misemio is a personal recipe book designed for the way we really discover food.</p><div class="mm-actions"><a href="https://github.com/olesyalevytskaua-ops/misemio" target="_blank" rel="noopener noreferrer">Explore source and design files ↗</a><a href="work.html#quiz-independent-title">More independent projects ↗</a></div></section>
 </main><footer>
